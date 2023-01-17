@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HELLO AGAIN</h1>
+
+<section class="bg-black">
+    <div class="mx-auto container">
+        {% for recipe in recipe_list %}
+            <div>
+                <div class="image-container">
+                    {% if "placeholder" in recipe.featured_image.url %}
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top">
+                    {% else %}
+                    <img src="{{ recipe.featured_image.url }}" class="card-img-top">
+                    {% endif %}
+                    <div>
+                        <p class="author">Author: {{ recipe.author }}</p>
+                    </div>
+                    <a href="#">
+                        <h2>{{ recipe.title }}</h2>
+                        <p>{{ recipe.excerpt }}</p>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
