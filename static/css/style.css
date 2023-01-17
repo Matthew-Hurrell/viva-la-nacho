@@ -1,0 +1,15 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts - 'Asap' & 'Port Lligat Slab */
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500;600;700&family=Port+Lligat+Slab&display=swap');
+
+/* font-family: 'Asap', sans-serif; */
+
+/* font-family: 'Port Lligat Slab', serif; */
+
+body {
+    font-family: 'Port Lligat Slab', serif;
+}
