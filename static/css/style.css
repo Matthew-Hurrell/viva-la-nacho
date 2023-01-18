@@ -11,5 +11,15 @@
 /* font-family: 'Port Lligat Slab', serif; */
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
     font-family: 'Port Lligat Slab', serif;
+}
+
+footer {
+    margin-top: auto;
 }
