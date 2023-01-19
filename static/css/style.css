@@ -10,16 +10,65 @@
 
 /* font-family: 'Port Lligat Slab', serif; */
 
+/* General */
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-nav {
+/* Hero */
+
+.hero {
+    background-image: url('https://res.cloudinary.com/dihur97qf/image/upload/v1674160158/viva-hero-image_quybxc.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-title {
+    background: linear-gradient(120deg, #fbbf24 60%, #fcd34d 60%);
+}
+
+/* Fonts */
+
+nav, h1, h2, h3, h4, h5 {
     font-family: 'Port Lligat Slab', serif;
 }
 
+/* Footer */
+
 footer {
     margin-top: auto;
+}
+
+/* Icons */
+.fa-heart {
+    color: red;
+}
+
+.fa-pepper-hot {
+    color: #16a34a;
+}
+
+.fa-facebook, .fa-instagram, .fa-twitter, .fa-tiktok {
+    color: white;
+    transition: color 0.2s;
+}
+
+.fa-facebook:hover {
+    color: #1877f2;
+}
+
+.fa-instagram:hover {
+    color: #c32aa3;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2;
+}
+
+.fa-tiktok:hover {
+    color: #ee1d52;
 }
