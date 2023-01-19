@@ -2,9 +2,16 @@
 
 {% block content %}
 
-<h1>HELLO AGAIN</h1>
+<section class="hero w-full h-[700px] flex items-center justify-center">
+    <div class="hero-title p-10 border-2 border-black">
+        <h1 class="text-6xl uppercase relative">Viva La Nacho
+            <img class="absolute w-10 top-[-15px] right-[-5px] rotate-12" src="https://res.cloudinary.com/dihur97qf/image/upload/v1674072852/viva-la-nacho-favicon_kvc5ph.png" alt="Viva La Nacho Mexican Hat Logo">
+        </h1>
+        <h2 class="text-2xl">Spice up your kitchen</h2>
+    </div>
+</section>
 
-<section>
+<section class="hidden">
     <div class="mx-auto container">
         {% for recipe in recipe_list %}
             <div>
