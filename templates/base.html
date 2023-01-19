@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <nav class="bg-amber-400 w-full h-20 flex justify-between items-center relative">
+    <nav class="bg-amber-300 w-full h-20 flex justify-between items-center relative">
         <div class="h-full pl-4">
             <a href="{% url 'home' %}">
                 <img class="h-full" src="https://res.cloudinary.com/dihur97qf/image/upload/v1674072852/viva-la-nacho-favicon_kvc5ph.png" alt="Viva La Nacho Mexican Hat Logo">
@@ -34,8 +34,8 @@
             <!-- Main Menu -->
             <ul class="hidden lg:flex lg:gap-x-10 xl:gap-x-12 lg:mr-6 xl:mr-10 underline-offset-2 text-xl uppercase">
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
-                <li class="hover:scale-105 hover:underline"><a href="#">My Favourites</a></li>
-                <li class="hover:scale-105 hover:underline"><a href="#">My Recipes</a></li>
+                <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
+                <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="#">Log In</a></li>
                 <li class="hover:scale-105 hover:underline"><a href="#">Log Out</a></li>
                 <li class="hover:scale-105 hover:underline"><a href="">Sign Up</a></li>
@@ -57,8 +57,8 @@
         <!-- Mobile Menu -->
         <ul class="mobile-menu hidden absolute lg:hidden px-4 py-4 flex flex-col text-xl uppercase gap-y-10 bg-yellow-300 right-0 left-0 top-20">
             <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
-            <li class="hover:scale-105 hover:underline"><a href="#">My Favourites</a></li>
-            <li class="hover:scale-105 hover:underline"><a href="#">My Recipes</a></li>
+            <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
+            <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
             <li class="hover:scale-105 hover:underline"><a href="#">Log In</a></li>
             <li class="hover:scale-105 hover:underline"><a href="#">Log Out</a></li>
             <li class="hover:scale-105 hover:underline"><a href="">Sign Up</a></li>
@@ -67,15 +67,37 @@
         </ul>
     </nav>
 
-    <h1 class="underline">Hello World</h1>
-
     <main>
     {% block content %}
     
     {% endblock content %}
     </main>
 
-    <footer>
+    <footer class="flex flex-col justify-center items-center bg-green-900 py-12 px-2.5">
+
+        <div class="flex gap-x-10 md:gap-x-24 mb-8">
+
+            <a href="www.facebook.com" target="_blank" aria-label="Facebook link"><i class="fa-brands fa-facebook fa-2x"></i></a>
+            <a href="www.instagram.com" target="_blank" aria-label="Instagram link"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="www.twitter.com" target="_blank" aria-label="Twitter link"><i class="fa-brands fa-twitter fa-2x"></i></a>
+            <a href="www.tiktok.com" target="_blank" aria-label="Tiktok link"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+        </div>
+        <nav class="footer-nav mb-8 md:border-b border-white md:pb-6">
+            <ul class="flex flex-col md:flex-row md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-4 underline-offset-2 text-xl text-white uppercase text-center">
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
+                <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
+                <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
+                <li class="hover:scale-105 hover:underline"><a href="#">Log In</a></li>
+                <li class="hover:scale-105 hover:underline"><a href="#">Log Out</a></li>
+                <li class="hover:scale-105 hover:underline"><a href="">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h3 class="text-white uppercase text-3xl text-center mb-2 relative">Viva La Nacho
+                <img class="absolute w-7 top-[-11px] right-[-8px] rotate-12" src="https://res.cloudinary.com/dihur97qf/image/upload/v1674072852/viva-la-nacho-favicon_kvc5ph.png" alt="Viva La Nacho Mexican Hat Logo">
+            </h3>
+            <p class="text-white text-center">Spice up your kitchen</p>
+        </div>
 
     </footer>
     <script src="{% static 'js/script.js' %}"></script>
