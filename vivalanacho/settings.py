@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'tailwind',
     'recipeapp',
+    'tailwindtest',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +142,11 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Tailwind
+
+TAILWIND_APP_NAME = 'tailwindtest'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
