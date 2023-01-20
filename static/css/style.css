@@ -1,6 +1,7 @@
-/* Tailwind */
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
 
 /* Google Fonts - 'Asap' & 'Port Lligat Slab */
