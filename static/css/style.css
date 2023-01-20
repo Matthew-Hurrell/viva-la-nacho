@@ -38,6 +38,17 @@ nav, h1, h2, h3, h4, h5 {
     font-family: 'Port Lligat Slab', serif;
 }
 
+p {
+    font-family: 'Asap', sans-serif;
+}
+
+/* Nav */
+
+.main-nav-logo {
+    transform: rotate(-12deg);
+    margin-top: 4px;
+}
+
 /* Footer */
 
 footer {
