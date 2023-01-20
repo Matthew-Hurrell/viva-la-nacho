@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "build": "tailwindcss -i static/css/style.css -o static/css/dist/output.css --watch"
+  },
   "devDependencies": {
     "tailwindcss": "^3.2.4"
+  },
+  "engines": {
+    "node": "16.13.0"
   }
 }
