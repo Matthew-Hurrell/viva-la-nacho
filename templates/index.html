@@ -136,7 +136,7 @@
 <section class="py-14 md:py-24 bg-lime-100">
     <h2 class="text-center text-4xl mb-10">Most Popular Recipes</h2>
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
-        {% for recipe in data.latest_recipes %}
+        {% for recipe in data.most_popular_recipes %}
             <div class="border border-black">
                 <div class="relative">
                     {% if "placeholder" in recipe.featured_image.url %}
