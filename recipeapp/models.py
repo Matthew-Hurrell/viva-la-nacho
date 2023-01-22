@@ -107,6 +107,12 @@ class Recipe(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+    def string_of_allergens(self):
+        return ', '.join(self.allergens)
+
+    def string_of_created_on(self):
+        return self.created_on.strftime("%A %d %B %Y")
+
 
 class Comment(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
