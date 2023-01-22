@@ -22,6 +22,7 @@
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav class="bg-amber-300 w-full h-20 flex justify-between items-center relative">
         <div class="h-full pl-4">
             <a href="{% url 'home' %}">
@@ -29,6 +30,7 @@
             </a>
         </div>
         <div class="flex items-center relative">
+
             <!-- Main Menu -->
             <ul class="hidden lg:flex lg:gap-x-10 xl:gap-x-12 lg:mr-6 xl:mr-10 underline-offset-2 text-xl uppercase">
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
@@ -52,8 +54,9 @@
                 </svg>
             </button>
         </div>
+
         <!-- Mobile Menu -->
-        <ul class="mobile-menu hidden absolute lg:hidden px-4 py-4 flex flex-col text-xl uppercase gap-y-10 bg-yellow-300 right-0 left-0 top-20">
+        <ul class="z-50 mobile-menu hidden absolute lg:hidden px-4 py-4 flex flex-col text-xl uppercase gap-y-10 bg-yellow-300 right-0 left-0 top-20">
             <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
             <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
             <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
@@ -65,12 +68,14 @@
         </ul>
     </nav>
 
+    <!-- Main Block Content -->
     <main>
     {% block content %}
     
     {% endblock content %}
     </main>
 
+    <!-- Footer -->
     <footer class="flex flex-col justify-center items-center bg-green-900 py-12 px-2.5">
 
         <div class="flex gap-x-10 md:gap-x-24 mb-8">
