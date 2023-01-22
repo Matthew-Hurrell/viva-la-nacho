@@ -38,7 +38,7 @@
 <!-- Featured Recipe -->
 <section class="py-14 md:py-24 featured-recipe-section px-5 md:px-10">
     <div class="container mx-auto flex flex-col lg:flex-row">
-        <div class="flex flex-col w-full lg:w-5/12">
+        <div class="flex flex-col w-full lg:w-5/12 mb-5 lg:mb-0">
             <div class="relative mb-5 border border-black">
                 {% if "placeholder" in data.featured_recipe.featured_image.url %}
                     <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
@@ -48,23 +48,23 @@
                 <a href="#" class="absolute top-[5px] right-[5px]"><i class="fa-regular fa-heart fa-2x"></i></a>
             </div>
             <div class="grid grid-cols-3 gap-x-5">
-                <div class="h-[150px] border border-black">
+                <div class="h-[90px] sm:h-[150px] border border-black">
                     <img class="h-full object-center object-cover w-full" src="{{ data.featured_recipe.gallery_image_1.url }}" alt="">
                 </div>
-                <div class="h-[150px] border border-black">
+                <div class="h-[90px] sm:h-[150px] border border-black">
                     <img class="h-full object-center object-cover w-full" src="{{ data.featured_recipe.gallery_image_2.url }}" alt="">
                 </div>
-                <div class="h-[150px] border border-black">
+                <div class="h-[90px] sm:h-[150px] border border-black">
                     <img class="h-full object-center object-cover w-full" src="{{ data.featured_recipe.gallery_image_3.url }}" alt="">
                 </div>
             </div>
         </div>
-        <div class="px-5 md:px-16 py-5 md:py-8 xl:py-10 bg-amber-100 w-full lg:w-7/12 relative">
+        <div class="px-5 md:px-16 py-5 md:py-8 xl:py-10 bg-amber-100 w-full lg:w-7/12 relative lg:ml-5">
             <h2 class="text-left text-4xl mb-3">Featured Recipe - {{ data.featured_recipe.title }}</h2>
             <p class="text-base md:text-xl mb-6 xl:mb-8 text-left">by {{ data.featured_recipe.author }}</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 md:gap-x-0 lg:gap-x-10 gap-y-4 xl:gap-y-8 text-xl w-full 2xl:w-10/12">
-                <p class="text-base md:text-xl"><i class="fa-solid fa-kitchen-set text-2xl align-sub mr-5"></i> Prep time - {{ data.featured_recipe.prep_time }} mins</p>
-                <p class="text-base md:text-xl"><i class="fa-regular fa-clock text-2xl align-sub mr-[24px] xl:mr-5"></i> Cooking time - {{ data.featured_recipe.cooking_time }} mins</p>
+                <p class="text-base md:text-xl"><i class="fa-solid fa-kitchen-set text-2xl md:text-3xl align-sub mr-5"></i> Prep time - {{ data.featured_recipe.prep_time }} mins</p>
+                <p class="text-base md:text-xl"><i class="fa-regular fa-clock text-2xl md:text-3xl align-sub mr-[24px] xl:mr-5"></i> Cooking time - {{ data.featured_recipe.cooking_time }} mins</p>
                 <p class="text-base md:text-xl">
                     <svg class="inline align-sub mr-5 h-[25px] w-[25px] md:h-[35px] md:w-[35px]" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     viewBox="0 0 219.792 219.792" xml:space="preserve">
@@ -94,7 +94,7 @@
                     {% elif data.featured_recipe.difficulty == 4 %}
                         Pro
                     {% endif %}</p>
-                <p class="text-base md:text-xl"><i class="fa-solid fa-utensils text-2xl align-sub mr-[30px] xl:mr-6"></i> Serves - {{ data.featured_recipe.serves }}</p>
+                <p class="text-base md:text-xl"><i class="fa-solid fa-utensils text-2xl md:text-3xl align-sub mr-[30px] xl:mr-6"></i> Serves - {{ data.featured_recipe.serves }}</p>
             </div>
             <p class="text-base md:text-xl mt-6 xl:mt-10 pb-16 md:pb-11 lg:pb-0">{{ data.featured_recipe.excerpt }}</p>
             <div class="absolute right-5 md:right-10 bottom-6">
@@ -109,7 +109,7 @@
     <h2 class="text-center text-4xl mb-10">Latest Recipes</h2>
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
         {% for recipe in data.latest_recipes %}
-            <div class="">
+            <div class="border border-black">
                 <div class="relative">
                     {% if "placeholder" in recipe.featured_image.url %}
                         <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
@@ -120,6 +120,34 @@
                     <a href="#" class="absolute top-[5px] right-[5px]"><i class="fa-regular fa-heart fa-2x"></i></a>
                 </div>
                 <div class="p-5 bg-amber-100">
+                    <h3 class="text-3xl text-left">{{ recipe.title }}</h2>
+                    <p class="text-left mb-3">by {{ recipe.author }}</p>
+                    <p class="mb-5">{{ recipe.excerpt }}</p>
+                    <div class="flex justify-end">
+                        <a class="text-xl bg-green-600 px-2 py-1.5 mx-4 border border-black hover:scale-105 hover:shadow" href="#">View recipe</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Latest Recipes -->
+<section class="py-14 md:py-24 bg-lime-100">
+    <h2 class="text-center text-4xl mb-10">Most Popular Recipes</h2>
+    <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
+        {% for recipe in data.latest_recipes %}
+            <div class="border border-black">
+                <div class="relative">
+                    {% if "placeholder" in recipe.featured_image.url %}
+                        <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    {% else %}
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+                    {% endif %}
+                    <!-- <i class="fa-solid fa-heart fa-2x absolute top-[5px] right-[5px]"></i> -->
+                    <a href="#" class="absolute top-[5px] right-[5px]"><i class="fa-regular fa-heart fa-2x"></i></a>
+                </div>
+                <div class="p-5 bg-white">
                     <h3 class="text-3xl text-left">{{ recipe.title }}</h2>
                     <p class="text-left mb-3">by {{ recipe.author }}</p>
                     <p class="mb-5">{{ recipe.excerpt }}</p>
