@@ -34,7 +34,7 @@ body {
 
 /* Fonts */
 
-nav, h1, h2, h3, h4, h5 {
+nav, h1, h2, h3, h4, h5, a, button {
     font-family: 'Port Lligat Slab', serif;
 }
 
@@ -56,6 +56,10 @@ footer {
 }
 
 /* Icons */
+.fa-star {
+    color: #fde047;
+}
+
 .fa-heart {
     color: red;
 }
@@ -83,4 +87,13 @@ footer {
 
 .fa-tiktok:hover {
     color: #ee1d52;
+}
+
+/* Featured Recipe */
+
+.featured-recipe-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
