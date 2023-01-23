@@ -3,7 +3,7 @@
 {% block content %}
 
 <!-- Recipe Details -->
-<section class="py-14 md:py-24 px-5 md:px-10 bg-lime-100">
+<section class="py-14 md:py-24 px-5 md:px-10 bg-amber-100">
     <div class="container mx-auto flex flex-col lg:flex-row">
         <div class="flex flex-col w-full lg:w-5/12 mb-5 lg:mb-0">
 
@@ -88,20 +88,83 @@
     </div>
 </section>
 
+<!-- Divider -->
+
+<section class="bg-green-800 py-1">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="border-b border-white w-6/12"></div>
+        <div class="mx-5">
+            <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+        </div>
+        <div class="border-b border-white w-6/12"></div>
+    </div>
+</section>
+
 <!-- Recipe Method and Ingredients -->
 
 <section class="py-14 md:py-24 px-5 md:px-10 bg-amber-100">
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2">
-        <div>
-            <h3>Ingredients</h2>
-            <p>{{ recipe.ingredients|striptags }}</p>
+        <div class="w-full lg:w-4/5 mb-14 lg:mb-0">
+            <h3 class="text-3xl mb-3">Ingredients</h2>
+            <p class="text-sm">{{ recipe.ingredients|safe }}</p>
         </div>
+
         <div>
-            <h3>Method</h2>
-            <p>{{ recipe.method|striptags }}</p>
+            <h3 class="text-3xl mb-3">Method</h2>
+            <p>{{ recipe.method|safe }}</p>
         </div>
     </div>
+</section>
 
+<!-- Divider -->
+
+<section class="bg-green-800 py-1">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="border-b border-white w-6/12"></div>
+        <div class="mx-5">
+            <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+        </div>
+        <div class="border-b border-white w-6/12"></div>
+    </div>
+</section>
+
+<!-- Comments Section -->
+
+<section class="py-14 md:py-24 px-5 md:px-10">
+    <div class="container mx-auto flex flex-col lg:flex-row gap-x-20">
+
+        <!-- Comments -->
+        <div class="w-7/12">
+            <h3 class="text-3xl mb-10">Comments</h3>
+            {% for comment in comments %}
+            <div class="mb-8 border-b border-black pb-5">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center">
+                        <span class="relative mr-10">
+                            <i class="fa-solid fa-user-tie text-3xl"></i>
+                            <img class="absolute w-10 top-[-11px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1674072852/viva-la-nacho-favicon_kvc5ph.png" alt="Viva La Nacho Mexican Hat Logo">
+                        </span>
+                        <h4 class="text-xl">{{ comment.name }}</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-base">
+                            {{ comment.string_of_created_on }}
+                        </h4>
+                    </div>
+                </div>
+                <div>
+                    <p>{{ comment.body }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+        <!-- Post A Comment Form -->
+        <div>
+            <h3 class="text-3xl mb-10">Post a comment</h3>
+        </div>
+    </div>
 </section>
 
 {% endblock %}
