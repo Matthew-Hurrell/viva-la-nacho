@@ -127,3 +127,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+    def string_of_created_on(self):
+        return self.created_on.strftime("%A %d %B %Y")
