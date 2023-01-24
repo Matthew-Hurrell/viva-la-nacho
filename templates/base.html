@@ -35,11 +35,14 @@
             <!-- Main Menu -->
             <ul class="hidden lg:flex lg:gap-x-10 xl:gap-x-12 lg:mr-6 xl:mr-10 underline-offset-2 text-xl uppercase">
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
+                {% if user.is_authenticated %}
                 <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
-                <li class="hover:scale-105 hover:underline"><a href="#">Log In</a></li>
-                <li class="hover:scale-105 hover:underline"><a href="#">Log Out</a></li>
-                <li class="hover:scale-105 hover:underline"><a href="">Sign Up</a></li>
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
+                {% else %}
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'account_login' %}">Log In</a></li>
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                {% endif %}
             </ul>
             <a href="#" class="hidden lg:block text-xl uppercase bg-green-600 px-3 py-2 mx-4 border border-black hover:scale-105 hover:shadow">Post A Recipe</a>
         </div>
@@ -89,11 +92,14 @@
         <nav class="footer-nav mb-8 md:border-b border-white md:pb-6">
             <ul class="flex flex-col md:flex-row md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-4 underline-offset-2 text-xl text-white uppercase text-center">
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
+                {% if user.is_authenticated %}
                 <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
-                <li class="hover:scale-105 hover:underline"><a href="#">Log In</a></li>
-                <li class="hover:scale-105 hover:underline"><a href="#">Log Out</a></li>
-                <li class="hover:scale-105 hover:underline"><a href="">Sign Up</a></li>
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
+                {% else %}
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'account_login' %}">Log In</a></li>
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                {% endif %}
             </ul>
         </nav>
         <div>
