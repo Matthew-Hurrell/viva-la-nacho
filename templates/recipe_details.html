@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <!-- Recipe Details -->
 <section class="py-14 md:py-24 px-5 md:px-10 bg-amber-100">
     <div class="container mx-auto flex flex-col lg:flex-row">
@@ -163,7 +165,22 @@
         <!-- Post A Comment Form -->
         <div>
             <h3 class="text-3xl mb-10">Post a comment</h3>
+            {% if commented %}
+                <p>Thank you for posting a comment! Your comment will be visible when it has been approved</p>
+            {% else %}
+                {% if user.is_authenticated %}
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit">Submit</button>
+                </form>
+                {% else %}
+                <p>I'm sorry amigo, you have to be logged in to post a comment!</p>
+                {% endif %}
+            {% endif %}
         </div>
+
     </div>
 </section>
 
