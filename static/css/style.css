@@ -102,3 +102,56 @@ footer {
     background-position: center;
     background-size: cover;
 }
+
+/* Allauth Pages */
+
+.accounts-background {
+    background: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674680944/accounts-background_xjkxa8.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form.login p, form.signup p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form.login p:last-of-type {
+    display: block;
+}
+
+form.signup p:last-of-type {
+    margin-bottom: 30px;
+}
+
+form.login label, form.signup label {
+    font-size: 1.25rem;
+}
+
+#id_remember {
+    margin-left: 5px;
+}
+
+#id_login, #id_password, #id_username, #id_email, #id_password1, #id_password2 {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 1.25rem;
+}
+
+#id_login:placeholder, #id_password:placeholder {
+    font-size: 1.25rem;
+}
+
+.primaryAction {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid black;
+}
+
+.primaryAction:hover {
+    transform: scaleX(1.05);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}

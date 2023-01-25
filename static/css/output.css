@@ -700,6 +700,10 @@ video {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .inline {
   display: inline;
 }
@@ -774,6 +778,10 @@ video {
 
 .w-6\/12 {
   width: 50%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .rotate-12 {
@@ -928,6 +936,10 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-3 {
@@ -1167,6 +1179,59 @@ footer {
   background-size: cover;
 }
 
+/* Allauth Pages */
+
+.accounts-background {
+  background: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674680944/accounts-background_xjkxa8.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form.login p, form.signup p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+form.login p:last-of-type {
+  display: block;
+}
+
+form.signup p:last-of-type {
+  margin-bottom: 30px;
+}
+
+form.login label, form.signup label {
+  font-size: 1.25rem;
+}
+
+#id_remember {
+  margin-left: 5px;
+}
+
+#id_login, #id_password, #id_username, #id_email, #id_password1, #id_password2 {
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 1.25rem;
+}
+
+#id_login:placeholder, #id_password:placeholder {
+  font-size: 1.25rem;
+}
+
+.primaryAction {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid black;
+}
+
+.primaryAction:hover {
+  transform: scaleX(1.05);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1290,6 +1355,11 @@ footer {
     padding-bottom: 2rem;
   }
 
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .md\:pb-6 {
     padding-bottom: 1.5rem;
   }
@@ -1364,6 +1434,10 @@ footer {
     width: 80%;
   }
 
+  .lg\:w-6\/12 {
+    width: 50%;
+  }
+
   .lg\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -1416,6 +1490,10 @@ footer {
     width: 50%;
   }
 
+  .xl\:w-5\/12 {
+    width: 41.666667%;
+  }
+
   .xl\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1446,5 +1524,9 @@ footer {
 
   .\32xl\:w-10\/12 {
     width: 83.333333%;
+  }
+
+  .\32xl\:w-4\/12 {
+    width: 33.333333%;
   }
 }
