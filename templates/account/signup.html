@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+<section class="accounts-background py-14 md:py-20 flex-1 flex flex-col items-center px-5">
+
+  <h2 class="text-center text-4xl mb-10">{% trans "Sign Up" %}</h2>
+
+  <div class="border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6">
+
+    <p class="mb-3 text-xl">{% blocktrans %}Already have an account amigo? Then please <a class="hover:underline text-2xl" href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+
+    <form class="signup flex flex-col" id="signup_form" method="post" action="{% url 'account_signup' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button class="primaryAction bg-amber-400 inline-block" type="submit">{% trans "Lets cook!" %} &raquo;</button>
+    </form>
+  </div>
+
+</section>
+
+{% endblock %}
