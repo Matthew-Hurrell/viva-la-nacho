@@ -16,7 +16,24 @@
                 {% else %}
                     <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="{{ recipe.featured_image.url }}">
                 {% endif %}
-                <a href="#" class="absolute top-[5px] right-[5px]"><i class="fa-regular fa-heart fa-2x"></i></a>
+
+                <!-- Heart Like Icon -->
+                {% if user.is_authenticated %}
+                    <form class="absolute top-[5px] right-[5px]" action="{% url 'recipe_like' recipe.slug %}" method="post">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="recipe_id" value="{{ recipe.slug }}">
+                            <i class="fa-solid fa-heart-circle-minus fa-2x w-full h-full"></i>
+                        </button>
+                        {% else %}
+                        <button type="submit" name="recipe_id" value="{{ recipe.slug }}">
+                            <i class="fa-solid fa-heart-circle-plus fa-2x w-full h-full"></i>
+                        </button>
+                        {% endif %}
+                    </form>
+                {% else %}
+                    <i class="fa-solid fa-heart-circle-minus fa-2x absolute top-[5px] right-[5px]"></i>
+                {% endif %}
             </div>
 
             <!-- Gallery Images -->
@@ -45,7 +62,8 @@
 
         </div>
         <div class="px-5 lg:px-10 w-full lg:w-7/12 relative lg:ml-5">
-            <h2 class="text-left text-4xl mb-3">{{ recipe.title }}</h2>
+            <h2 class="text-left text-4xl block md:inline-block md:mr-3 md:mb-3">{{ recipe.title }}</h2>
+            <h3 class="block md:inline-block text-xl mb-3 text-right md:text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-x-10 mb-6">
                 <p class="text-base md:text-lg text-left order-2">Posted {{ recipe.string_of_created_on }}</p>
                 <p class="text-base md:text-lg text-left order-1">by {{ recipe.author }}</p>
@@ -132,7 +150,7 @@
 
 <!-- Comments Section -->
 
-<section class="comments-section py-14 md:py-24 px-5 md:px-10">
+<section class="comments-section py-14 md:py-24 px-5 md:px-10 bg-amber-100">
     <div class="container mx-auto flex flex-col lg:flex-row lg:gap-x-12 xl:gap-x-20">
 
         <!-- Comments -->
