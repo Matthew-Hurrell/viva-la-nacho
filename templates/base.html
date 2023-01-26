@@ -62,11 +62,14 @@
         <!-- Mobile Menu -->
         <ul class="z-50 mobile-menu hidden absolute lg:hidden px-4 py-4 flex flex-col text-xl uppercase gap-y-10 bg-yellow-300 right-0 left-0 top-20">
             <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
+            {% if user.is_authenticated %}
             <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
             <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
-            <li class="hover:scale-105 hover:underline"><a href="#">Log In</a></li>
-            <li class="hover:scale-105 hover:underline"><a href="#">Log Out</a></li>
-            <li class="hover:scale-105 hover:underline"><a href="">Sign Up</a></li>
+            <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
+            {% else %}
+            <li class="hover:scale-105 hover:underline"><a href="{% url 'account_login' %}">Log In</a></li>
+            <li class="hover:scale-105 hover:underline"><a href="{% url 'account_signup' %}">Sign Up</a></li>
+            {% endif %}
             <li><a href="#" class="text-xl uppercase bg-green-600 px-3 py-2 border border-black hover:scale-105 hover:shadow">Post A Recipe</a></li>
             </ul>
         </ul>
