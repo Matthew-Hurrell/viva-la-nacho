@@ -155,3 +155,26 @@ form.login label, form.signup label {
     transform: scaleX(1.05);
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
+
+/* Comments Section */
+
+.comments-section form textarea {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 1.25rem;
+    background-color: #fef3c7;
+}
+
+.comments-section form button {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid black;
+    background-color: #fbbf24;
+}
+
+@media only screen and (max-width: 1023px) { 
+    .comments-section form textarea {
+        width: 100%;
+    }
+}
