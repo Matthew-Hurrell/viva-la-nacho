@@ -61,7 +61,11 @@ footer {
     color: #fde047;
 }
 
-.fa-heart {
+.fa-heart, .fa-heart-circle-plus {
+    color: red;
+}
+
+.fa-heart-circle-minus {
     color: red;
 }
 
@@ -162,7 +166,7 @@ form.login label, form.signup label {
     border: 1px solid black;
     padding: 5px;
     font-size: 1.25rem;
-    background-color: #fef3c7;
+    background-color: white;
 }
 
 .comments-section form button {
