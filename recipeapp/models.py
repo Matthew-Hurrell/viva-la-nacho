@@ -62,7 +62,8 @@ ALLERGIES = (
     ('Molluscs', 'Molluscs'),
     ('Nuts', 'Nuts'),
     ('Sesame Seeds', 'Sesame Seeds'),
-    ('Sulphur Dioxide', 'Sulphur Dioxide')
+    ('Sulphur Dioxide', 'Sulphur Dioxide'),
+    ('None', 'None')
 )
 
 DIFFICULTIES = (
@@ -95,7 +96,7 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name="recipe_likes")
+    likes = models.ManyToManyField(User, related_name="recipe_likes", blank=True)
     featured = models.BooleanField(default=False)
 
     class Meta:
