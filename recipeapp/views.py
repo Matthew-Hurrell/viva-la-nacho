@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Recipe
+from .models import Recipe, Comment
 from django.db.models import Count
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm
+from django.template.defaultfilters import slugify
 
 
 class RecipeList(generic.ListView):
@@ -85,3 +86,40 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
+
+
+class PostRecipe(View):
+
+    form_class = RecipeForm
+    initial = {'key': 'value'}
+    template_name = 'post_recipe.html'
+
+    def get(self, request, *args, **kwargs):
+        form = self.form_class(initial=self.initial)
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST, request.FILES)
+        if form.is_valid():
+            form.instance.author = request.user
+            form.instance.slug = slugify(form.instance.title)
+            recipe = form.save(commit=False)
+            recipe.save()
+            print('successful')
+            return render(
+                request,
+                'post_recipe.html',
+                {
+                    'posted': True
+                }
+            )
+        else:
+            print('unsuccessful')
+            return render(
+                request,
+                'post_recipe.html',
+                {
+                    'form': form,
+                    'failed': True,
+                }
+            )
