@@ -9,3 +9,17 @@ nav_button.addEventListener('click', () => {
     exit_icon.classList.toggle('hidden');
     mobile_menu.classList.toggle('hidden');
 })
+
+// Cancel Buttons
+if ( document.getElementsByClassName('cancel').length > 0 ) {
+    const cancel_buttons = document.getElementsByClassName('cancel');
+    const form = document.querySelector('.form-content');
+    const pop_up = document.querySelector('.pop-up-confirmation');
+
+    for (let button of cancel_buttons) {
+        button.addEventListener('click', () => {
+            form.classList.toggle('hidden');
+            pop_up.classList.toggle('hidden');
+        })
+    }
+}
