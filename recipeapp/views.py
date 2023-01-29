@@ -16,7 +16,7 @@ class RecipeList(generic.ListView):
         myset = {
             "latest_recipes": Recipe.objects.filter(status=1).order_by('-created_on'),
             "featured_recipe": Recipe.objects.get(featured=True),
-            "most_popular_recipes": Recipe.objects.annotate(like_count=Count('likes')).order_by('-like_count'),
+            "most_popular_recipes": Recipe.objects.filter(status=1).annotate(like_count=Count('likes')).order_by('-like_count'),
         }
         return myset
 
@@ -96,7 +96,14 @@ class PostRecipe(View):
 
     def get(self, request, *args, **kwargs):
         form = self.form_class(initial=self.initial)
-        return render(request, self.template_name, {'form': form})
+        return render(
+            request,
+            self.template_name,
+            {
+                'form': form,
+                'posted': False,
+            }
+        )
 
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST, request.FILES)
@@ -110,7 +117,7 @@ class PostRecipe(View):
                 request,
                 'post_recipe.html',
                 {
-                    'posted': True
+                    'posted': True,
                 }
             )
         else:
@@ -121,5 +128,6 @@ class PostRecipe(View):
                 {
                     'form': form,
                     'failed': True,
+                    'posted': False,
                 }
             )
