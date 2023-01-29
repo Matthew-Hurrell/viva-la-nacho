@@ -98,6 +98,10 @@ footer {
     color: white;
 }
 
+.fa-check {
+    color: #16a34a;
+}
+
 /* Featured Recipe */
 
 .featured-recipe-section {

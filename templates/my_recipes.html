@@ -2,8 +2,71 @@
 
 {% block content %}
 
-{% for recipe in my_recipes %}
-    {{ recipe.title }}
-{% endfor %}
+<!-- My Recipes -->
+<section class="my-recipes-section bg-white py-14 md:py-20 flex-1 flex flex-col items-center px-5">
+
+    <div class="container mx-auto">
+
+        {% if user.is_authenticated %}
+
+            <h2 class="text-center text-4xl mb-10">My Recipes</h2>
+            <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
+                {% for recipe in my_recipes %}
+                    <div>
+                        <div class="relative">
+                            {% if "placeholder" in recipe.featured_image.url %}
+                                <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                                <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
+                                <div class="px-2 px-1 z-40 bg-amber-100 absolute top-3 left-3 text-lg text-left">
+                                    {% if recipe.status == 0 %}
+                                        Draft <i class="fa-regular fa-pen-to-square"></i>
+                                    {% else %}
+                                        Published <i class="fa-solid fa-check"></i>
+                                    {% endif %}
+                                </div>
+                            {% else %}
+                                <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+                                <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
+                                <div class="px-2 px-1 z-40 bg-amber-100 absolute top-3 left-3 text-lg text-left">
+                                    {% if recipe.status == 0 %}
+                                        Draft <i class="fa-regular fa-pen-to-square"></i>
+                                    {% else %}
+                                        Published <i class="fa-solid fa-check"></i>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="p-5 bg-lime-100 border border-black">
+                            <h3 class="text-left text-3xl">{{ recipe.title }}</h3>
+                            <p class="text-left mb-3">by {{ recipe.author }}</p>
+                            <p class="mb-5">{{ recipe.excerpt }}</p>
+                            <div class="flex flex-row flex-wrap justify-between gap-y-3">
+                                <a class="inline-block w-5/12 text-center text-xl bg-amber-400 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="">Edit</a>
+                                <a class="inline-block w-5/12 text-center text-xl bg-red-500 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="">Delete</a>
+                                <a class="w-full text-center text-xl bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        {% else %}
+
+            <!-- If User Isn't Signed In -->
+            <div class="no-sign-up-notification border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+                <h2 class="text-center text-4xl mb-10">You have to be logged in view your recipes!</h2>
+                <p class="text-lg text-center mb-3">If you have an account please log in!</p>
+                <a id="login-button" class="block text-center confirm mb-3" href="{% url 'account_login' %}">Log In</a>
+                <p class="text-lg text-center mb-3">Or you can sign up for an account today to post your own recipes!</p>
+                <a class="confirm block text-center mb-3" href="{% url 'account_signup' %}">Well sign me up!</a>
+                <p class="text-lg text-center mb-3">Otherwise you can return to the homepage to view other recipes.</p>
+                <a href="{% url 'home' %}" class="cancel block text-center">No take me back home!</a>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
 
 {% endblock %}
