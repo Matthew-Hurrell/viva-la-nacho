@@ -51,28 +51,29 @@
 <section class="py-14 md:py-24 featured-recipe-section px-5 md:px-10">
     <div class="container mx-auto flex flex-col lg:flex-row">
         <div class="flex flex-col w-full lg:w-5/12 mb-5 lg:mb-0">
-            <div class="mb-5 border border-black">
+            <div class="mb-5 relative">
                 {% if "placeholder" in data.featured_recipe.featured_image.url %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                    <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ data.featured_recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                 {% else %}
                     <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="{{ data.featured_recipe.featured_image.url }}">
+                    <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ data.featured_recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                 {% endif %}
             </div>
             <div class="grid grid-cols-3 gap-x-5">
-                <div class="h-[90px] sm:h-[150px] border border-black">
+                <div class="h-[90px] sm:h-[150px]">
                     <img class="h-full object-center object-cover w-full" src="{{ data.featured_recipe.gallery_image_1.url }}" alt="">
                 </div>
-                <div class="h-[90px] sm:h-[150px] border border-black">
+                <div class="h-[90px] sm:h-[150px]">
                     <img class="h-full object-center object-cover w-full" src="{{ data.featured_recipe.gallery_image_2.url }}" alt="">
                 </div>
-                <div class="h-[90px] sm:h-[150px] border border-black">
+                <div class="h-[90px] sm:h-[150px]">
                     <img class="h-full object-center object-cover w-full" src="{{ data.featured_recipe.gallery_image_3.url }}" alt="">
                 </div>
             </div>
         </div>
-        <div class="px-5 md:px-16 py-5 md:py-8 xl:py-10 bg-amber-100 w-full lg:w-7/12 relative lg:ml-5">
+        <div class="border border-black px-5 md:px-16 py-5 md:py-8 xl:py-10 bg-amber-100 w-full lg:w-7/12 relative lg:ml-5">
             <h2 class="block md:inline-block text-left text-4xl md:mr-3">Featured Recipe - {{ data.featured_recipe.title }}</h2>
-            <h3 class="block md:inline-block text-xl mb-3 text-left">Likes - {{ data.featured_recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></h3>
             <p class="text-base md:text-xl mb-6 xl:mb-8 text-left">by {{ data.featured_recipe.author }}</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 md:gap-x-0 lg:gap-x-10 gap-y-4 xl:gap-y-8 text-xl w-full 2xl:w-10/12">
                 <p class="text-base md:text-xl"><i class="fa-solid fa-kitchen-set text-2xl md:text-3xl align-sub mr-5"></i> Prep time - {{ data.featured_recipe.prep_time }} mins</p>
@@ -128,21 +129,22 @@
 </section>
 
 <!-- Latest Recipes -->
-<section class="py-14 md:py-24 bg-white">
+<section class="py-14 md:py-24 bg-amber-100">
     <h2 class="text-center text-4xl mb-10">Latest Recipes</h2>
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
         {% for recipe in data.latest_recipes %}
             <div>
-                <div>
+                <div class="relative">
                     {% if "placeholder" in recipe.featured_image.url %}
-                        <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                        <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% else %}
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+                        <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% endif %}
                 </div>
-                <div class="p-5 bg-amber-100">
+                <div class="p-5 bg-white border border-black">
                     <h3 class="text-left text-3xl">{{ recipe.title }}</h3>
-                    <h4 class="text-lg mb-3 text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></h4>
                     <p class="text-left mb-3">by {{ recipe.author }}</p>
                     <p class="mb-5">{{ recipe.excerpt }}</p>
                     <div class="flex justify-end">
@@ -171,16 +173,17 @@
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
         {% for recipe in data.most_popular_recipes %}
             <div>
-                <div>
+                <div class="relative">
                     {% if "placeholder" in recipe.featured_image.url %}
-                        <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                        <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% else %}
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+                        <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% endif %}
                 </div>
-                <div class="p-5 bg-white">
+                <div class="p-5 bg-white border border-black">
                     <h3 class="text-3xl text-left">{{ recipe.title }}</h3>
-                    <h4 class="text-lg mb-3 text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></h4>
                     <p class="text-left mb-3">by {{ recipe.author }}</p>
                     <p class="mb-5">{{ recipe.excerpt }}</p>
                     <div class="flex justify-end">
