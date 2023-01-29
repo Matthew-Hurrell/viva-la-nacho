@@ -37,7 +37,7 @@
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
                 {% if user.is_authenticated %}
                 <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
-                <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'my_recipes' %}">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
                 {% else %}
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'account_login' %}">Log In</a></li>
@@ -64,7 +64,7 @@
             <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
             {% if user.is_authenticated %}
             <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
-            <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
+            <li class="hover:scale-105 hover:underline"><a href="{% url 'my_recipes' %}">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
             <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
             {% else %}
             <li class="hover:scale-105 hover:underline"><a href="{% url 'account_login' %}">Log In</a></li>
@@ -95,7 +95,7 @@
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
                 {% if user.is_authenticated %}
                 <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
-                <li class="hover:scale-105 hover:underline"><a href="#">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'my_recipes' %}">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
                 {% else %}
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'account_login' %}">Log In</a></li>
