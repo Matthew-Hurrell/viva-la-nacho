@@ -131,3 +131,19 @@ class PostRecipe(View):
                     'posted': False,
                 }
             )
+
+
+class MyRecipes(generic.ListView):
+    model = Recipe
+    template_name = 'my_recipes.html'
+
+    def get(self, request):
+        queryset = Recipe.objects.filter(author=request.user.id).order_by('-created_on')
+        queryset_dict = {
+            'my_recipes': queryset
+        }
+        return render(
+            request,
+            self.template_name,
+            queryset_dict
+         )
