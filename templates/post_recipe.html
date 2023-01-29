@@ -6,22 +6,89 @@
 
 {% load crispy_forms_tags %}
 
-{% if user.is_authenticated %}
+<!-- Post A Recipe Section -->
 
-    <p class="text-base">Posting as: {{ user.username }}</p>
-    <form enctype="multipart/form-data" class="mt-3" method="post">
-        {{ form | crispy }}
-        {% csrf_token %}
-        <button class="mt-3" type="submit">Submit</button>
-    </form>
-{% else %}
-    <p class="text-base">I'm sorry amigo, you have to be logged in to post a recipe!</p>
-{% endif %}
+<section class="post-recipe-section py-14 md:py-20 flex-1 flex flex-col items-center px-5">
 
-{% if posted %}
+    <div class="container mx-auto">
 
-    <h2>It posted! Hell yeah</h2>
+        {% if user.is_authenticated %}
 
-{% endif %}
+            {% if posted is False %}
+
+            <div class="mx-auto form-content border border-black w-full lg:w-10/12 xl:w-8/12 2xl:w-7/12 bg-amber-100 p-6">
+
+                <!-- Heading -->
+                <h2 class="text-center text-4xl mb-10">Post A Recipe</h2>
+
+                <!-- Username -->
+                <h3 class="text-lg">Posting as: {{ user.username }}</h3>
+
+                <!-- If Failed To Post Form -->
+                {% if failed %}
+                    <p class="text-lg text-red-500">
+                        <strong>
+                        Unfortunately your form failed to submit. Please check all required fields are
+                        correctly filled in and try again
+                        </strong>
+                    </p>
+                {% endif %}
+
+                <!-- Form -->
+                <form enctype="multipart/form-data" class="mt-3 post-recipe" method="post">
+                    {{ form | crispy }}
+                    {% csrf_token %}
+                    <button class="mt-3 primaryAction bg-amber-400" type="submit">Submit</button>
+                    <button class="cancel bg-white mt-3">Cancel</button>
+
+                </form>
+
+            </div>
+
+            {% endif %}
+
+
+            <!-- Cancel Confirmation Pop-up -->
+            <div class="hidden pop-up-confirmation border border-black w-full md:w-7/12 lg:w-6/12 xl:w-7/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+                <h2 class="text-center text-4xl mb-10">Are you sure you want to cancel?</h2>
+                <p class="text-lg text-center">Your form progress will be lost and you will be returned to the home page.</p>
+                <p class="text-lg text-center mb-6">This cannot be undone!</p>
+                <a class="confirm block text-center" href="{% url 'home' %}">Yes take me home!</a>
+                <button class="cancel block mt-3 text-centet">No take me back!</button>
+            </div>
+
+
+        {% else %}
+
+            <!-- If User Isn't Signed In -->
+            <div class="no-sign-up-notification border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+                <h2 class="text-center text-4xl mb-10">You have to be logged in to post a recipe!</h2>
+                <p class="text-lg text-center mb-3">If you have an account please log in!</p>
+                <a id="login-button" class="block text-center confirm mb-3" href="{% url 'account_login' %}">Log In</a>
+                <p class="text-lg text-center mb-3">Or you can sign up for an account today to post your own recipes!</p>
+                <a class="confirm block text-center mb-3" href="{% url 'account_signup' %}">Well sign me up!</a>
+                <p class="text-lg text-center mb-3">Otherwise you can return to the homepage to view other recipes.</p>
+                <a href="{% url 'home' %}" class="cancel block text-center">No take me back home!</a>
+            </div>
+
+        {% endif %}
+
+        {% if posted is True %}
+
+            <!-- Form Successfully Posted Display -->
+            <div class="succesfull-form-submission border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+                <h2 class="text-center text-4xl mb-10">Thank you for sharing your recipe!</h2>
+                <p class="text-lg text-center mb-3">Your recipe has been successfully submitted</p>
+                <p class="text-lg text-center mb-3">Would you like to return to the home page or post another recipe?</p>
+                <a class="confirm block text-center mb-3" href="{% url 'post_recipe' %}">Post another recipe!</a>
+                <a href="{% url 'home' %}" class="cancel block text-center">Take me back home!</a>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
 
 {% endblock %}
