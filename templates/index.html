@@ -133,7 +133,7 @@
     <h2 class="text-center text-4xl mb-10">Latest Recipes</h2>
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
         {% for recipe in data.latest_recipes %}
-            <div>
+            <div class="hover:shadow-lg">
                 <div class="relative">
                     {% if "placeholder" in recipe.featured_image.url %}
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
@@ -147,8 +147,8 @@
                     <h3 class="text-left text-3xl">{{ recipe.title }}</h3>
                     <p class="text-left mb-3">by {{ recipe.author }}</p>
                     <p class="mb-5">{{ recipe.excerpt }}</p>
-                    <div class="flex justify-end">
-                        <a class="text-xl bg-green-600 px-2 py-1.5 mx-4 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
+                    <div class="flex">
+                        <a class="text-xl w-full text-center bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@
     <h2 class="text-center text-4xl mb-10">Most Popular Recipes</h2>
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
         {% for recipe in data.most_popular_recipes %}
-            <div>
+            <div class="hover:shadow-lg">
                 <div class="relative">
                     {% if "placeholder" in recipe.featured_image.url %}
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
@@ -186,8 +186,8 @@
                     <h3 class="text-3xl text-left">{{ recipe.title }}</h3>
                     <p class="text-left mb-3">by {{ recipe.author }}</p>
                     <p class="mb-5">{{ recipe.excerpt }}</p>
-                    <div class="flex justify-end">
-                        <a class="text-xl bg-green-600 px-2 py-1.5 mx-4 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
+                    <div class="flex">
+                        <a class="text-xl w-full text-center bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
                     </div>
                 </div>
             </div>
