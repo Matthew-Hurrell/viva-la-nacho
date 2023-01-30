@@ -12,7 +12,7 @@
             <!-- Featured Image -->
             <div class="relative mb-5 border border-black">
                 {% if "placeholder" in recipe.featured_image.url %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
                 {% else %}
                     <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="{{ recipe.featured_image.url }}">
                 {% endif %}
