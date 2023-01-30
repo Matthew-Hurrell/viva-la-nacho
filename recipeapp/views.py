@@ -5,6 +5,7 @@ from .models import Recipe, Comment
 from django.db.models import Count
 from .forms import CommentForm, RecipeForm
 from django.template.defaultfilters import slugify
+from django.views.generic import TemplateView
 
 
 class RecipeList(generic.ListView):
@@ -147,3 +148,28 @@ class MyRecipes(generic.ListView):
             self.template_name,
             queryset_dict
          )
+
+
+class EditRecipe(TemplateView):
+    model = Recipe
+    template_name = 'edit_recipe.html'
+
+    def get(self, request, pk, *args, **kwargs):
+        recipe = Recipe.objects.get(pk=pk)
+        form = RecipeForm(instance=recipe)
+        return render(
+            request,
+            self.template_name,
+            {
+                'form': form,
+                'posted': False
+            }
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+        recipe = Recipe.objects.get(pk=pk)
+        form = RecipeForm(request.POST, instance=recipe)
+        if form.is_valid():
+            form.save()
+            return redirect('recipe_detail', pk=recipe.pk)
+        return render(request, self.template_name, {'form': form})
