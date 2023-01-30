@@ -12,7 +12,7 @@
             <h2 class="text-center text-4xl mb-10">My Recipes</h2>
             <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
                 {% for recipe in my_recipes %}
-                    <div>
+                    <div class="hover:shadow-lg">
                         <div class="relative">
                             {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
@@ -37,13 +37,14 @@
                             {% endif %}
                         </div>
                         <div class="p-5 bg-lime-100 border border-black">
-                            <h3 class="text-left text-3xl">{{ recipe.title }}</h3>
-                            <p class="text-left mb-3">by {{ recipe.author }}</p>
+                            <h3 class="text-left text-3xl mb-3">{{ recipe.title }}</h3>
                             <p class="mb-5">{{ recipe.excerpt }}</p>
                             <div class="flex flex-row flex-wrap justify-between gap-y-3">
                                 <a class="inline-block w-5/12 text-center text-xl bg-amber-400 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="">Edit</a>
                                 <a class="inline-block w-5/12 text-center text-xl bg-red-500 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="">Delete</a>
+                                {% if recipe.status == 1 %}
                                 <a class="w-full text-center text-xl bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
