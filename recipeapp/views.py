@@ -171,5 +171,11 @@ class EditRecipe(TemplateView):
         form = RecipeForm(request.POST, instance=recipe)
         if form.is_valid():
             form.save()
-            return redirect('recipe_detail', pk=recipe.pk)
+            return render(
+                request,
+                self.template_name,
+                {
+                    'form': form,
+                    'posted': True
+                })
         return render(request, self.template_name, {'form': form})
