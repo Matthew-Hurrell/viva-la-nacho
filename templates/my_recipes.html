@@ -40,7 +40,7 @@
                             <h3 class="text-left text-3xl mb-3">{{ recipe.title }}</h3>
                             <p class="mb-5">{{ recipe.excerpt }}</p>
                             <div class="flex flex-row flex-wrap justify-between gap-y-3">
-                                <a class="inline-block w-5/12 text-center text-xl bg-amber-400 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="">Edit</a>
+                                <a class="inline-block w-5/12 text-center text-xl bg-amber-400 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'edit_recipe' recipe.id %}">Edit</a>
                                 <a class="inline-block w-5/12 text-center text-xl bg-red-500 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="">Delete</a>
                                 {% if recipe.status == 1 %}
                                 <a class="w-full text-center text-xl bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
