@@ -23,3 +23,25 @@ if ( document.getElementsByClassName('cancel').length > 0 ) {
         })
     }
 }
+
+// Recipe Delete Button
+if ( document.getElementsByClassName('my-recipe-card-content').length > 0 ) {
+    const my_recipe_cards = document.getElementsByClassName('my-recipe-card-content');
+    
+    for (let recipe of my_recipe_cards) {
+        const recipe_text_content = recipe.querySelector('.recipe-text-content');
+        const delete_recipe_notification = recipe.querySelector('.delete-recipe-notification');
+        const delete_button = recipe_text_content.querySelector('.delete-button');
+        const cancel_button = delete_recipe_notification.querySelector('.cancel-delete');
+
+        delete_button.addEventListener('click', () => {
+            recipe_text_content.classList.toggle('hidden');
+            delete_recipe_notification.classList.toggle('hidden');
+        })
+
+        cancel_button.addEventListener('click', () => {
+            recipe_text_content.classList.toggle('hidden');
+            delete_recipe_notification.classList.toggle('hidden');
+        })
+    }
+}
