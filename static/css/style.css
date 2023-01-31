@@ -196,27 +196,27 @@ form.login label, form.signup label {
     background-size: cover;
 }
 
-form.post-recipe label {
+form.post-recipe label, form.edit-recipe label {
     font-size: 1.125rem;
 }
 
 @media only screen and (max-width: 650px) { 
     
-    form.post-recipe label {
+    form.post-recipe label, form.edit-recipe label {
         font-size: 1rem;
     }
 
-    .post-recipe #div_id_title input[type=text] {
+    form #div_id_title input[type=text] {
         font-size: 1rem;
         width: 100%;
     }
 }
 
-.post-recipe > div {
+.post-recipe > div, .edit-recipe > div {
     margin-bottom: 20px;
 }
 
-.post-recipe input[type=text] {
+form input[type=text] {
     border: 1px solid black;
     padding: 5px;
     font-size: 1.125rem;
@@ -250,7 +250,7 @@ form.post-recipe label {
     }
 }
 
-.post-recipe input[type=checkbox] {
+form input[type=checkbox] {
     margin-right: 5px;
 }
 
@@ -279,7 +279,7 @@ form.post-recipe label {
 
 }
 
-.post-recipe textarea {
+.post-recipe textarea, .edit-recipe textarea {
     width: 100%;
     border: 1px solid black;
     padding: 5px;
@@ -288,7 +288,7 @@ form.post-recipe label {
 
 @media only screen and (max-width: 650px) { 
     
-    .post-recipe textarea {
+    .post-recipe textarea, .edit-recipe textarea {
         font-size: 1rem;
     }
 }
@@ -298,7 +298,7 @@ form.post-recipe label {
     height: 6rem;
 }
 
-.post-recipe input[type=number] {
+form input[type=number] {
     border: 1px solid black;
     padding: 5px;
     font-size: 1.125rem;
@@ -307,18 +307,18 @@ form.post-recipe label {
 
 @media only screen and (max-width: 650px) { 
     
-    .post-recipe input[type=number] {
+    form input[type=number] {
         font-size: 1rem;
     }
 
-    .post-recipe #div_id_difficulty select,
-    .post-recipe #div_id_status select,
-    .post-recipe input[type=file] {
+    form #div_id_difficulty select,
+    form #div_id_status select,
+    form input[type=file] {
         font-size: 1rem;
     }
 }
 
-.post-recipe select {
+form select {
     border: 1px solid black;
     padding: 5px;
     font-size: 1.125rem;
@@ -331,7 +331,7 @@ form.post-recipe label {
     display: inline-block;
 }
 
-.post-recipe button {
+form button {
     width: 100%;
 }
 
@@ -368,4 +368,26 @@ form.post-recipe label {
 
 #error_1_id_category {
     color: red;
+}
+
+/* My Recipes */
+
+.my-recipes-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.818), rgba(255, 255, 255, 0.819)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background-position: center;
+}
+
+/* Edit Recipe */
+
+.edit-recipe-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Recipe Cards */
+
+.recipe-card:hover {
+    transform: scale(1.01);
 }
