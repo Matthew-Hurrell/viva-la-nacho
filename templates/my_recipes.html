@@ -9,10 +9,10 @@
 
         {% if user.is_authenticated %}
 
-            <h2 class="text-center text-4xl mb-10">My Recipes</h2>
-            <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
+            <h1 class="text-center text-4xl mb-10">My Recipes</h1>
+            <div class="my-recipes-container mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
                 {% for recipe in my_recipes %}
-                    <div class="hover:shadow-lg">
+                    <div class="my-recipe-card-content recipe-card">
                         <div class="relative">
                             {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
@@ -36,20 +36,44 @@
                                 </div>
                             {% endif %}
                         </div>
-                        <div class="p-5 bg-lime-100 border border-black">
+                        <div class="recipe-text-content p-5 bg-lime-100 border border-black">
                             <h3 class="text-left text-3xl mb-3">{{ recipe.title }}</h3>
                             <p class="mb-5">{{ recipe.excerpt }}</p>
                             <div class="flex flex-row flex-wrap justify-between gap-y-3">
                                 <a class="inline-block w-5/12 text-center text-xl bg-amber-400 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'edit_recipe' recipe.id %}">Edit</a>
-                                <a class="inline-block w-5/12 text-center text-xl bg-red-500 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="">Delete</a>
+                                <button class="inline-block delete-button w-5/12 text-center text-xl bg-red-500 px-2 py-1.5 border border-black hover:scale-105 hover:shadow">Delete</button>
                                 {% if recipe.status == 1 %}
                                 <a class="w-full text-center text-xl bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
                                 {% endif %}
                             </div>
                         </div>
+
+                        <!-- Delete Recipe Notification -->
+                        <div class="delete-recipe-notification hidden p-5 bg-lime-100 border border-black">
+                            <h3 class="text-left text-3xl mb-3">Are you sure you want to delete this recipe?</h3>
+                            <p class="mb-5">This cannot be undone!</p>
+                            <div class="flex flex-row flex-wrap justify-between gap-y-3">
+                                <a class="inline-block delete-button w-5/12 text-center text-xl bg-red-500 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'delete_recipe' recipe.id %}">Delete</a>
+                                <button class="inline-block bg-green-600 cancel-delete w-5/12 text-center text-xl px-2 py-1.5 border border-black hover:scale-105 hover:shadow">Cancel</button>
+                            </div>
+                        </div>
+
                     </div>
                 {% endfor %}
             </div>
+
+            <!-- If recipe list length equals 0 -->
+            {% if my_recipes|length == 0 %}
+                <div class="mx-auto container">
+                    <div class="no-recipes-notification border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+                        <h2 class="text-center text-4xl mb-10">You don't have any recipes!</h2>
+                        <p class="text-lg text-center mb-3">Click the button below to post your first recipe!</p>
+                        <a class="block text-center confirm mb-3" href="{% url 'post_recipe' %}">Post A Recipe</a>
+                        <p class="text-lg text-center mb-3">Otherwise you can return to the homepage to view other recipes.</p>
+                        <a href="{% url 'home' %}" class="cancel block text-center">No take me back home!</a>
+                    </div>
+                </div>
+            {% endif %}
 
         {% else %}
 
