@@ -72,46 +72,48 @@
                 </div>
             </div>
         </div>
-        <div class="border border-black px-5 md:px-16 py-5 md:py-8 xl:py-10 bg-amber-100 w-full lg:w-7/12 relative lg:ml-5">
-            <h2 class="block md:inline-block text-left text-4xl md:mr-3">Featured Recipe - {{ data.featured_recipe.title }}</h2>
-            <p class="text-base md:text-xl mb-6 xl:mb-8 text-left">by {{ data.featured_recipe.author }}</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 md:gap-x-0 lg:gap-x-10 gap-y-4 xl:gap-y-8 text-xl w-full 2xl:w-10/12">
-                <p class="text-base md:text-xl"><i class="fa-solid fa-kitchen-set text-2xl md:text-3xl align-sub mr-5"></i> Prep time - {{ data.featured_recipe.prep_time }} mins</p>
-                <p class="text-base md:text-xl"><i class="fa-regular fa-clock text-2xl md:text-3xl align-sub mr-[24px] xl:mr-5"></i> Cooking time - {{ data.featured_recipe.cooking_time }} mins</p>
-                <p class="text-base md:text-xl">
-                    <svg class="inline align-sub mr-5 h-[25px] w-[25px] md:h-[35px] md:w-[35px]" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                    viewBox="0 0 219.792 219.792" xml:space="preserve">
-                    <g>
-                    <path d="M159.4,25.975c-0.916,0-1.836,0.024-2.759,0.07C146.664,9.856,129.195,0,109.896,0c-19.3,0-36.769,9.856-46.744,26.045
-                        c-0.923-0.047-1.844-0.07-2.76-0.07c-30.306,0-54.961,24.656-54.961,54.962c0,25.355,17.397,47.182,41.432,53.264v78.092
-                        c0,4.143,3.357,7.5,7.5,7.5h111.066c4.143,0,7.5-3.357,7.5-7.5v-78.088c24.031-6.084,41.432-27.917,41.432-53.268
-                        C214.361,50.631,189.706,25.975,159.4,25.975z M157.929,204.792H61.863v-14.136h20.639h27.395h27.396h20.638V204.792z
-                            M164.485,120.563c-3.747,0.476-6.556,3.663-6.556,7.44v50.152h-14.388v-46.779c0-3.452-2.798-6.25-6.25-6.25
-                        c-3.452,0-6.25,2.798-6.25,6.25v46.779h-14.896v-46.779c0-3.452-2.798-6.25-6.25-6.25c-3.452,0-6.25,2.798-6.25,6.25v46.779H88.752
-                        v-46.779c0-3.452-2.798-6.25-6.25-6.25c-3.452,0-6.25,2.798-6.25,6.25v46.779H61.863V128.73c0.008-0.085,0.015-0.17,0.021-0.255
-                        c0.248-3.952-2.618-7.416-6.547-7.912c-19.899-2.51-34.905-19.546-34.905-39.626c0-22.035,17.927-39.962,39.961-39.962
-                        c1.929,0,3.893,0.144,5.842,0.431c3.221,0.472,6.374-1.184,7.813-4.102C80.837,23.546,94.575,15,109.896,15
-                        c15.32,0,29.058,8.547,35.852,22.305c1.439,2.917,4.587,4.571,7.814,4.101c1.944-0.286,3.908-0.431,5.838-0.431
-                        c22.034,0,39.961,17.927,39.961,39.962C199.361,101.005,184.368,118.04,164.485,120.563z"/>
-                    </g>
-                    </svg> 
-                    Difficulty - 
-                    {% if data.featured_recipe.difficulty == 0 %}
-                        Beginner
-                    {% elif data.featured_recipe.difficulty == 1 %}
-                        Easy
-                    {% elif data.featured_recipe.difficulty == 2 %}
-                        Medium
-                    {% elif data.featured_recipe.difficulty == 3 %}
-                        Hard
-                    {% elif data.featured_recipe.difficulty == 4 %}
-                        Pro
-                    {% endif %}</p>
-                <p class="text-base md:text-xl"><i class="fa-solid fa-utensils text-2xl md:text-3xl align-sub mr-[30px] xl:mr-6"></i> Serves - {{ data.featured_recipe.serves }}</p>
+        <div class="border flex flex-col justify-between border-black px-5 md:px-8 xl:px-10 py-5 md:py-8 xl:py-10 bg-amber-100 w-full lg:w-7/12 relative lg:ml-5">
+            <div class="mb-3">
+                <h2 class="block md:inline-block text-left text-4xl md:mr-3">Featured Recipe - {{ data.featured_recipe.title }}</h2>
+                <p class="text-base md:text-xl mb-6 xl:mb-8 text-left">by {{ data.featured_recipe.author }}</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 md:gap-x-0 lg:gap-x-10 gap-y-4 xl:gap-y-8 text-xl w-full 2xl:w-10/12">
+                    <p class="text-base md:text-xl"><i class="fa-solid fa-kitchen-set text-2xl md:text-3xl align-sub mr-5"></i> Prep time - {{ data.featured_recipe.prep_time }} mins</p>
+                    <p class="text-base md:text-xl"><i class="fa-regular fa-clock text-2xl md:text-3xl align-sub mr-[24px] xl:mr-5"></i> Cooking time - {{ data.featured_recipe.cooking_time }} mins</p>
+                    <p class="text-base md:text-xl">
+                        <svg class="inline align-sub mr-5 h-[25px] w-[25px] md:h-[35px] md:w-[35px]" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        viewBox="0 0 219.792 219.792" xml:space="preserve">
+                        <g>
+                        <path d="M159.4,25.975c-0.916,0-1.836,0.024-2.759,0.07C146.664,9.856,129.195,0,109.896,0c-19.3,0-36.769,9.856-46.744,26.045
+                            c-0.923-0.047-1.844-0.07-2.76-0.07c-30.306,0-54.961,24.656-54.961,54.962c0,25.355,17.397,47.182,41.432,53.264v78.092
+                            c0,4.143,3.357,7.5,7.5,7.5h111.066c4.143,0,7.5-3.357,7.5-7.5v-78.088c24.031-6.084,41.432-27.917,41.432-53.268
+                            C214.361,50.631,189.706,25.975,159.4,25.975z M157.929,204.792H61.863v-14.136h20.639h27.395h27.396h20.638V204.792z
+                                M164.485,120.563c-3.747,0.476-6.556,3.663-6.556,7.44v50.152h-14.388v-46.779c0-3.452-2.798-6.25-6.25-6.25
+                            c-3.452,0-6.25,2.798-6.25,6.25v46.779h-14.896v-46.779c0-3.452-2.798-6.25-6.25-6.25c-3.452,0-6.25,2.798-6.25,6.25v46.779H88.752
+                            v-46.779c0-3.452-2.798-6.25-6.25-6.25c-3.452,0-6.25,2.798-6.25,6.25v46.779H61.863V128.73c0.008-0.085,0.015-0.17,0.021-0.255
+                            c0.248-3.952-2.618-7.416-6.547-7.912c-19.899-2.51-34.905-19.546-34.905-39.626c0-22.035,17.927-39.962,39.961-39.962
+                            c1.929,0,3.893,0.144,5.842,0.431c3.221,0.472,6.374-1.184,7.813-4.102C80.837,23.546,94.575,15,109.896,15
+                            c15.32,0,29.058,8.547,35.852,22.305c1.439,2.917,4.587,4.571,7.814,4.101c1.944-0.286,3.908-0.431,5.838-0.431
+                            c22.034,0,39.961,17.927,39.961,39.962C199.361,101.005,184.368,118.04,164.485,120.563z"/>
+                        </g>
+                        </svg> 
+                        Difficulty - 
+                        {% if data.featured_recipe.difficulty == 0 %}
+                            Beginner
+                        {% elif data.featured_recipe.difficulty == 1 %}
+                            Easy
+                        {% elif data.featured_recipe.difficulty == 2 %}
+                            Medium
+                        {% elif data.featured_recipe.difficulty == 3 %}
+                            Hard
+                        {% elif data.featured_recipe.difficulty == 4 %}
+                            Pro
+                        {% endif %}</p>
+                    <p class="text-base md:text-xl"><i class="fa-solid fa-utensils text-2xl md:text-3xl align-sub mr-[30px] xl:mr-6"></i> Serves - {{ data.featured_recipe.serves }}</p>
+                </div>
+                <p class="text-base md:text-xl mt-6 xl:mt-10 pb-16 md:pb-11 lg:pb-0">{{ data.featured_recipe.excerpt }}</p>
             </div>
-            <p class="text-base md:text-xl mt-6 xl:mt-10 pb-16 md:pb-11 lg:pb-0">{{ data.featured_recipe.excerpt }}</p>
-            <div class="absolute right-5 md:right-10 bottom-6">
-                <a class="text-xl bg-green-600 px-2.5 py-2 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' data.featured_recipe.slug %}">View recipe</a>
+            <div class="flex justify-end">
+                <a class="w-full md:w-7/12 block text-center text-xl bg-green-600 px-2.5 py-2 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' data.featured_recipe.slug %}">View recipe</a>
             </div>
         </div>
     </div>
@@ -133,7 +135,7 @@
     <h2 class="text-center text-4xl mb-10">Latest Recipes</h2>
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
         {% for recipe in data.latest_recipes %}
-            <div class="hover:shadow-lg">
+            <div class="recipe-card">
                 <div class="relative">
                     {% if "placeholder" in recipe.featured_image.url %}
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
@@ -172,7 +174,7 @@
     <h2 class="text-center text-4xl mb-10">Most Popular Recipes</h2>
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
         {% for recipe in data.most_popular_recipes %}
-            <div class="hover:shadow-lg">
+            <div class="recipe-card">
                 <div class="relative">
                     {% if "placeholder" in recipe.featured_image.url %}
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
