@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe, Comment
@@ -113,7 +113,6 @@ class PostRecipe(View):
             form.instance.slug = slugify(form.instance.title)
             recipe = form.save(commit=False)
             recipe.save()
-            print('successful')
             return render(
                 request,
                 'post_recipe.html',
@@ -122,7 +121,6 @@ class PostRecipe(View):
                 }
             )
         else:
-            print('unsuccessful')
             return render(
                 request,
                 'post_recipe.html',
@@ -147,7 +145,7 @@ class MyRecipes(generic.ListView):
             request,
             self.template_name,
             queryset_dict
-         )
+        )
 
 
 class EditRecipe(TemplateView):
@@ -168,14 +166,33 @@ class EditRecipe(TemplateView):
 
     def post(self, request, pk, *args, **kwargs):
         recipe = Recipe.objects.get(pk=pk)
-        form = RecipeForm(request.POST, instance=recipe)
+        form = RecipeForm(request.POST, request.FILES, instance=recipe)
         if form.is_valid():
             form.save()
+            form.instance.slug = slugify(form.instance.title)
+            recipe = form.save(commit=False)
+            recipe.save()
             return render(
                 request,
                 self.template_name,
                 {
                     'form': form,
                     'posted': True
-                })
-        return render(request, self.template_name, {'form': form})
+                }
+            )
+        else:
+            return render(
+                request,
+                self.template_name,
+                {
+                    'form': form,
+                    'failed': True,
+                    'posted': False,
+                }
+            )
+
+
+def DeleteRecipe(request, pk):
+    recipe = Recipe.objects.get(pk=pk)
+    recipe.delete()
+    return redirect('my_recipes')
