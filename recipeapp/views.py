@@ -192,7 +192,23 @@ class EditRecipe(TemplateView):
             )
 
 
-def DeleteRecipe(request, pk):
-    recipe = Recipe.objects.get(pk=pk)
-    recipe.delete()
-    return redirect('my_recipes')
+class DeleteRecipe(View):
+    def get(self, request, pk, *args, **kwargs):
+        recipe = get_object_or_404(Recipe, pk=pk)
+        recipe.delete()
+        return redirect('my_recipes')
+
+
+class MyFavourites(generic.ListView):
+    def get(self, request, *args, **kwargs):
+        user = request.user
+        favourite_recipes = Recipe.objects.filter(likes=user).filter(status=1)
+        context = {'recipes': favourite_recipes}
+        return render(request, 'my_favourites.html', context)
+
+
+class UnlikeRecipe(View):
+    def get(self, request, pk, *args, **kwargs):
+        recipe = get_object_or_404(Recipe, pk=pk)
+        recipe.likes.remove(request.user)
+        return redirect('my_favourites')
