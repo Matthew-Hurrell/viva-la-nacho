@@ -36,7 +36,7 @@
             <ul class="hidden lg:flex lg:gap-x-10 xl:gap-x-12 lg:mr-6 xl:mr-10 underline-offset-2 text-xl uppercase">
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
                 {% if user.is_authenticated %}
-                <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'my_favourites' %}">My Favourites <i class="fa-solid fa-heart"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'my_recipes' %}">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
                 {% else %}
@@ -63,7 +63,7 @@
         <ul class="z-50 mobile-menu hidden absolute lg:hidden px-4 py-4 flex flex-col text-xl uppercase gap-y-10 bg-yellow-300 right-0 left-0 top-20">
             <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
             {% if user.is_authenticated %}
-            <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
+            <li class="hover:scale-105 hover:underline"><a href="{% url 'my_favourites' %}">My Favourites <i class="fa-solid fa-heart"></i></a></li>
             <li class="hover:scale-105 hover:underline"><a href="{% url 'my_recipes' %}">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
             <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
             {% else %}
@@ -94,7 +94,7 @@
             <ul class="flex flex-col md:flex-row md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-4 underline-offset-2 text-xl text-white uppercase text-center">
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
                 {% if user.is_authenticated %}
-                <li class="hover:scale-105 hover:underline"><a href="#">My Favourites <i class="fa-solid fa-heart"></i></a></li>
+                <li class="hover:scale-105 hover:underline"><a href="{% url 'my_favourites' %}">My Favourites <i class="fa-solid fa-heart"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'my_recipes' %}">My Recipes <i class="fa-solid fa-pepper-hot"></i></a></li>
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'account_logout' %}">Log Out</a></li>
                 {% else %}
