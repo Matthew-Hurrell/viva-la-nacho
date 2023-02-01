@@ -611,6 +611,10 @@ video {
   right: 5px;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -796,10 +800,6 @@ video {
   width: 41.666667%;
 }
 
-.w-7\/12 {
-  width: 58.333333%;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -882,6 +882,10 @@ video {
 
 .gap-y-3 {
   row-gap: 0.75rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border {
@@ -982,6 +986,10 @@ video {
   padding: 1.25rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1045,6 +1053,31 @@ video {
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.px-0\.5 {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.py-px {
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .pl-4 {
@@ -1196,6 +1229,10 @@ footer {
 }
 
 .fa-heart-circle-minus {
+  color: red;
+}
+
+.fa-circle-xmark {
   color: red;
 }
 
@@ -1516,6 +1553,13 @@ form button {
   transform: scale(1.01);
 }
 
+/* My Favourites */
+
+.my-favourites-section {
+  background: linear-gradient(rgba(255, 255, 255, 0.818), rgba(255, 255, 255, 0.819)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+  background-position: center;
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1646,19 +1690,14 @@ form button {
     padding-right: 2.5rem;
   }
 
-  .md\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .md\:pb-6 {
@@ -1834,14 +1873,14 @@ form button {
          column-gap: 5rem;
   }
 
-  .xl\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .xl\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .xl\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }
 

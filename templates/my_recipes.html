@@ -10,6 +10,7 @@
         {% if user.is_authenticated %}
 
             <h1 class="text-center text-4xl mb-10">My Recipes</h1>
+
             <div class="my-recipes-container mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
                 {% for recipe in my_recipes %}
                     <div class="my-recipe-card-content recipe-card">

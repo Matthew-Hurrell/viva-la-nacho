@@ -69,6 +69,10 @@ footer {
     color: red;
 }
 
+.fa-circle-xmark {
+    color: red;
+}
+
 .fa-pepper-hot {
     color: #16a34a;
 }
@@ -390,4 +394,11 @@ form button {
 
 .recipe-card:hover {
     transform: scale(1.01);
+}
+
+/* My Favourites */
+
+.my-favourites-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.818), rgba(255, 255, 255, 0.819)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background-position: center;
 }
