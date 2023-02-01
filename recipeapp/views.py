@@ -10,16 +10,15 @@ from django.views.generic import TemplateView
 
 class RecipeList(generic.ListView):
     model = Recipe
-    context_object_name = "data"
+    context_object_name = "recipes"
     template_name = "index.html"
 
-    def get_queryset(self):
-        myset = {
-            "latest_recipes": Recipe.objects.filter(status=1).order_by('-created_on'),
-            "featured_recipe": Recipe.objects.get(featured=True),
-            "most_popular_recipes": Recipe.objects.filter(status=1).annotate(like_count=Count('likes')).order_by('-like_count'),
-        }
-        return myset
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['latest_recipes'] = Recipe.objects.filter(status=1).order_by('-created_on')[:9]
+        context['most_popular_recipes'] = Recipe.objects.filter(status=1).annotate(like_count=Count('likes')).order_by('-like_count')[:9]
+        context['featured_recipe'] = Recipe.objects.get(featured=True)
+        return context
 
 
 class RecipeDetails(View):
@@ -80,12 +79,10 @@ class RecipeLike(View):
 
     def post(self, request, slug):
         recipe = get_object_or_404(Recipe, slug=slug)
-
         if recipe.likes.filter(id=request.user.id).exists():
             recipe.likes.remove(request.user)
         else:
             recipe.likes.add(request.user)
-
         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
 
 
