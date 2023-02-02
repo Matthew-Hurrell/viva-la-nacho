@@ -599,6 +599,10 @@ video {
   right: 0.75rem;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
 .left-3 {
   left: 0.75rem;
 }
@@ -609,10 +613,6 @@ video {
 
 .right-\[5px\] {
   right: 5px;
-}
-
-.top-2 {
-  top: 0.5rem;
 }
 
 .z-50 {
@@ -964,6 +964,42 @@ video {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.fill-amber-400 {
+  fill: #fbbf24;
+}
+
+.fill-amber-500 {
+  fill: #f59e0b;
+}
+
+.fill-amber-600 {
+  fill: #d97706;
+}
+
+.fill-red-700 {
+  fill: #b91c1c;
+}
+
+.fill-red-600 {
+  fill: #dc2626;
+}
+
+.fill-orange-500 {
+  fill: #f97316;
+}
+
+.fill-orange-600 {
+  fill: #ea580c;
+}
+
+.fill-red-500 {
+  fill: #ef4444;
+}
+
+.fill-green-600 {
+  fill: #16a34a;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -984,10 +1020,6 @@ video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
 }
 
 .px-3 {
@@ -1053,31 +1085,6 @@ video {
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-}
-
-.py-0\.5 {
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-}
-
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.px-0\.5 {
-  padding-left: 0.125rem;
-  padding-right: 0.125rem;
-}
-
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.py-px {
-  padding-top: 1px;
-  padding-bottom: 1px;
 }
 
 .pl-4 {
@@ -1329,6 +1336,11 @@ form.login label, form.signup label {
 .primaryAction:hover {
   transform: scaleX(1.05);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.errorlist {
+  color: red;
+  font-size: 1.125rem;
 }
 
 /* Comments Section */
