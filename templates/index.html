@@ -16,9 +16,9 @@
 <section class="bg-green-800 py-1">
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
-        <div class="mx-5">
-            <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
-        </div>
+            <div class="mx-5">
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+            </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
 </section>
@@ -40,9 +40,9 @@
 <section class="bg-green-800 py-1">
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
-        <div class="mx-5">
-            <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
-        </div>
+            <div class="mx-5">
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+            </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
 </section>
@@ -50,16 +50,28 @@
 <!-- Featured Recipe -->
 <section class="py-14 md:py-24 featured-recipe-section px-5 md:px-10">
     <div class="container mx-auto flex flex-col lg:flex-row">
+
+        <!-- Images -->
         <div class="flex flex-col w-full lg:w-5/12 mb-5 lg:mb-0">
             <div class="mb-5 relative">
+
+                <!-- Image Placeholder -->
                 {% if "placeholder" in featured_recipe.featured_image.url %}
                     <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+
+                    <!-- Number of Likes Icon Tag -->
                     <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ featured_recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                 {% else %}
+
+                    <!-- Recipe Featured Image -->
                     <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="{{ featured_recipe.featured_image.url }}">
+                    
+                    <!-- Number of Likes Icon Tag -->
                     <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ featured_recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                 {% endif %}
             </div>
+
+            <!-- Gallery Images -->
             <div class="grid grid-cols-3 gap-x-5">
                 <div class="h-[90px] sm:h-[150px]">
                     <img class="h-full object-center object-cover w-full" src="{{ featured_recipe.gallery_image_1.url }}" alt="">
@@ -71,14 +83,29 @@
                     <img class="h-full object-center object-cover w-full" src="{{ featured_recipe.gallery_image_3.url }}" alt="">
                 </div>
             </div>
+
         </div>
+
+        <!-- Featured Recipe Text Content -->
         <div class="border flex flex-col justify-between border-black px-5 md:px-8 xl:px-10 py-5 md:py-8 xl:py-10 bg-amber-100 w-full lg:w-7/12 relative lg:ml-5">
             <div class="mb-3">
+
+                <!-- Title -->
                 <h2 class="block md:inline-block text-left text-4xl md:mr-3">Featured Recipe - {{ featured_recipe.title }}</h2>
+
+                <!-- Author -->
                 <p class="text-base md:text-xl mb-6 xl:mb-8 text-left">by {{ featured_recipe.author }}</p>
+
+                <!-- Icon Block -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 md:gap-x-0 lg:gap-x-10 gap-y-4 xl:gap-y-8 text-xl w-full 2xl:w-10/12">
+
+                    <!-- Prep Time -->
                     <p class="text-base md:text-xl"><i class="fa-solid fa-kitchen-set text-2xl md:text-3xl align-sub mr-5"></i> Prep time - {{ featured_recipe.prep_time }} mins</p>
+
+                    <!-- Cooking Time -->
                     <p class="text-base md:text-xl"><i class="fa-regular fa-clock text-2xl md:text-3xl align-sub mr-[24px] xl:mr-5"></i> Cooking time - {{ featured_recipe.cooking_time }} mins</p>
+
+                    <!-- Difficulty -->
                     <p class="text-base md:text-xl">
                         <svg class="inline align-sub mr-5 h-[25px] w-[25px] md:h-[35px] md:w-[35px]" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                         viewBox="0 0 219.792 219.792" xml:space="preserve">
@@ -108,13 +135,22 @@
                         {% elif featured_recipe.difficulty == 4 %}
                             Pro
                         {% endif %}</p>
+
+                        <!-- Serving -->
                     <p class="text-base md:text-xl"><i class="fa-solid fa-utensils text-2xl md:text-3xl align-sub mr-[30px] xl:mr-6"></i> Serves - {{ featured_recipe.serves }}</p>
+
                 </div>
+
+                <!-- Excerpt -->
                 <p class="text-base md:text-xl mt-6 xl:mt-10 pb-16 md:pb-11 lg:pb-0">{{ featured_recipe.excerpt }}</p>
+
             </div>
+
+            <!-- View Recipe Button -->
             <div class="flex justify-end">
                 <a class="w-full md:w-7/12 block text-center text-xl bg-green-600 px-2.5 py-2 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' featured_recipe.slug %}">View recipe</a>
             </div>
+
         </div>
     </div>
 </section>
@@ -123,35 +159,65 @@
 <section class="bg-green-800 py-1">
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
-        <div class="mx-5">
-            <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
-        </div>
+            <div class="mx-5">
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+            </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
 </section>
 
 <!-- Latest Recipes -->
 <section class="py-14 md:py-24 bg-amber-100">
+
+    <!-- Heading -->
     <h2 class="text-center text-4xl mb-10">Latest Recipes</h2>
+
+    <!-- Cards Section -->
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
+
+        <!-- Latest Recipes Loop -->
         {% for recipe in latest_recipes %}
+
+            <!-- Latest Recipes Card -->
             <div class="recipe-card">
+
+                <!-- Images -->
                 <div class="relative">
+
+                    <!-- Image Placeholder -->
                     {% if "placeholder" in recipe.featured_image.url %}
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                        
+                        <!-- Number of Likes Icon Tag -->
                         <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% else %}
+
+                        <!-- Recipe Featured Image -->
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+                        
+                        <!-- Number of Likes Icon Tag -->
                         <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% endif %}
+
                 </div>
+
+                <!-- Latest Recipes Text Content -->
                 <div class="p-5 bg-white border border-black">
+
+                    <!-- Title -->
                     <h3 class="text-left text-3xl">{{ recipe.title }}</h3>
+
+                    <!-- Author -->
                     <p class="text-left mb-3">by {{ recipe.author }}</p>
+
+                    <!-- Excerpt -->
                     <p class="mb-5">{{ recipe.excerpt }}</p>
+
+                    <!-- View Recipe Button -->
                     <div class="flex">
                         <a class="text-xl w-full text-center bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
                     </div>
+
                 </div>
             </div>
         {% endfor %}
@@ -162,35 +228,65 @@
 <section class="bg-green-800 py-1">
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
-        <div class="mx-5">
-            <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
-        </div>
+            <div class="mx-5">
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+            </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
 </section>
 
 <!-- Most Popular Recipes -->
 <section class="py-14 md:py-24 bg-lime-100">
+
+    <!-- Heading -->
     <h2 class="text-center text-4xl mb-10">Most Popular Recipes</h2>
+
+    <!-- Most Popular Recipes Cards Container -->
     <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
+
+        <!-- Most Popular Recipes Loop -->
         {% for recipe in most_popular_recipes %}
+
+            <!-- Most Popular Recipe Card -->
             <div class="recipe-card">
+
+                <!-- Images -->
                 <div class="relative">
+
+                    <!-- Placeholder -->
                     {% if "placeholder" in recipe.featured_image.url %}
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+
+                        <!-- Number of Likes Icon Tag -->
                         <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% else %}
+
+                        <!-- Recipe Featured Image -->
                         <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+
+                        <!-- Number of Likes Icon Tag -->
                         <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% endif %}
+
                 </div>
+
+                <!-- Text Content -->
                 <div class="p-5 bg-white border border-black">
+
+                    <!-- Title -->
                     <h3 class="text-3xl text-left">{{ recipe.title }}</h3>
+
+                    <!-- Author -->
                     <p class="text-left mb-3">by {{ recipe.author }}</p>
+
+                    <!-- Excerpt -->
                     <p class="mb-5">{{ recipe.excerpt }}</p>
+
+                    <!-- View Recipe Button -->
                     <div class="flex">
                         <a class="text-xl w-full text-center bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
                     </div>
+                    
                 </div>
             </div>
         {% endfor %}
