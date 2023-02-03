@@ -5,7 +5,10 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Recipe)
 class RecipeAdmin(SummernoteModelAdmin):
-    # Recipe Admin
+    """
+    Class for the Recipe section of the admin area. 
+    Organises the display of posts as well as filtering, search and other custom methods.
+    """
 
     # Prepopulated Slug Field
     prepopulated_fields = {'slug': ('title',)}
@@ -46,7 +49,10 @@ class RecipeAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    # Comment Admin
+    """
+    Class for the Comment section of the admin area. 
+    Organises the display of posts as well as filtering, search and other custom methods.
+    """
 
     # Search Fields
     search_fields = ['recipe', 'name', 'body']
