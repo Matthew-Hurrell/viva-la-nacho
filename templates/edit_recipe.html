@@ -8,7 +8,6 @@
 
 <!-- Edit Recipe Section -->
 <section class="edit-recipe-section py-14 md:py-20 flex-1 flex flex-col items-center px-5">
-
     <div class="container mx-auto">
 
         <!-- If user is logged in -->
@@ -28,7 +27,7 @@
                     <!-- Username -->
                     <h3 class="text-lg">Editing as: {{ user.username }}</h3>
 
-                    <!-- If Failed Edit -->
+                    <!-- If Form Submit Failed Notification -->
                     {% if failed %}
                         <p class="text-lg text-red-500">
                             <strong>
@@ -50,7 +49,6 @@
 
                 {% endif %}
 
-
                 <!-- Cancel Confirmation Pop-up -->
                 <div class="hidden pop-up-confirmation border border-black w-full md:w-7/12 lg:w-6/12 xl:w-7/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
                     <h2 class="text-center text-4xl mb-10">Are you sure you want to cancel?</h2>
@@ -62,7 +60,7 @@
 
             {% else %}
 
-            <!-- If recipe isn't a user recipe -->
+            <!-- If user isn't the author of the recipe -->
             <div class="not-user-recipe-notification border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
                 <h2 class="text-center text-4xl mb-10">You can't edit a recipe that isn't yours!</h2>
                 <p class="text-lg text-center mb-3">View your recipe list on the My Recipes page!</p>
@@ -90,7 +88,7 @@
 
         {% if posted is True %}
 
-            <!-- Recipe Successfully Edited Display -->
+            <!-- Recipe Successfully Edited Notification -->
             <div class="successful-form-submission border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
                 <h2 class="text-center text-4xl mb-10">Thank you for editing your recipe!</h2>
                 <p class="text-lg text-center mb-3">Your recipe has been successfully submitted</p>
@@ -102,7 +100,6 @@
         {% endif %}
 
     </div>
-
 </section>
 
 
