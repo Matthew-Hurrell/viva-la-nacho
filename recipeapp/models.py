@@ -6,7 +6,10 @@ from cloudinary.models import CloudinaryField
 
 
 class ModifiedArrayField(ArrayField):
-    # Modified Array Class
+    """
+    Modified Array Field.
+    Allows for checkbox multiple select fields to create an array.
+    """
 
     # Form Field Function
     def formfield(self, **kwargs):
@@ -85,7 +88,10 @@ DIFFICULTIES = (
 
 
 class Recipe(models.Model):
-    # Recipe Model
+    """
+    Recipe model class.
+    Assigns fields and methods for the recipe model.
+    """
 
     # Title Field
     title = models.CharField(max_length=200, unique=True)
@@ -195,7 +201,10 @@ class Recipe(models.Model):
 
 
 class Comment(models.Model):
-    # Comment Model
+    """
+    Comment model.
+    Assigns fields and methods for the comment model.
+    """
 
     # Recipe Field (Foreign Key)
     recipe = models.ForeignKey(
