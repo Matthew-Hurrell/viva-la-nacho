@@ -16,9 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# URL Patterns 
 urlpatterns = [
+
+    # Admin
     path('admin/', admin.site.urls),
+
+    # Summernote
     path('summernote/', include('django_summernote.urls')),
+
+    # Homepage
     path('', include('recipeapp.urls'), name='recipe_urls'),
+
+    # Allauth Accounts
     path('accounts/', include('allauth.urls')),
 ]
