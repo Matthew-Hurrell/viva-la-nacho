@@ -25,10 +25,14 @@
     <!-- Navigation -->
     <nav class="bg-amber-300 w-full h-20 flex justify-between items-center relative">
         <div class="h-full pl-4">
+
+            <!-- Nav Logo -->
             <a href="{% url 'home' %}">
                 <img class="h-5/6 rotate-12 main-nav-logo" src="https://res.cloudinary.com/dihur97qf/image/upload/v1674072852/viva-la-nacho-favicon_kvc5ph.png" alt="Viva La Nacho Mexican Hat Logo">
             </a>
+
         </div>
+
         <div class="flex items-center relative">
 
             <!-- Main Menu -->
@@ -45,6 +49,8 @@
             </ul>
             <a href="{% url 'post_recipe' %}" class="hidden lg:block text-xl uppercase bg-green-600 px-3 py-2 mx-4 border border-black hover:scale-105 hover:shadow">Post A Recipe</a>
         </div>
+
+        <!-- Mobile Menu Open/Close Icons -->
         <div class="block lg:hidden mx-4">
             <button id="main-nav-mobile-button" class="flex items-center">
                 <svg class="h-11 burger-menu fill-orange-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -82,13 +88,15 @@
     <!-- Footer -->
     <footer class="flex flex-col justify-center items-center bg-green-900 py-12 px-2.5">
 
+        <!-- Social Icons -->
         <div class="flex gap-x-10 md:gap-x-24 mb-8">
-
             <a href="https://www.facebook.com" target="_blank" aria-label="Facebook link"><i class="fa-brands fa-facebook fa-2x"></i></a>
             <a href="https://www.instagram.com" target="_blank" aria-label="Instagram link"><i class="fa-brands fa-instagram fa-2x"></i></a>
             <a href="https://www.twitter.com" target="_blank" aria-label="Twitter link"><i class="fa-brands fa-twitter fa-2x"></i></a>
             <a href="https://www.tiktok.com" target="_blank" aria-label="Tiktok link"><i class="fa-brands fa-tiktok fa-2x"></i></a>
         </div>
+
+        <!-- Footer Nav -->
         <nav class="footer-nav mb-8 md:border-b border-white md:pb-6">
             <ul class="flex flex-col md:flex-row md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-4 underline-offset-2 text-xl text-white uppercase text-center">
                 <li class="hover:scale-105 hover:underline"><a href="{% url 'home' %}">Home</a></li>
@@ -102,6 +110,8 @@
                 {% endif %}
             </ul>
         </nav>
+
+        <!-- Site Name and Logo -->
         <div>
             <h3 class="text-white uppercase text-3xl text-center mb-2 relative">Viva La Nacho
                 <img class="absolute w-7 top-[-11px] right-[-8px] rotate-12" src="https://res.cloudinary.com/dihur97qf/image/upload/v1674072852/viva-la-nacho-favicon_kvc5ph.png" alt="Viva La Nacho Mexican Hat Logo">
@@ -110,7 +120,9 @@
         </div>
 
     </footer>
-    <!-- Custom JS -->
+
+    <!-- Custom JS Link -->
     <script src="{% static 'js/script.js' %}"></script>
+
 </body>
 </html>
