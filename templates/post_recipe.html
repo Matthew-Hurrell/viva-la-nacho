@@ -2,20 +2,25 @@
 
 {% block content %}
 
+<!-- Cloudinary -->
 {% load cloudinary %}
 
+<!-- Crispy Forms -->
 {% load crispy_forms_tags %}
 
 <!-- Post A Recipe Section -->
-
 <section class="post-recipe-section py-14 md:py-20 flex-1 flex flex-col items-center px-5">
 
+    <!-- Container -->
     <div class="container mx-auto">
 
+        <!-- If User is Logged In -->
         {% if user.is_authenticated %}
 
+            <!-- If User Hasn't Posted A Recipe -->
             {% if posted is False %}
 
+            <!-- Form Content -->
             <div class="mx-auto form-content border border-black w-full lg:w-10/12 xl:w-8/12 2xl:w-7/12 bg-amber-100 p-6">
 
                 <!-- Heading -->
@@ -24,38 +29,54 @@
                 <!-- Username -->
                 <h3 class="text-lg">Posting as: {{ user.username }}</h3>
 
-                <!-- If Failed To Post Form -->
+                <!-- If Failed Form Submission Failed -->
                 {% if failed %}
+
+                    <!-- Paragraph -->
                     <p class="text-lg text-red-500">
                         <strong>
                         Unfortunately your form failed to submit. Please check all required fields are
                         correctly filled in and try again
                         </strong>
                     </p>
+
                 {% endif %}
 
-                <!-- Form -->
+                <!-- Post A Recipe Form -->
                 <form enctype="multipart/form-data" class="mt-3 post-recipe" method="post">
                     {{ form | crispy }}
                     {% csrf_token %}
+
+                    <!-- Submit Button -->
                     <button class="mt-3 primaryAction bg-amber-400" type="submit">Submit</button>
 
                 </form>
 
+                <!-- Cancel Button -->
                 <button class="cancel bg-white mt-3">Cancel</button>
 
             </div>
 
             {% endif %}
 
-
-            <!-- Cancel Confirmation Pop-up -->
+            <!-- Cancel Form Confirmation Pop-up Notification -->
             <div class="hidden pop-up-confirmation border border-black w-full md:w-7/12 lg:w-6/12 xl:w-7/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+
+                <!-- Title -->
                 <h2 class="text-center text-4xl mb-10">Are you sure you want to cancel?</h2>
+
+                <!-- Paragraph -->
                 <p class="text-lg text-center">Your form progress will be lost and you will be returned to the home page.</p>
+
+                <!-- Paragraph -->
                 <p class="text-lg text-center mb-6">This cannot be undone!</p>
+
+                <!-- Home Link -->
                 <a class="confirm block text-center" href="{% url 'home' %}">Yes take me home!</a>
+
+                <!-- Cancel Button -->
                 <button class="cancel block mt-3 text-centet">No take me back!</button>
+
             </div>
 
 
@@ -63,33 +84,56 @@
 
             <!-- If User Isn't Signed In -->
             <div class="no-sign-up-notification border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+
+                <!-- Title -->
                 <h2 class="text-center text-4xl mb-10">You have to be logged in to post a recipe!</h2>
+
+                <!-- Paragraph -->
                 <p class="text-lg text-center mb-3">If you have an account please log in!</p>
+
+                <!-- Log In Link -->
                 <a id="login-button" class="block text-center confirm mb-3" href="{% url 'account_login' %}">Log In</a>
+
+                <!-- Paragraph -->
                 <p class="text-lg text-center mb-3">Or you can sign up for an account today to post your own recipes!</p>
+
+                <!-- Sign Up Link -->
                 <a class="confirm block text-center mb-3" href="{% url 'account_signup' %}">Well sign me up!</a>
+
+                <!-- Paragraph -->
                 <p class="text-lg text-center mb-3">Otherwise you can return to the homepage to view other recipes.</p>
+
+                <!-- Home Link -->
                 <a href="{% url 'home' %}" class="cancel block text-center">No take me back home!</a>
+
             </div>
 
         {% endif %}
 
+        <!-- If User Has Submitted Form Successfully -->
         {% if posted is True %}
 
-            <!-- Form Successfully Posted Display -->
+            <!-- Form Successfully Posted Notification -->
             <div class="succesfull-form-submission border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+
+                <!-- Title -->
                 <h2 class="text-center text-4xl mb-10">Thank you for sharing your recipe!</h2>
+
+                <!-- Paragraph -->
                 <p class="text-lg text-center mb-3">Your recipe has been successfully submitted</p>
+
+                <!-- Paragraph -->
                 <p class="text-lg text-center mb-3">Would you like to return to the home page or post another recipe?</p>
+
+                <!-- Post Recipe Link -->
                 <a class="confirm block text-center mb-3" href="{% url 'post_recipe' %}">Post another recipe!</a>
+
+                <!-- Home Link -->
                 <a href="{% url 'home' %}" class="cancel block text-center">Take me back home!</a>
+
             </div>
-
         {% endif %}
-
     </div>
-
 </section>
-
 
 {% endblock %}
