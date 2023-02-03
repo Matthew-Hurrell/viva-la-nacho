@@ -4,7 +4,10 @@ from django_summernote.widgets import SummernoteWidget
 
 
 class CommentForm(forms.ModelForm):
-    # Comment Form Class
+    """
+    Comment Form Class.
+    Sets the model and fields for the comment form.
+    """
 
     class Meta:
         # Meta Class
@@ -17,7 +20,11 @@ class CommentForm(forms.ModelForm):
 
 
 class RecipeForm(forms.ModelForm):
-    # Recipe Form Class
+    """
+    Recipe Form Class.
+    Sets the model and fields for the recipe form.
+    Also assigns summernote widget to certain form fields.
+    """
 
     class Meta:
         # Meta Class
@@ -25,7 +32,7 @@ class RecipeForm(forms.ModelForm):
         # Model
         model = Recipe
 
-        # Summernote Widgets 
+        # Summernote Widgets
         widgets = {
             'method': SummernoteWidget(),
             'ingredients': SummernoteWidget()
