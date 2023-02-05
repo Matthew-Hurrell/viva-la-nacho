@@ -17,7 +17,7 @@
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
             <div class="mx-5">
-                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red" aria-label="Chilli icon"></i>
             </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
@@ -41,7 +41,7 @@
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
             <div class="mx-5">
-                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red" aria-label="Chilli icon"></i>
             </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
@@ -57,14 +57,14 @@
 
                 <!-- Image Placeholder -->
                 {% if "placeholder" in featured_recipe.featured_image.url %}
-                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg" alt="Make salsa not war in pink lights on colourful wall">
 
                     <!-- Number of Likes Icon Tag -->
                     <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ featured_recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                 {% else %}
 
                     <!-- Recipe Featured Image -->
-                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="{{ featured_recipe.featured_image.url }}">
+                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="{{ featured_recipe.featured_image.url }}" alt="{{ featured_recipe.title }}">
                     
                     <!-- Number of Likes Icon Tag -->
                     <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ featured_recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
@@ -74,13 +74,13 @@
             <!-- Gallery Images -->
             <div class="grid grid-cols-3 gap-x-5">
                 <div class="h-[90px] sm:h-[150px]">
-                    <img class="h-full object-center object-cover w-full" src="{{ featured_recipe.gallery_image_1.url }}" alt="">
+                    <img class="h-full object-center object-cover w-full" src="{{ featured_recipe.gallery_image_1.url }}" alt="{{ featured_recipe.title }}">
                 </div>
                 <div class="h-[90px] sm:h-[150px]">
-                    <img class="h-full object-center object-cover w-full" src="{{ featured_recipe.gallery_image_2.url }}" alt="">
+                    <img class="h-full object-center object-cover w-full" src="{{ featured_recipe.gallery_image_2.url }}" alt="{{ featured_recipe.title }}">
                 </div>
                 <div class="h-[90px] sm:h-[150px]">
-                    <img class="h-full object-center object-cover w-full" src="{{ featured_recipe.gallery_image_3.url }}" alt="">
+                    <img class="h-full object-center object-cover w-full" src="{{ featured_recipe.gallery_image_3.url }}" alt="{{ featured_recipe.title }}">
                 </div>
             </div>
 
@@ -160,7 +160,7 @@
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
             <div class="mx-5">
-                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red" aria-label="Chilli icon"></i>
             </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
@@ -186,14 +186,14 @@
 
                     <!-- Image Placeholder -->
                     {% if "placeholder" in recipe.featured_image.url %}
-                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg" alt="Make salsa not war in pink lights on colourful wall">
                         
                         <!-- Number of Likes Icon Tag -->
                         <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% else %}
 
                         <!-- Recipe Featured Image -->
-                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
                         
                         <!-- Number of Likes Icon Tag -->
                         <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
@@ -229,7 +229,7 @@
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
             <div class="mx-5">
-                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red" aria-label="Chilli icon"></i>
             </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
@@ -255,14 +255,14 @@
 
                     <!-- Placeholder -->
                     {% if "placeholder" in recipe.featured_image.url %}
-                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg" alt="Make salsa not war in pink lights on colourful wall">
 
                         <!-- Number of Likes Icon Tag -->
                         <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
                     {% else %}
 
                         <!-- Recipe Featured Image -->
-                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
 
                         <!-- Number of Likes Icon Tag -->
                         <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
