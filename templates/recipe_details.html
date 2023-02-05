@@ -17,11 +17,11 @@
 
                 <!-- Placeholder -->
                 {% if "placeholder" in recipe.featured_image.url %}
-                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg" alt="Make salsa not war in pink lights on colourful wall">
                 {% else %}
 
                     <!-- Featured Image -->
-                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="{{ recipe.featured_image.url }}">
+                    <img class="object-center object-cover w-full h-[300px] md:h-[400px]" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
 
                 {% endif %}
 
@@ -36,14 +36,14 @@
                         {% if liked %}
 
                         <!-- Unlike Button and Icon -->
-                        <button type="submit" name="recipe_id" value="{{ recipe.slug }}">
+                        <button type="submit" name="recipe_id" value="{{ recipe.slug }}" aria-label="Unlike recipe button">
                             <i class="fa-solid fa-heart-circle-minus fa-2x w-full h-full"></i>
                         </button>
 
                         {% else %}
 
                         <!-- Like Button and Icon -->
-                        <button type="submit" name="recipe_id" value="{{ recipe.slug }}">
+                        <button type="submit" name="recipe_id" value="{{ recipe.slug }}" aria-label="Like recipe button">
                             <i class="fa-solid fa-heart-circle-plus fa-2x w-full h-full"></i>
                         </button>
 
@@ -55,7 +55,7 @@
                 {% else %}
 
                     <!-- Disabled Like Icon -->
-                    <i class="fa-solid fa-heart-circle-minus fa-2x absolute top-[5px] right-[5px]"></i>
+                    <i class="fa-solid fa-heart-circle-minus fa-2x absolute top-[5px] right-[5px]" aria-label="Disabled like icon"></i>
 
                 {% endif %}
 
@@ -70,7 +70,7 @@
                 <div class="h-[90px] sm:h-[150px] border border-black">
 
                     <!-- Gallery Image 1 -->
-                    <img class="h-full object-center object-cover w-full" src="{{ recipe.gallery_image_1.url }}" alt="">
+                    <img class="h-full object-center object-cover w-full" src="{{ recipe.gallery_image_1.url }}" alt="{{ recipe.title }}">
 
                 </div>
                 {% endif %}
@@ -80,7 +80,7 @@
                 <div class="h-[90px] sm:h-[150px] border border-black">
 
                     <!-- Gallery Image 2 -->
-                    <img class="h-full object-center object-cover w-full" src="{{ recipe.gallery_image_2.url }}" alt="">
+                    <img class="h-full object-center object-cover w-full" src="{{ recipe.gallery_image_2.url }}" alt="{{ recipe.title }}">
 
                 </div>
                 {% endif %}
@@ -91,7 +91,7 @@
                 <div class="h-[90px] sm:h-[150px] border border-black">
 
                     <!-- Gallery Image 3 -->
-                    <img class="h-full object-center object-cover w-full" src="{{ recipe.gallery_image_3.url }}" alt="">
+                    <img class="h-full object-center object-cover w-full" src="{{ recipe.gallery_image_3.url }}" alt="{{ recipe.title }}">
 
                 </div>
                 {% endif %}
@@ -178,7 +178,7 @@
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
             <div class="mx-5">
-                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red" aria-label="Chilli icon"></i>
             </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
@@ -218,7 +218,7 @@
     <div class="container mx-auto flex items-center justify-between">
         <div class="border-b border-white w-6/12"></div>
             <div class="mx-5">
-                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red"></i>
+                <i class="chilli-pepper-divider fa-solid fa-pepper-hot text-3xl text-red" aria-label="Chilli icon"></i>
             </div>
         <div class="border-b border-white w-6/12"></div>
     </div>
@@ -255,7 +255,7 @@
                             <span class="relative mr-10">
 
                                 <!-- User Icon -->
-                                <i class="fa-solid fa-user-tie text-3xl"></i>
+                                <i class="fa-solid fa-user-tie text-3xl" aria-label="User icon"></i>
 
                                 <!-- Mexican Hat Image -->
                                 <img class="absolute w-10 top-[-11px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1674072852/viva-la-nacho-favicon_kvc5ph.png" alt="Viva La Nacho Mexican Hat Logo">
