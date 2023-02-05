@@ -27,16 +27,20 @@ class RecipeList(generic.ListView):
     # Get Method
     def get_context_data(self, **kwargs):
         """
-        Get method returning most popular recipes list, latest recipes list and featured recipe.
+        Get method returning most popular recipes list, latest recipes list
+        and featured recipe.
         """
 
         context = super().get_context_data(**kwargs)
 
         # Latest Recipes List
-        context['latest_recipes'] = Recipe.objects.filter(status=1).order_by('-created_on')[:9]
+        context['latest_recipes'] = Recipe.objects.filter(
+            status=1).order_by('-created_on')[:9]
 
         # Most Popular Recipes List
-        context['most_popular_recipes'] = Recipe.objects.filter(status=1).annotate(like_count=Count('likes')).order_by('-like_count')[:9]
+        context['most_popular_recipes'] = Recipe.objects.filter(
+            status=1).annotate(like_count=Count('likes')).order_by(
+                '-like_count')[:9]
 
         # Featured Recipe
         context['featured_recipe'] = Recipe.objects.get(featured=True)
@@ -88,7 +92,8 @@ class RecipeDetails(View):
 
     def post(self, request, slug, *args, **kwargs):
         """
-        Post method for comment form setting recipe object and returning variables.
+        Post method for comment form setting recipe object and returning
+        variables.
         """
 
         # Queryset Filtering Out Draft Recipes
@@ -122,7 +127,7 @@ class RecipeDetails(View):
             # Assign Comment Form to comment Variable With Commit Set to False
             comment = comment_form.save(commit=False)
 
-            # Match Comment to Recipe 
+            # Match Comment to Recipe
             comment.recipe = recipe
 
             # Save Comment
@@ -148,7 +153,7 @@ class RecipeDetails(View):
 
 class RecipeLike(View):
     """
-    RecipeLike class view. 
+    RecipeLike class view.
     Contains post method for liking and unliking a recipe.
     """
 
@@ -157,7 +162,7 @@ class RecipeLike(View):
         Post method for liking and unliking a recipe.
         """
 
-        # Assign Recipe Object to recipe Variable 
+        # Assign Recipe Object to recipe Variable
         recipe = get_object_or_404(Recipe, slug=slug)
 
         # If User has Already Liked Recipe
@@ -179,8 +184,10 @@ class RecipeLike(View):
 class PostRecipe(View):
     """
     PostRecipe class view.
-    Uses with the RecipeForm on the post_recipe template to allow users to post a recipe.
-    Class features a get and a post method to render the template and post the form.
+    Uses with the RecipeForm on the post_recipe template to allow users
+    to post a recipe.
+    Class features a get and a post method to render the template and
+    post the form.
     """
 
     # Assign RecipeForm to form_class Variable
@@ -197,7 +204,8 @@ class PostRecipe(View):
         Get method to render template and return variables.
         """
 
-        # Set form Variable to form_class with initial variable Passed as Argument
+        # Set form Variable to form_class with initial variable
+        # Passed as an Argument
         form = self.form_class(initial=self.initial)
 
         # Return Render Request with Template Name and Variables
@@ -233,7 +241,8 @@ class PostRecipe(View):
             # Save Recipe
             recipe.save()
 
-            # Return Render Request with post_recipe template and posted Variable Set to True
+            # Return Render Request with post_recipe template and
+            # posted Variable Set to True
             return render(
                 request,
                 'post_recipe.html',
@@ -245,7 +254,8 @@ class PostRecipe(View):
         # If Form Isn't Valid
         else:
 
-            # Return Render Request with post_recipe Template with Failed Variable Set to True
+            # Return Render Request with post_recipe Template with
+            # Failed Variable Set to True
             return render(
                 request,
                 'post_recipe.html',
@@ -261,8 +271,8 @@ class EditRecipe(TemplateView):
     """
     EditRecipe class view.
     Features a get and a post method.
-    Pulls in data from a specific recipe object and fills it into form fields for editing.
-    edit_recipe template is used to render the form.
+    Pulls in data from a specific recipe object and fills it into form fields
+    for editing. edit_recipe template is used to render the form.
     """
 
     # Sets Recipe as Model
@@ -276,7 +286,8 @@ class EditRecipe(TemplateView):
         Get method to render template and form.
         """
 
-        # Assigns Specific Recipe Object Using Primary Key Field to recipe Variable 
+        # Assigns Specific Recipe Object Using Primary Key Field to
+        # recipe Variable
         recipe = Recipe.objects.get(pk=pk)
 
         # Creates An Instance of the RecipeForm with the recipe object
@@ -297,10 +308,12 @@ class EditRecipe(TemplateView):
         Post method to submit recipe form and return template with variables.
         """
 
-        # Assigns Specific Recipe Object Using Primary Key Field to recipe Variable 
+        # Assigns Specific Recipe Object Using Primary Key Field to
+        # recipe Variable
         recipe = Recipe.objects.get(pk=pk)
 
-        # Passes Recipe Instance, Post Request and Files Request to RecipeForm and Assigns form to form Variable
+        # Passes Recipe Instance, Post Request and Files Request to
+        # RecipeForm and Assigns form to form Variable
         form = RecipeForm(request.POST, request.FILES, instance=recipe)
 
         # If Form Is Valid
@@ -331,7 +344,8 @@ class EditRecipe(TemplateView):
         # If Form Isn't Valid
         else:
 
-            # Return Render Request with Template Name and Variables Including Failed True
+            # Return Render Request with Template Name and Variables
+            # Including Failed True
             return render(
                 request,
                 self.template_name,
@@ -361,7 +375,8 @@ class MyRecipes(generic.ListView):
         """
 
         # Set queryset to Recipe Objects Which Have Been Created By The User
-        queryset = Recipe.objects.filter(author=request.user.id).order_by('-created_on')
+        queryset = Recipe.objects.filter(
+            author=request.user.id).order_by('-created_on')
 
         # Queryset Dictionary
         queryset_dict = {
@@ -379,7 +394,8 @@ class MyRecipes(generic.ListView):
 class MyFavourites(generic.ListView):
     """
     MyFavourites class view.
-    Returns a list of recipe objects that a user has liked to the my_favourites template.
+    Returns a list of recipe objects that a user has liked to
+    the my_favourites template.
     """
 
     def get(self, request, *args, **kwargs):
@@ -390,7 +406,8 @@ class MyFavourites(generic.ListView):
         # Assign User Request to user Variable
         user = request.user
 
-        # Filter Recipe Objects to Display Published Recipes That The User Has Liked
+        # Filter Recipe Objects to Display Published Recipes That The
+        # User Has Liked
         favourite_recipes = Recipe.objects.filter(likes=user).filter(status=1)
 
         # Assign favourite_recipes Variable to context Object
@@ -403,7 +420,7 @@ class MyFavourites(generic.ListView):
 class DeleteRecipe(View):
     """
     DeleteRecipe class view.
-    Deletes specific recipe object using the primary key. 
+    Deletes specific recipe object using the primary key.
     """
 
     def get(self, request, pk, *args, **kwargs):
@@ -429,7 +446,8 @@ class UnlikeRecipe(View):
 
     def get(self, request, pk, *args, **kwargs):
         """
-        Get method to remove recipe from user my_favourites list by unliking recipe.
+        Get method to remove recipe from user my_favourites list by
+        unliking recipe.
         """
 
         # Assign Recipe Object Using Primary Key to recipe Variable
@@ -451,7 +469,8 @@ class AllRecipes(generic.ListView):
     # Sets Recipe as Model
     model = Recipe
 
-    # Set queryset to All Recipe Objects Which Are Published and Order By Created On Date
+    # Set queryset to All Recipe Objects Which Are Published and Order
+    # By Created On Date
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
 
     # Assigns all_recipes Template to template_name Variable
