@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- All Recipes -->
+<section class="py-14 md:py-24 bg-amber-100">
+
+    <!-- Heading -->
+    <h1 class="text-center text-4xl mb-10">All Recipes</h1>
+
+    <!-- Cards Section -->
+    <div class="mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
+
+        <!-- Recipes Loop -->
+        {% for recipe in recipe_list %}
+
+            <!-- Recipes Card -->
+            <div class="recipe-card">
+
+                <!-- Images -->
+                <div class="relative">
+
+                    <!-- Image Placeholder -->
+                    {% if "placeholder" in recipe.featured_image.url %}
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg" alt="Make salsa not war in pink lights on colourful wall">
+                        
+                        <!-- Number of Likes Icon Tag -->
+                        <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
+                    {% else %}
+
+                        <!-- Recipe Featured Image -->
+                        <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }}">
+                        
+                        <!-- Number of Likes Icon Tag -->
+                        <div class="px-2 px-1 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
+                    {% endif %}
+
+                </div>
+
+                <!-- Recipe Text Content -->
+                <div class="p-5 bg-white border border-black">
+
+                    <!-- Title -->
+                    <h3 class="text-left text-3xl">{{ recipe.title }}</h3>
+
+                    <!-- Author -->
+                    <p class="text-left mb-3">by {{ recipe.author }}</p>
+
+                    <!-- Excerpt -->
+                    <p class="mb-5">{{ recipe.excerpt }}</p>
+
+                    <!-- View Recipe Button -->
+                    <div class="flex">
+                        <a class="text-xl w-full text-center bg-green-600 px-2 py-1.5 border border-black hover:scale-105 hover:shadow" href="{% url 'recipe_details' recipe.slug %}">View recipe</a>
+                    </div>
+
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if is_paginated %}
+    <div class="container mx-auto pagination text-center mt-10 md:mt-16">
+        <span class="step-links">
+
+            <!-- Current Page -->
+            <span class="current mr-3 text-lg">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+
+            <!-- Previous Page Links -->
+            {% if page_obj.has_previous %}
+                <a class="text-xl text-center bg-green-600 px-4 py-1.5 border border-black hover:scale-105 hover:shadow" href="?page=1">&laquo; First</a>
+                <a class="text-xl text-center bg-amber-400 px-4 py-1.5 border border-black hover:scale-105 hover:shadow ml-3" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+    
+            <!-- Next Page Links -->
+            {% if page_obj.has_next %}
+                <a class="text-xl text-center bg-green-600 px-4 py-1.5 border border-black hover:scale-105 hover:shadow" href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a class="text-xl text-center bg-amber-400 px-4 py-1.5 border border-black hover:scale-105 hover:shadow ml-3" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+            {% endif %}
+
+        </span>
+    </div>
+    {% endif %}
+
+</section>
+
+{% endblock %}
