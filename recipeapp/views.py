@@ -244,7 +244,7 @@ class PostRecipe(View):
 
         # If Form Isn't Valid
         else:
-            
+
             # Return Render Request with post_recipe Template with Failed Variable Set to True
             return render(
                 request,
@@ -440,3 +440,22 @@ class UnlikeRecipe(View):
 
         # Return Redirect to Template my_favourites
         return redirect('my_favourites')
+
+
+class AllRecipes(generic.ListView):
+    """
+    AllRecipes class view.
+    Returns list of all published recipes to the all_recipes template.
+    """
+
+    # Sets Recipe as Model
+    model = Recipe
+
+    # Set queryset to All Recipe Objects Which Are Published and Order By Created On Date
+    queryset = Recipe.objects.filter(status=1).order_by('-created_on')
+
+    # Assigns all_recipes Template to template_name Variable
+    template_name = 'all_recipes.html'
+
+    # Adds page pagination
+    paginate_by = 9
