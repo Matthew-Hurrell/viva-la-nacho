@@ -28,24 +28,24 @@
 
                             <!-- Image Placeholder -->
                             {% if "placeholder" in recipe.featured_image.url %}
-                                <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg">
+                                <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="https://res.cloudinary.com/dihur97qf/image/upload/v1675020732/make-salsa-placeholder_abnk74.jpg" alt="Make salsa not war in pink lights on colourful wall">
 
                                 <!-- Number of Likes Icon Tag -->
                                 <div class="px-2 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
 
                                 <!-- Delete Button -->
-                                <button class="unlike-button flex justify-center items-center absolute rounded-full top-2 left-3 text-3xl px-1 py-1 bg-amber-100"><i class="fa-solid fa-circle-xmark"></i></button>
+                                <button class="unlike-button flex justify-center items-center absolute rounded-full top-2 left-3 text-3xl px-1 py-1 bg-amber-100" aria-label="Unlike button"><i class="fa-solid fa-circle-xmark"></i></button>
 
                             {% else %}
 
                                 <!-- Featured Image -->
-                                <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}">
+                                <img class="object-center object-cover w-full h-[250px] md:h-[300px]" src="{{ recipe.featured_image.url }}" alt="{{recipe.title}}">
 
                                 <!-- Number of Likes Icon Tag -->
                                 <div class="px-2 z-50 bg-amber-100 absolute top-3 right-3 text-lg text-left">Likes - {{ recipe.number_of_likes }} <i class="fa-solid fa-heart"></i></div>
 
                                 <!-- Delete Button -->
-                                <button class="unlike-button flex justify-center items-center absolute rounded-full top-2 left-3 text-3xl px-1 py-1 bg-amber-100"><i class="fa-solid fa-circle-xmark"></i></button>
+                                <button class="unlike-button flex justify-center items-center absolute rounded-full top-2 left-3 text-3xl px-1 py-1 bg-amber-100" aria-label="Unlike button"><i class="fa-solid fa-circle-xmark"></i></button>
                             {% endif %}
 
                         </div>
