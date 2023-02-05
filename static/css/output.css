@@ -964,40 +964,8 @@ video {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
-.fill-amber-400 {
-  fill: #fbbf24;
-}
-
-.fill-amber-500 {
-  fill: #f59e0b;
-}
-
-.fill-amber-600 {
-  fill: #d97706;
-}
-
-.fill-red-700 {
-  fill: #b91c1c;
-}
-
-.fill-red-600 {
-  fill: #dc2626;
-}
-
-.fill-orange-500 {
-  fill: #f97316;
-}
-
 .fill-orange-600 {
   fill: #ea580c;
-}
-
-.fill-red-500 {
-  fill: #ef4444;
-}
-
-.fill-green-600 {
-  fill: #16a34a;
 }
 
 .object-cover {
@@ -1174,12 +1142,6 @@ video {
 }
 
 /* Google Fonts */
-
-/* Google Fonts - 'Asap' & 'Port Lligat Slab */
-
-/* font-family: 'Asap', sans-serif; */
-
-/* font-family: 'Port Lligat Slab', serif; */
 
 /* General */
 
@@ -1541,6 +1503,11 @@ form button {
 
 #error_1_id_category {
   color: red;
+}
+
+.summernote-div iframe {
+  width: 100%;
+  max-width: 720px;
 }
 
 /* My Recipes */

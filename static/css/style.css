@@ -373,6 +373,11 @@ form button {
     color: red;
 }
 
+.summernote-div iframe {
+    width: 100%;
+    max-width: 720px;
+}
+
 /* My Recipes */
 
 .my-recipes-section {
