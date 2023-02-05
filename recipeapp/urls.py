@@ -10,10 +10,13 @@ urlpatterns = [
     # Path for Liking a Recipe
     path('like/<slug:slug>', views.RecipeLike.as_view(), name='recipe_like'),
 
+    # Path for All Recipes
+    path('all_recipes/', views.AllRecipes.as_view(), name='all_recipes'),
+
     # Path for Posting a Recipe
     path('post_recipe/', views.PostRecipe.as_view(), name='post_recipe'),
 
-    # Path for My Recipes 
+    # Path for My Recipes
     path('my_recipes/', views.MyRecipes.as_view(), name='my_recipes'),
 
     # Path for My Favourites
@@ -22,7 +25,7 @@ urlpatterns = [
     # Path for Unlike Recipe (Remove from My Favourites)
     path('recipe/unlike/<int:pk>', views.UnlikeRecipe.as_view(), name='unlike_recipe'),
 
-    # Path for Edit Recipe 
+    # Path for Edit Recipe
     path('recipe/edit/<int:pk>/', views.EditRecipe.as_view(), name='edit_recipe'),
 
     # Path for Delete Recipe
