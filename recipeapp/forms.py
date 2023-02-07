@@ -10,12 +10,8 @@ class CommentForm(forms.ModelForm):
     """
 
     class Meta:
-        # Meta Class
 
-        # Model
         model = Comment
-
-        # Fields
         fields = ('body',)
 
 
@@ -27,9 +23,7 @@ class RecipeForm(forms.ModelForm):
     """
 
     class Meta:
-        # Meta Class
 
-        # Model
         model = Recipe
 
         # Summernote Widgets
@@ -38,7 +32,6 @@ class RecipeForm(forms.ModelForm):
             'ingredients': SummernoteWidget()
         }
 
-        # Fields
         fields = (
             'title',
             'category',
