@@ -15,16 +15,10 @@ class RecipeList(generic.ListView):
     Defines method which returns two lists of objects and one single object.
     """
 
-    # Model
     model = Recipe
-
-    # Context Object Name
     context_object_name = "recipes"
-
-    # Template Name
     template_name = "index.html"
 
-    # Get Method
     def get_context_data(self, **kwargs):
         """
         Get method returning most popular recipes list, latest recipes list
@@ -61,23 +55,14 @@ class RecipeDetails(View):
         Get method setting recipe object and returning variables.
         """
 
-        # Queryset Filtering Out Draft Recipes
         queryset = Recipe.objects.filter(status=1)
-
-        # Assigning Recipe Instance to recipe Variable
         recipe = get_object_or_404(queryset, slug=slug)
-
-        # Assigning Approved Recipe Comments to comments Variable
         comments = recipe.comments.filter(approved=True).order_by('created_on')
-
-        # Set liked to False
         liked = False
 
-        # Set liked to True if User has Liked Recipe
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        # Return Render Request with Template Name and Variables
         return render(
             request,
             "recipe_details.html",
@@ -96,48 +81,25 @@ class RecipeDetails(View):
         variables.
         """
 
-        # Queryset Filtering Out Draft Recipes
         queryset = Recipe.objects.filter(status=1)
-
-        # Assigning Recipe Instance to recipe Variable
         recipe = get_object_or_404(queryset, slug=slug)
-
-        # Assigning Recipe Comments to comments Variable
         comments = recipe.comments.filter(approved=True).order_by('created_on')
-
-        # Set liked to False
         liked = False
 
-        # If User has Liked Recipe, Set liked to True
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        # Assign Comment Form to comment_form Variable
         comment_form = CommentForm(data=request.POST)
 
-        # If comment_form is Valid
         if comment_form.is_valid():
-
-            # Assign User Email to Comment Form Email Field
             comment_form.instance.email = request.user.email
-
-            # Assign User Username to Comment Form Name
             comment_form.instance.name = request.user.username
-
-            # Assign Comment Form to comment Variable With Commit Set to False
             comment = comment_form.save(commit=False)
-
-            # Match Comment to Recipe
             comment.recipe = recipe
-
-            # Save Comment
             comment.save()
-
-        # If comment_form Isn't Valid
         else:
             comment_form = CommentForm()
 
-        # Return Render Request with Template Name and Variables
         return render(
             request,
             "recipe_details.html",
@@ -162,22 +124,13 @@ class RecipeLike(View):
         Post method for liking and unliking a recipe.
         """
 
-        # Assign Recipe Object to recipe Variable
         recipe = get_object_or_404(Recipe, slug=slug)
 
-        # If User has Already Liked Recipe
         if recipe.likes.filter(id=request.user.id).exists():
-
-            # Remove User From Recipe Likes
             recipe.likes.remove(request.user)
-
-        # Otherwise if User Hasn't Liked Recipe
         else:
-
-            # Add User to Recipe Likes
             recipe.likes.add(request.user)
 
-        # Return Redirect Reverse to recipe_details Template
         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
 
 
@@ -190,13 +143,8 @@ class PostRecipe(View):
     post the form.
     """
 
-    # Assign RecipeForm to form_class Variable
     form_class = RecipeForm
-
-    # Set Key and Value Object to initial Variable
     initial = {'key': 'value'}
-
-    # Assign post_recipe Template to template_name Variable
     template_name = 'post_recipe.html'
 
     def get(self, request, *args, **kwargs):
@@ -204,11 +152,7 @@ class PostRecipe(View):
         Get method to render template and return variables.
         """
 
-        # Set form Variable to form_class with initial variable
-        # Passed as an Argument
         form = self.form_class(initial=self.initial)
-
-        # Return Render Request with Template Name and Variables
         return render(
             request,
             self.template_name,
@@ -222,27 +166,13 @@ class PostRecipe(View):
         """
         Post method to submit and save form to new recipe instance.
         """
-
-        # Assign form_class with Post and Files Arguments to form Variable
         form = self.form_class(request.POST, request.FILES)
 
-        # If Form is Valid
         if form.is_valid():
-
-            # Assign User to Recipe Form Instance Field
             form.instance.author = request.user
-
-            # Assign Slugified Form Instance Title to Form Instance Slug
             form.instance.slug = slugify(form.instance.title)
-
-            # Assign Uncommitted form to recipe Variable
             recipe = form.save(commit=False)
-
-            # Save Recipe
             recipe.save()
-
-            # Return Render Request with post_recipe template and
-            # posted Variable Set to True
             return render(
                 request,
                 'post_recipe.html',
@@ -250,12 +180,7 @@ class PostRecipe(View):
                     'posted': True,
                 }
             )
-
-        # If Form Isn't Valid
         else:
-
-            # Return Render Request with post_recipe Template with
-            # Failed Variable Set to True
             return render(
                 request,
                 'post_recipe.html',
@@ -275,10 +200,7 @@ class EditRecipe(TemplateView):
     for editing. edit_recipe template is used to render the form.
     """
 
-    # Sets Recipe as Model
     model = Recipe
-
-    # Sets the edit_recipe Template as the Template Name
     template_name = 'edit_recipe.html'
 
     def get(self, request, pk, *args, **kwargs):
@@ -286,14 +208,9 @@ class EditRecipe(TemplateView):
         Get method to render template and form.
         """
 
-        # Assigns Specific Recipe Object Using Primary Key Field to
-        # recipe Variable
         recipe = Recipe.objects.get(pk=pk)
-
-        # Creates An Instance of the RecipeForm with the recipe object
         form = RecipeForm(instance=recipe)
 
-        # Render Request with Template Name and Variables
         return render(
             request,
             self.template_name,
@@ -308,30 +225,15 @@ class EditRecipe(TemplateView):
         Post method to submit recipe form and return template with variables.
         """
 
-        # Assigns Specific Recipe Object Using Primary Key Field to
-        # recipe Variable
         recipe = Recipe.objects.get(pk=pk)
-
-        # Passes Recipe Instance, Post Request and Files Request to
-        # RecipeForm and Assigns form to form Variable
         form = RecipeForm(request.POST, request.FILES, instance=recipe)
 
-        # If Form Is Valid
         if form.is_valid():
-
-            # Save Form
             form.save()
-
-            # Assign Slugify Form Instance Title to Form Instance Slug
             form.instance.slug = slugify(form.instance.title)
-
-            # Assign Uncommited Form to recipe Variable
             recipe = form.save(commit=False)
-
-            # Save Recipe
             recipe.save()
 
-            # Return Render Request with Template Name and Variables
             return render(
                 request,
                 self.template_name,
@@ -340,12 +242,7 @@ class EditRecipe(TemplateView):
                     'posted': True
                 }
             )
-
-        # If Form Isn't Valid
         else:
-
-            # Return Render Request with Template Name and Variables
-            # Including Failed True
             return render(
                 request,
                 self.template_name,
@@ -363,10 +260,7 @@ class MyRecipes(generic.ListView):
     Returns list of recipe objects created by user to the my_recipes template.
     """
 
-    # Sets Recipe as Model
     model = Recipe
-
-    # Assigns my_recipes Template to template_name Variable
     template_name = 'my_recipes.html'
 
     def get(self, request):
@@ -374,16 +268,12 @@ class MyRecipes(generic.ListView):
         Get method to render template and return queryset objects.
         """
 
-        # Set queryset to Recipe Objects Which Have Been Created By The User
         queryset = Recipe.objects.filter(
             author=request.user.id).order_by('-created_on')
-
-        # Queryset Dictionary
         queryset_dict = {
             'my_recipes': queryset
         }
 
-        # Return Render Request with my_recipes Template and queryset
         return render(
             request,
             self.template_name,
@@ -403,17 +293,10 @@ class MyFavourites(generic.ListView):
         Get method to render template and return queryset objects.
         """
 
-        # Assign User Request to user Variable
         user = request.user
-
-        # Filter Recipe Objects to Display Published Recipes That The
-        # User Has Liked
         favourite_recipes = Recipe.objects.filter(likes=user).filter(status=1)
-
-        # Assign favourite_recipes Variable to context Object
         context = {'recipes': favourite_recipes}
 
-        # Return Render Request with my_favourites Template and Context Object
         return render(request, 'my_favourites.html', context)
 
 
@@ -428,13 +311,9 @@ class DeleteRecipe(View):
         Get method to delete recipe object.
         """
 
-        # Assign Recipe Object Using Primary Key to recipe Variable
         recipe = get_object_or_404(Recipe, pk=pk)
-
-        # Delete recipe
         recipe.delete()
 
-        # Return Redirect to Template my_recipes
         return redirect('my_recipes')
 
 
@@ -450,13 +329,9 @@ class UnlikeRecipe(View):
         unliking recipe.
         """
 
-        # Assign Recipe Object Using Primary Key to recipe Variable
         recipe = get_object_or_404(Recipe, pk=pk)
-
-        # Remove User Like from Recipe
         recipe.likes.remove(request.user)
 
-        # Return Redirect to Template my_favourites
         return redirect('my_favourites')
 
 
@@ -466,15 +341,7 @@ class AllRecipes(generic.ListView):
     Returns list of all published recipes to the all_recipes template.
     """
 
-    # Sets Recipe as Model
     model = Recipe
-
-    # Set queryset to All Recipe Objects Which Are Published and Order
-    # By Created On Date
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
-
-    # Assigns all_recipes Template to template_name Variable
     template_name = 'all_recipes.html'
-
-    # Adds page pagination
     paginate_by = 9
