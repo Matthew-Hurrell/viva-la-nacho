@@ -6,8 +6,9 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Recipe)
 class RecipeAdmin(SummernoteModelAdmin):
     """
-    Class for the Recipe section of the admin area. 
-    Organises the display of posts as well as filtering, search and other custom methods.
+    Class for the Recipe section of the admin area.
+    Organises the display of posts as well as filtering, search and other
+    custom methods.
     """
 
     # Prepopulated Slug Field
@@ -50,8 +51,9 @@ class RecipeAdmin(SummernoteModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     """
-    Class for the Comment section of the admin area. 
-    Organises the display of posts as well as filtering, search and other custom methods.
+    Class for the Comment section of the admin area.
+    Organises the display of posts as well as filtering, search and other
+    custom methods.
     """
 
     # Search Fields
