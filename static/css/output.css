@@ -990,12 +990,12 @@ video {
      object-position: center;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-4 {
@@ -1095,6 +1095,16 @@ video {
   vertical-align: sub;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1108,11 +1118,6 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-5xl {
@@ -1147,10 +1152,6 @@ video {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .underline-offset-2 {
@@ -1561,6 +1562,15 @@ form button {
   background-position: center;
 }
 
+/* 404 */
+
+.error-background {
+  background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1680,6 +1690,11 @@ form button {
     padding: 2.5rem;
   }
 
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .md\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1688,11 +1703,6 @@ form button {
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-  }
-
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .md\:px-8 {
@@ -1763,12 +1773,12 @@ form button {
     display: none;
   }
 
-  .lg\:w-10\/12 {
-    width: 83.333333%;
-  }
-
   .lg\:w-6\/12 {
     width: 50%;
+  }
+
+  .lg\:w-10\/12 {
+    width: 83.333333%;
   }
 
   .lg\:w-5\/12 {
@@ -1840,16 +1850,16 @@ form button {
     margin-top: 2.5rem;
   }
 
+  .xl\:w-5\/12 {
+    width: 41.666667%;
+  }
+
   .xl\:w-8\/12 {
     width: 66.666667%;
   }
 
   .xl\:w-7\/12 {
     width: 58.333333%;
-  }
-
-  .xl\:w-5\/12 {
-    width: 41.666667%;
   }
 
   .xl\:w-6\/12 {
@@ -1890,12 +1900,12 @@ form button {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:w-7\/12 {
-    width: 58.333333%;
-  }
-
   .\32xl\:w-4\/12 {
     width: 33.333333%;
+  }
+
+  .\32xl\:w-7\/12 {
+    width: 58.333333%;
   }
 
   .\32xl\:w-10\/12 {
