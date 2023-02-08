@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 from .models import Recipe, Comment
 from django.db.models import Count
 from .forms import CommentForm, RecipeForm
@@ -345,3 +345,8 @@ class AllRecipes(generic.ListView):
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'all_recipes.html'
     paginate_by = 9
+
+
+# 404 View
+def custom_404(request, exception):
+    return render(request, "404.html")
