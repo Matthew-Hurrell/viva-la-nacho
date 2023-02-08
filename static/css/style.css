@@ -44,6 +44,12 @@ p {
     margin-top: 4px;
 }
 
+/* Active Nav Items */
+
+.active {
+    text-decoration: underline;
+}
+
 /* Footer */
 
 footer {
