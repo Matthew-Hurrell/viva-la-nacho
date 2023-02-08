@@ -7,6 +7,7 @@ cookiecutter==2.1.1
 dj-database-url==0.5.0
 dj3-cloudinary-storage==0.0.6
 Django==3.2.16
+django-active-link==0.1.8
 django-allauth==0.52.0
 django-browser-reload==1.6.0
 django-crispy-forms==1.14.0
