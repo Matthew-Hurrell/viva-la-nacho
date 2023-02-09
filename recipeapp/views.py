@@ -303,18 +303,19 @@ class MyFavourites(generic.ListView):
 class DeleteRecipe(View):
     """
     DeleteRecipe class view.
-    Deletes specific recipe object using the primary key.
+    Deletes specific recipe object using the primary key and returns
+    recipe_deleted template.
     """
 
     def get(self, request, pk, *args, **kwargs):
         """
         Get method to delete recipe object.
         """
-
         recipe = get_object_or_404(Recipe, pk=pk)
         recipe.delete()
+        context = {'success': True}
 
-        return redirect('my_recipes')
+        return render(request, 'recipe_deleted.html', context)
 
 
 class UnlikeRecipe(View):
