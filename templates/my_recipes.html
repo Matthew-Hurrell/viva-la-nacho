@@ -14,6 +14,26 @@
             <!-- Heading -->
             <h1 class="text-center text-4xl mb-10">My Recipes</h1>
 
+            <!-- If Delete Is Successful -->
+            {% if messages %}
+                <div class="notification-message flex items-center justify-center mb-5">
+                    {% for message in messages %}
+
+                    <!-- Message Title -->
+                    <h2 class="text-red-600 text-2xl mr-3">{{ message }}</h2>
+
+                    <!-- X Mark Icon -->
+                    <button class="notification-close-button">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+                        </svg>
+                    </button>
+
+                    {% endfor %}
+                </div>
+            {% endif %}
+
             <!-- Cards Container -->
             <div class="my-recipes-container mx-auto container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-7 gap-y-5 sm:gap-y-7 px-5 md:px-10">
 
