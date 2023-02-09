@@ -421,3 +421,12 @@ form button {
     background-position: center;
     background-size: cover;
 }
+
+/* Recipe Deleted */
+
+.recipe-deleted-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
