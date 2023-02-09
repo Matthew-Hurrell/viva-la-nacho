@@ -67,3 +67,17 @@ if ( document.getElementsByClassName('my-favourites-card-content').length > 0 ) 
         })
     }
 }
+
+// Recipe Unlike Notification Close Button
+if ( document.getElementsByClassName('notification-close-button').length > 0 ) { 
+    const close_button = document.querySelector('.notification-close-button');
+    const notification = document.querySelector('.notification-message');
+
+    close_button.addEventListener('click', () => {
+        notification.classList.add('hidden');
+    })
+
+    setTimeout(function() {
+        notification.classList.add('hidden');
+    }, 5000);
+}
