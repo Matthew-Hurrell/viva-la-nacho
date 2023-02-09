@@ -6,6 +6,7 @@ from django.db.models import Count
 from .forms import CommentForm, RecipeForm
 from django.template.defaultfilters import slugify
 from django.views.generic import TemplateView
+from django.contrib import messages
 
 
 class RecipeList(generic.ListView):
@@ -313,9 +314,9 @@ class DeleteRecipe(View):
         """
         recipe = get_object_or_404(Recipe, pk=pk)
         recipe.delete()
-        context = {'success': True}
+        messages.success(request, 'Recipe deleted')
 
-        return render(request, 'recipe_deleted.html', context)
+        return redirect(reverse('my_recipes'))
 
 
 class UnlikeRecipe(View):
@@ -332,8 +333,9 @@ class UnlikeRecipe(View):
 
         recipe = get_object_or_404(Recipe, pk=pk)
         recipe.likes.remove(request.user)
+        messages.success(request, 'Recipe unliked')
 
-        return redirect('my_favourites')
+        return redirect(reverse('my_favourites'))
 
 
 class AllRecipes(generic.ListView):
