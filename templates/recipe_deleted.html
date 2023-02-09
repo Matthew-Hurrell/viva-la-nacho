@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- Recipe Deleted Section -->
+<section class="recipe-deleted-section py-14 md:py-20 flex-1 flex flex-col items-center px-5">
+
+    <!-- Container -->
+    <div class="container mx-auto">
+
+        <!-- If User is Logged In -->
+        {% if user.is_authenticated %}
+
+            <!-- If Recipe Successfully Deleted -->
+            {% if success %}
+
+                <div class="border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+
+                    <!-- Title -->
+                    <h2 class="text-center text-4xl mb-10">Recipe deleted!</h2>
+
+                    <!-- Paragraph -->
+                    <p class="text-lg text-center mb-3">Do you want to return to your recipes?</p>
+
+                    <!-- My Recipes Link -->
+                    <a href="{% url 'my_recipes' %}" class="confirm block text-center mb-3">My Recipes!</a>
+
+                    <!-- Paragraph -->
+                    <p class="text-lg text-center mb-3">Or you can go to the home page to view other recipes.</p>
+
+                    <!-- Home Link -->
+                    <a href="{% url 'home' %}" class="cancel block text-center">Take me back home!</a>
+
+                </div>
+
+            {% else %}
+
+            <div class="border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+
+                <!-- Title -->
+                <h2 class="text-center text-4xl mb-10">You lost amigo?</h2>
+
+                <!-- Paragraph -->
+                <p class="text-lg text-center mb-3">Do you want to go to your recipes?</p>
+
+                <!-- My Recipes Link -->
+                <a href="{% url 'my_recipes' %}" class="confirm block text-center mb-3">My Recipes!</a>
+
+                <!-- Paragraph -->
+                <p class="text-lg text-center mb-3">Or you can return to the homepage to view other recipes.</p>
+
+                <!-- Home Link -->
+                <a href="{% url 'home' %}" class="cancel block text-center">Take me back home!</a>
+
+            </div>
+
+            {% endif %}
+
+        {% else %}
+
+            <!-- If User Isn't Signed In -->
+            <div class="no-sign-up-notification border border-black w-full md:w-7/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 bg-amber-100 p-6 mx-auto">
+
+                <!-- Title -->
+                <h2 class="text-center text-4xl mb-10">You have to be logged in to delete a recipe!</h2>
+
+                <!-- Paragraph -->
+                <p class="text-lg text-center mb-3">If you have an account please log in!</p>
+
+                <!-- Log In Link -->
+                <a id="login-button" class="block text-center confirm mb-3" href="{% url 'account_login' %}">Log In</a>
+
+                <!-- Paragraph -->
+                <p class="text-lg text-center mb-3">Or you can sign up for an account today to post your own recipes!</p>
+
+                <!-- Sign Up Link -->
+                <a class="confirm block text-center mb-3" href="{% url 'account_signup' %}">Well sign me up!</a>
+
+                <!-- Paragraph -->
+                <p class="text-lg text-center mb-3">Otherwise you can return to the homepage to view other recipes.</p>
+
+                <!-- Home Link -->
+                <a href="{% url 'home' %}" class="cancel block text-center">No take me back home!</a>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+</section>
+
+{% endblock %}
