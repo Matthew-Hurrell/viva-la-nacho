@@ -182,7 +182,7 @@ form.login label, form.signup label {
     background-color: white;
 }
 
-.comments-section form button {
+.comment-form-submit {
     font-size: 1.25rem;
     text-transform: uppercase;
     padding: 0.5rem 0.75rem;
