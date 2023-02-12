@@ -95,7 +95,7 @@ if ( ( document.getElementsByClassName('post-recipe').length > 0 ) || ( document
 
     // Click submit button function
     function buttonclick(){
-        var submit_button = document.querySelector(".recipe-submit-button");
+        let submit_button = document.querySelector(".recipe-submit-button");
         submit_button.click();
     }
 
@@ -184,6 +184,31 @@ if ( ( document.getElementsByClassName('post-recipe').length > 0 ) || ( document
         if ( ! false ) {
             buttonclick();
         }
+    }
+}
 
+// Comment Form Validation
+
+if ( document.getElementsByClassName('comment-form').length > 0 ) {
+    let comment_form = document.forms["comment-form"];
+
+    // Click submit button function
+    function buttonclick(){
+        let submit_button = document.querySelector(".comment-submit-button");
+        submit_button.click();
+    }
+
+    // Validate form function
+    function validateCommentForm() {
+
+        let body = comment_form["body"].value;
+
+        if ( ( body.innerText == "" ) || ( body.trim().length == 0 ) ) {
+            alert("Form error - Comment body must be filled out");
+            return false;
+        }
+        if ( ! false ) {
+            buttonclick();
+        }
     }
 }
