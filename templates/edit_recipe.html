@@ -38,11 +38,18 @@
                     {% endif %}
 
                     <!-- Form -->
-                    <form enctype="multipart/form-data" class="mt-3 edit-recipe" method="post">
+                    <form enctype="multipart/form-data" class="mt-3 edit-recipe" method="post" name="edit-recipe">
                         {{ form | crispy }}
                         {% csrf_token %}
-                        <button class="mt-3 primaryAction bg-amber-400" type="submit">Submit</button>
+
+                        <!-- Hidden Submit Button -->
+                        <button class="hidden recipe-submit-button mt-3 primaryAction bg-amber-400" type="submit">Submit</button>
                     </form>
+
+                    <!-- User Submit Button -->
+                    <button class="user-submit-button mt-3 primaryAction bg-amber-400 w-full" onclick="return validateRecipeForm()">Submit</button>
+
+                    <!-- Cancel Button -->
                     <button class="cancel bg-white mt-3">Cancel</button>
 
                 </div>
