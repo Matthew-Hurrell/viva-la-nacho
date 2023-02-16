@@ -215,10 +215,19 @@ if ( document.getElementsByClassName('notification-close-button').length > 0 ) {
 //     }
 // }
 
-// Post Recipe Form Validation
+// Recipe Form Validation
 
-if ( document.getElementsByClassName('post-recipe').length > 0 ) {
-    let form = document.forms["post-recipe"];
+if ( ( document.getElementsByClassName('post-recipe').length > 0 ) || ( document.getElementsByClassName('edit-recipe').length > 0 ) ) {
+
+    let form;
+
+    // Assign recipe form variable to whatever form is being displayed
+    if ( document.getElementsByClassName('post-recipe').length > 0 ) {
+        form = document.forms["post-recipe"];
+    } else if ( document.getElementsByClassName('edit-recipe').length > 0 ) {
+        form = document.forms["edit-recipe"];
+    }
+
 
     function stripHTML(html){
         let doc = new DOMParser().parseFromString(html, 'text/html');
@@ -244,59 +253,59 @@ if ( document.getElementsByClassName('post-recipe').length > 0 ) {
             event.preventDefault();
             alert('Form error - Please enter a valid title.');
         }
-        if ( category_checkboxes.length == 0 ) {
+        else if ( category_checkboxes.length == 0 ) {
             event.preventDefault();
             alert("Form error - Please select a category");
         }
-        if ( prep_time == "" ) {
+        else if ( prep_time == "" ) {
             event.preventDefault();
             alert("Form error - Prep time must be filled out");
         }
-        if ( prep_time >= 600 ) {
+        else if ( prep_time >= 600 ) {
             event.preventDefault();
             alert("Form error - Prep time is too large");
         }
-        if ( cooking_time == "" ) {
+        else if ( cooking_time == "" ) {
             event.preventDefault();
             alert("Form error - Cooking time must be filled out");
         }
-        if ( cooking_time >= 600 ) {
+        else if ( cooking_time >= 600 ) {
             event.preventDefault();
             alert("Form error - Cooking time is too large");
         }
-        if ( serves == "" ) {
+        else if ( serves == "" ) {
             event.preventDefault();
             alert("Form error - Serves must be filled out");
         }
-        if ( serves > 10 ) {
+        else if ( serves > 10 ) {
             event.preventDefault();
             alert("Form error - Serving is too large");
         }
-        if ( difficulty == "" ) {
+        else if ( difficulty == "" ) {
             event.preventDefault();
             alert("Form error - Difficulty must be filled out");
         }
-        if ( ( excerpt == "" ) || ( excerpt.trim().length == 0 ) ) {
+        else if ( ( excerpt == "" ) || ( excerpt.trim().length == 0 ) ) {
             event.preventDefault();
             alert("Form error - Excerpt must be filled out");
         }
-        if ( excerpt.length >= 250 ) {
+        else if ( excerpt.length >= 250 ) {
             event.preventDefault();
             alert("Form error - Excerpt is too long. Limit is 250 characters");
         }
-        if ( allergen_checkboxes.length == 0 ) {
+        else if ( allergen_checkboxes.length == 0 ) {
             event.preventDefault();
             alert("Form error - Please select an allergen, or select 'none' for no allergens");
         }
-        if ( ( ingredients == "" ) || ( stripHTML(ingredients).trim().length == 0 ) ) {
+        else if ( ( ingredients == "" ) || ( stripHTML(ingredients).trim().length == 0 ) ) {
             event.preventDefault();
             alert("Form error - Ingredients must be filled out");
         }
-        if ( ( method == "" ) || ( stripHTML(method).trim().length == 0 ) ) {
+        else if ( ( method == "" ) || ( stripHTML(method).trim().length == 0 ) ) {
             event.preventDefault();
             alert("Form error - Method must be filled out");
         }
-        if ( ( featured_image_has_current.length == 0 ) && ( featured_image == "" ) ) {
+        else if ( ( featured_image_has_current.length == 0 ) && ( featured_image == "" ) ) {
             event.preventDefault();
             alert("Form error - Please upload at least one image using the first image field");
         }
