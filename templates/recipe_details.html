@@ -332,11 +332,9 @@
                         {% csrf_token %}
 
                         <!-- Submit Button -->
-                        <button class="hidden mt-3 comment-submit-button" type="submit">Submit</button>
+                        <button class="bg-amber-400 primaryAction mt-3 comment-submit-button" type="submit">Submit</button>
 
                     </form>
-
-                    <button class="mt-3 comment-form-submit" onclick="return validateCommentForm()">Submit</button>
 
                 <!-- If User Is Not Logged In -->
                 {% else %}
