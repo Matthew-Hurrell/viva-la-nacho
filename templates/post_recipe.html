@@ -47,13 +47,13 @@
                     {{ form | crispy }}
                     {% csrf_token %}
 
-                    <!-- Hidden Submit Button -->
-                    <button class="hidden recipe-submit-button mt-3 primaryAction bg-amber-400" type="submit">Submit</button>
+                    <!-- Submit Button -->
+                    <button class="recipe-submit-button mt-3 primaryAction bg-amber-400" type="submit">Submit</button>
 
                 </form>
 
                 <!-- User Submit Button -->
-                <button type="button" class="user-submit-button mt-3 primaryAction bg-amber-400 w-full" onclick="return validateRecipeForm()">Submit</button>
+                <!-- <button type="button" class="user-submit-button mt-3 primaryAction bg-amber-400 w-full" onclick="return validateRecipeForm()">Submit</button> -->
 
                 <!-- Cancel Button -->
                 <button type="button" class="cancel bg-white mt-3">Cancel</button>
