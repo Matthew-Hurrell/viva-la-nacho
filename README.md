@@ -1,108 +1,480 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **_Viva La Nacho_**
 
-Welcome Matthew Hobbs-Hurrell,
+What it is. What it does. What is its purpose. Target audience. Intro. Keep it brief.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Link to the live site - [Viva La Nacho](https://viva-la-nacho.herokuapp.com/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Viva La Nacho Main Image](readme/assets/images/viva-la-nacho.png)
 
-## Gitpod Reminders
+# Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [**Project**](<#project>)
+    * [Objective](<#objective>)
+    * [Site User Goal](<#site-user-goal>)
+    * [Site Owner Goal](<#site-owner-goal>)
+    * [**Project Management**](<#project-management>)
+        * [GitHub Project Board](<#github-project-board>)
+        * [Database Schema](<#database-schema>)
+* [**User Experience UX**](<#user-experience-ux>)
+    * [Wireframes](<#wireframes>)
+    * [User Stories](<#user-stories>)
+    * [Site Structure](<#site-structure>)
+    * [Colour Scheme](<#colour-scheme>)
+    * [Typography](<#typography>)
+* [**Features**](<#features>)
+    * [**Existing Features**](<#existing-features>)
+        * [**Homepage**](<#homepage>)
+            * [Navigation](<#navigation>)
+            * [Hero](<#hero>)
+            * [Intro](<#intro>)
+            * [Featured Recipe](<#featured-recipe>)
+            * [Latest Recipes List](<#latest-recipes-list>)
+            * [Most Popular Recipes List](<#most-popular-recipes-list>)
+            * [Footer](<#footer>)
+        * [**Authorisation**](<#authorisation>)
+            * [Sign Up](<#sign-up>)
+            * [Log In](<#log-in>)
+            * [Log Out](<#log-out>)
+        * [**Full Recipe Details**](<#full-recipe-details>)
+            * [Recipe Details](<#recipe-details>)
+            * [Like/Unlike Recipe](<#like-unlike-recipe>)
+            * [Recipe Comments](<#recipe-comments>)
+            * [Comment Form](<#comment-form>)
+            * [Comment Form Validation](<#comment-form-validation>)
+            * [Post Comment Notification](<#post-comment-notification>)
+        * [**All Recipes**](<#all-recipes>)
+            * [All Recipes List](<#recipe-cards>)
+            * [Recipe Cards](<#recipe-cards>)
+            * [Pagination](<#pagination>)
+        * [**My Favourites**](<#my-favourites>)
+            * [My Favourites List](<#my-favourites-list>)
+            * [Unlike Recipe](<#unlike-recipe>)
+            * [Unlike Recipe Notification](<#unlike-recipe-notification>)
+            * [No Favourites](<#no-favourites>)
+        * [**My Recipes**](<#my-recipes>)
+            * [My Recipes List](<#my-recipes-list>)
+            * [My Recipe Cards](<#my-recipe-cards>)
+            * [Delete Recipe](<#delete-recipe>)
+            * [Delete Recipe Notification](<#delete-recipe-notification>)
+            * [No Recipes](<#no-recipes>)
+        * [**Post A Recipe**](<#post-a-recipe>)
+            * [Post Recipe Form](<#post-recipe-form>)
+            * [Post Recipe Form Validation](<#post-recipe-form-validation>)
+            * [Cancel Post Recipe Form](<#cancel-post-recipe-form>)
+            * [Log In To Post Recipe](<#log-in-to-post-recipe>)
+            * [Post Recipe Notification](<#post-recipe-notification>)
+        * [**Edit Recipe**](<#edit-recipe>)
+            * [Edit Recipe Form](<#edit-recipe-form>)
+            * [Edit Recipe Form Validation](<#edit-recipe-form-validation>)
+            * [Cancel Edit Recipe Form](<#cancel-edit-recipe-form>)
+            * [Log In To Edit Recipe](<#log-in-to-edit-recipe>)
+            * [Edit Recipe Notification](<#edit-recipe-notification>)
+        * [**404 Page**](<#404-page>)
+    * [**Future Features**](<#future-features>)
+        * [Admin Area](<#admin-area>)
+        * [User Profile](<#user-profile>)
+        * [User Change Password](<#user-change-password>)
+        * [Sign Up Email Confirmation](<#sign-up-email-confirmation>)
+        * [Recipe Categories](<#recipe-categories>)
+        * [Search Recipes](<#search-recipes>)
+* [**Technologies Used**](<#technologies-used>)
+    * [Languages](<#languages>)
+    * [Frameworks](<#frameworks>)
+    * [Software](<#software>)
+    * [Libraries](<#libraries>)
+* [**Testing**](<#testing>)
+    * [**User Story Tests**](<#user-story-tests>)
+    * [**Validator Tests**](<#validator-tests>)
+        * [W3C (HTML)](<#w3c-html>)
+        * [W3C (CSS)](<#w3c-css>)
+        * [PEP8 (Python)](<#pep8-python>)
+        * [JSHint (JavaScript)](<#jshint-javascript>)
+    * [**Input Validation Tests**](<#input-validation-tests>)
+        * [Post Recipe Form Tests](<#post-recipe-form-tests>)
+        * [Edit Recipe Form Tests](<#edit-recipe-form-tests>)
+        * [Comment Form Tests](<#comment-form-tests>)
+    * [**Additional Tests**](<#additional-tests>)
+        * [Manual Tests](<#manual-tests>)
+        * [Automated Tests](<#automated-tests>)
+        * [Responsive Tests](<#responsive-tests>)
+        * [Browser Tests](<#browser-tests>)
+        * [Lighthouse Tests](<#lighthouse-tests>)
+        * [Wave Accessibility Tests](<#wave-accessibility-tests>)
+    * [**Bugs**](<#bugs>)
+        * [Resolved](<#resolved>)
+        * [Unresolved](<#unresolved>)
+* [**Deployment**](<#deployment>)
+    * [**Project Deployment Via Heroku**](<#project-deployment-via-heroku>)
+* [**Credits**](<#credits>)
+    * [**Content**](<#content>)
+    * [**Media**](<#media>)
+    * [**Code**](<#code>)
+*  [**Acknowledgements**](<#acknowledgements>)
 
-`python3 -m http.server`
+# Project 
 
-A blue button should appear to click: _Make Public_,
+## Objective
 
-Another blue button should appear to click: _Open Browser_.
+[Back to top](<#contents>)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Site User Goal
 
-A blue button should appear to click: _Make Public_,
+[Back to top](<#contents>)
 
-Another blue button should appear to click: _Open Browser_.
+## Site Owner Goal
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[Back to top](<#contents>)
 
-To log into the Heroku toolbelt CLI:
+## Project Management
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Github Project Board
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+[Back to top](<#contents>)
 
-------
+### Database Schema
 
-## Release History
+[Back to top](<#contents>)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# User Experience UX
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Wireframes
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+[Back to top](<#contents>)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## User Stories
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+[Back to top](<#contents>)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Site Structure 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+[Back to top](<#contents>)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Colour Scheme
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Back to top](<#contents>)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Typography 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+[Back to top](<#contents>)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Features
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Existing Features
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Homepage
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[Back to top](<#contents>)
 
-------
+#### Navigation
 
-## FAQ about the uptime script
+[Back to top](<#contents>)
 
-**Why have you added this script?**
+#### Hero
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[Back to top](<#contents>)
 
-**How will this affect me?**
+#### Intro
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+[Back to top](<#contents>)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+#### Featured Recipe
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+[Back to top](<#contents>)
 
-**So….?**
+#### Latest Recipes List
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+[Back to top](<#contents>)
 
-**Can I opt out?**
+#### Most Popular Recipes List
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+[Back to top](<#contents>)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+#### Footer
 
-**Anything more?**
+[Back to top](<#contents>)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Authorisation
 
----
+#### Sign Up
 
-Happy coding!
+[Back to top](<#contents>)
+
+#### Log In
+
+[Back to top](<#contents>)
+
+#### Log Out
+
+[Back to top](<#contents>)
+
+### Full Recipe Details
+
+#### Recipe Details
+
+[Back to top](<#contents>)
+
+#### Like/Unlike Recipe
+
+[Back to top](<#contents>)
+
+#### Recipe Comments
+
+[Back to top](<#contents>)
+
+#### Comment Form
+
+[Back to top](<#contents>)
+
+#### Comment Form Validation
+
+[Back to top](<#contents>)
+
+#### Post Comment Notification
+
+[Back to top](<#contents>)
+
+### All Recipes
+
+#### All Recipes List
+
+[Back to top](<#contents>)
+
+#### Recipe Cards
+
+[Back to top](<#contents>)
+
+#### Pagination
+
+[Back to top](<#contents>)
+
+### My Favourites
+
+#### My Favourites List
+
+[Back to top](<#contents>)
+
+#### Unlike Recipe
+
+[Back to top](<#contents>)
+
+#### Unlike Recipe Notification
+
+[Back to top](<#contents>)
+
+#### No Favourites
+
+[Back to top](<#contents>)
+
+### My Recipes
+
+#### My Recipes List
+
+[Back to top](<#contents>)
+
+#### My Recipe Cards
+
+[Back to top](<#contents>)
+
+#### Delete Recipe
+
+[Back to top](<#contents>)
+
+#### Delete Recipe Notification
+
+[Back to top](<#contents>)
+
+#### No Recipes
+
+[Back to top](<#contents>)
+
+### Post A Recipe
+
+#### Post Recipe Form
+
+[Back to top](<#contents>)
+
+#### Post Recipe Form Validation
+
+[Back to top](<#contents>)
+
+#### Cancel Post Recipe Form
+
+[Back to top](<#contents>)
+
+#### Log In To Post Recipe
+
+[Back to top](<#contents>)
+
+#### Post Recipe Notification
+
+[Back to top](<#contents>)
+
+### Edit Recipe
+
+#### Edit Recipe Form
+
+[Back to top](<#contents>)
+
+#### Edit Recipe Form Validation
+
+[Back to top](<#contents>)
+
+#### Cancel Edit Recipe Form
+
+[Back to top](<#contents>)
+
+#### Log In To Edit Recipe
+
+[Back to top](<#contents>)
+
+#### Edit Recipe Notification
+
+[Back to top](<#contents>)
+
+### 404 Page
+
+[Back to top](<#contents>)
+
+## Future Features
+
+### Admin Area
+
+[Back to top](<#contents>)
+
+### User Profile
+
+[Back to top](<#contents>)
+
+### User Change Password
+
+[Back to top](<#contents>)
+
+### Sign Up Email Confirmation
+
+[Back to top](<#contents>)
+
+### Recipe Categories
+
+[Back to top](<#contents>)
+
+### Search Recipes
+
+[Back to top](<#contents>)
+
+# Technologies Used
+
+## Languages
+
+[Back to top](<#contents>)
+
+## Frameworks
+
+[Back to top](<#contents>)
+
+## Software
+
+[Back to top](<#contents>)
+
+## Libraries
+
+[Back to top](<#contents>)
+
+# Testing
+
+## User Story Tests
+
+[Back to top](<#contents>)
+
+## Validator Tests
+
+### W3C (HTML)
+
+[Back to top](<#contents>)
+
+### W3C (CSS)
+
+[Back to top](<#contents>)
+
+### PEP8 (PYTHON)
+
+[Back to top](<#contents>)
+
+### JSHint (JavaScript)
+
+[Back to top](<#contents>)
+
+## Input Validation Tests
+
+### Post Recipe Form Tests
+
+[Back to top](<#contents>)
+
+### Edit Recipe Form Tests
+
+[Back to top](<#contents>)
+
+### Comment Form Tests
+
+[Back to top](<#contents>)
+
+## Additional Tests
+
+### Manual Tests
+
+[Back to top](<#contents>)
+
+### Automated Tests
+
+[Back to top](<#contents>)
+
+### Responsive Tests
+
+[Back to top](<#contents>)
+
+### Browser Tests
+
+[Back to top](<#contents>)
+
+### Lighthouse Tests
+
+[Back to top](<#contents>)
+
+### Wave Accessibility Tests
+
+[Back to top](<#contents>)
+
+## Bugs
+
+### Resolved 
+
+[Back to top](<#contents>)
+
+### Unresolved
+
+[Back to top](<#contents>)
+
+# Deployment
+
+## Project Deployment via Heroku
+
+This is a guide on how to deploy a project via [Heroku](https://www.heroku.com).
+
+[Back to top](<#contents>)
+
+# Credits
+
+## Content
+
+[Back to top](<#contents>)
+
+## Media
+
+[Back to top](<#contents>)
+
+## Code 
+
+[Back to top](<#contents>)
+
+# Acknowledgements
+
+[Back to top](<#contents>)
