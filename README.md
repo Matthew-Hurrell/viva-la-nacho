@@ -47,7 +47,7 @@ Link to the live site - [Viva La Nacho](https://viva-la-nacho.herokuapp.com/)
             * [Comment Form Validation](<#comment-form-validation>)
             * [Post Comment Notification](<#post-comment-notification>)
         * [**All Recipes**](<#all-recipes>)
-            * [All Recipes List](<#all-recipes-list>)`
+            * [All Recipes List](<#all-recipes-list>)
             * [Recipe Cards](<#recipe-cards>)
             * [Pagination](<#pagination>)
         * [**My Favourites**](<#my-favourites>)
@@ -214,7 +214,7 @@ The Viva La Nacho app features a simple and user friendly site structure that us
 
 ![Footer Nav Logged In](readme/assets/images/footer-nav-logged-in.png)
 
-![Header Nav Not Logged In](readme/assets/images/footer-nav-not-logged-in.png)
+![Footer Nav Not Logged In](readme/assets/images/footer-nav-not-logged-in.png)
 
 
 [Back to top](<#contents>)
@@ -243,33 +243,79 @@ Viva La Nacho uses [Google Fonts](https://fonts.google.com/) for the site typogr
 
 ### Homepage
 
+The homepage is the first page of the site that a user will see when they navigate to the [Viva La Nacho URL](https://viva-la-nacho.herokuapp.com/). It's designed to be eye catching to users and to quickly summarise the intention of the site. It is also a central location for all users to view recipes. 
+
+![Viva La Nacho Main Image](readme/assets/images/viva-la-nacho.png)
+
 [Back to top](<#contents>)
 
 #### Navigation
+
+Site navigation is present at all times on every page of the site in the form of footer and header nav bars. These navigational elements change depending on whether a user is logged in or not. Non logged in users only have access to the home page, recipe detail pages, view all recipe page and the log in and sign up page. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes. The header nav features the site logo which is also a link back to the home page. It also features a post a recipe button which is distinctly different from the other nav menu items. This is to draw the users eye and encourage them to sign up so that they can use this feature. All nav menu items feature a scale and underline hover effect. Navigation items are active on the current page and the underline remains in place as a visual aid to show the user where they are.
+
+![Header Nav Logged In](readme/assets/images/nav-bar-logged-in.png)
+
+![Header Nav Not Logged In](readme/assets/images/nav-bar-not-logged-in.png)
+
+![Mobile Nav Menu](readme/assets/images/mobile-nav-menu.png)
+
+![Footer Nav Logged In](readme/assets/images/footer-nav-logged-in.png)
+
+![Footer Nav Not Logged In](readme/assets/images/footer-nav-not-logged-in.png)
 
 [Back to top](<#contents>)
 
 #### Hero
 
+The homepage hero section is the large eye catching section which is just beneath the navigation bar. The hero is only displayed on the homepage. It is used to catch the users attention, and to clearly showcase the general topic of the site. It features a large, colourful full screen background image and a centralised text box with the site title and tagline. The hero section also features the mexican hat logo motif to reinforce the brand image.
+
+![Hero Homepage](readme/assets/images/hero-homepage.png)
+
 [Back to top](<#contents>)
 
 #### Intro
+
+The homepage intro section is a brief introductory text paragraph that explains the purpose of the site and how to use it to new users. The section also features a divider above and below to clearly define and separate the sections. These stylised dividers are used frequently throughout the site and help to solidify the theme. A lighter shade of the green theme colour is used as a background colour.
+
+![Intro Homepage](readme/assets/images/homepage-intro.png)
 
 [Back to top](<#contents>)
 
 #### Featured Recipe
 
+The featured recipe is the first recipe shown on the site homepage. This singular recipe has its own section and fills the entire width of the screen. The featured recipe can only be assigned by a site administrator. The general idea was that this would be cycled weekly/monthly for a new featured recipe. Unlike the other recipes on the page, the featured recipe displays the whole gallery of recipe images. It also displays information such as prep time, cooking time, difficulty, serving, the excerpt and the author username. There is a button link that takes the user to the full recipe details. There is also a like count displayed as a tag over the large recipe image. The background of the section is a colourful mexican wall full of torn posters but a gradient is used to fade the image so it doesn't distract from the recipe content.
+
+![Featured Recipe](readme/assets/images/featured-recipe.png)
+
 [Back to top](<#contents>)
 
 #### Latest Recipes List
+
+The latest recipe list is a dynamic list of the latest recipes that have been uploaded to the site. When a new recipe is published, it will appear at the top of the list. Draft recipes do not appear in this list. Each recipe is displayed as a card. Each card has an image, a like count tag, a title, an author, an excerpt and a link to the full recipe page. The list displays a maximum of nine cards to avoid clutter. At the end of the section there is also a button link to the all recipes page. This section is fully responsive, and cards stack on top of each other on smaller screens. 
+
+![Latest Recipes](readme/assets/images/latest-recipes-1.png)
+
+![Latest Recipes](readme/assets/images/latest-recipes-2.png)
 
 [Back to top](<#contents>)
 
 #### Most Popular Recipes List
 
+The most popular recipes list is another list styled similarly to the previous list. This list is ordered by recipes with the most likes. The list has a max of nine just like the previous list. At the bottom of this section is another view all recipes button link which takes the user to the all recipes page.
+
+![Most Popular Recipes](readme/assets/images/most-popular-recipes-1.png)
+
+![Most Popular Recipes](readme/assets/images/most-popular-recipes-2.png)
+
 [Back to top](<#contents>)
 
 #### Footer
+
+The Viva La Nacho footer is present on every page of the site. It features the same navigation menu as the header nav but styled differently. A deep green background colour is used, which contrasts well with the light background colours of the inner sections. Social media icon links feature colour hover effects which match their individual social media colour palettes. There is also a repitition of the viva la nacho site name and tag line with the mexican hat motif to finish the page. This footer is fully responsive, and navigation items stack vertically on smaller screens.
+
+![Footer](readme/assets/images/viva-la-nacho-footer.png)
+
+![Footer Responsive](readme/assets/images/viva-la-nacho-footer-responsive.png)
 
 [Back to top](<#contents>)
 
@@ -277,19 +323,39 @@ Viva La Nacho uses [Google Fonts](https://fonts.google.com/) for the site typogr
 
 #### Sign Up
 
+A user can navigate to the sign up page via the site navigation bars if they are not logged in. The Viva La Nacho sign up page is a template from the [Django Allauth Package](https://django-allauth.readthedocs.io/en/latest/installation.html). Allauth provides the basic functionality for the user authorisation used in Viva La Nacho. However, the basic allauth templates have been heavily customised and styled to match the site design. The sign up page features a title and a sign up form with user input fields. The form also features javascript validation to alert the user if the fields are incorrectly filled out. The page also features another mexican food themed background image. The image is filtered to lighten the colours to prevent being too distracting to the user. Once a user submits the form correctly they are redirected back to the homepage as a logged in user.
+
+![Sign Up](readme/assets/images/sign-up.png)
+
 [Back to top](<#contents>)
 
 #### Log In
+
+A user can navigate to the log in page via the site navigation bars if they are not already logged in. The styling of the log in page is very similar to the rest of the user authorisation pages. The colour scheme and background image are consistent, but the form and page heading are different. Once the log in form is submitted correctly the user is redirected to the homepage as a logged in user.
+
+![Log In](readme/assets/images/log-in.png)
 
 [Back to top](<#contents>)
 
 #### Log Out
 
+A user can navigate to the log out page via the site navigation bars if they are logged in. They are promted on this page to confirm they wish to log out. Upon confirmation the user is logged out and redirected to the homepage. If the user instead clicks the 'I'm still hungry' button they are just redirected back to the homepage but not logged out. The styling and background image is consistent with the other authorisation pages for coherence. 
+
+![Log Out](readme/assets/images/log-out.png)
+
 [Back to top](<#contents>)
 
 ### Full Recipe Details
 
+The full recipe details page is a template used to display the full information of a recipe. Each published recipe has a recipe details page. Theses pages are available for all users to view, including non logged in users. The main purpose of the page is to display the full recipe method and ingredients. Users will generally navigate to a full recipe page by clicking the view recipe button on the recipe card either on the home page or the all recipes page. As the user has now shown a specific interest in the recipe, all the information about the recipe is displayed here. 
+
+![Recipe Details](readme/assets/images/recipe-details-1.png)
+
 #### Recipe Details
+
+The first section of the recipe page features the recipe image. When there is more than one image a gallery of images is displayed underneath the main image. Basic recipe details and information is displayed in the top section such as cooking and prep time and allergens. There is also an icon on the image which allows the user to like the recipe. In the middle section there is two columns of text displaying the recipe ingredients and method. These fields are both summernote fields so they accept fully formatted and styled user text. Each section on the recipe details page is separated by a divider to clearly illustrate the different segments. 
+
+![Recipe Details](readme/assets/images/recipe-details-2.png)
 
 [Back to top](<#contents>)
 
