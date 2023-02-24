@@ -361,75 +361,165 @@ The first section of the recipe page features the recipe image. When there is mo
 
 #### Like / Unlike Recipe
 
+A user can like and unlike a recipe from that recipes specific recipe page. Each recipe features a heart icon in the top right corner of the main recipe image that can be clicked to like a recipe. It can also be clicked again to unlike a recipe. When a recipe is liked by a user, the icon changes to a heart with a minus icon. Unregistered users cannot like a recipe as they do not have a username. A user who is not logged in only sees a heart icon with a minus symbol to suggest it is blocked. Clicking the icon is disabled for an unregistered user and has no effect. 
+
+![Like Recipe](readme/assets/images/like-recipe.png)
+
+![Unlike Recipe](readme/assets/images/unlike-recipe.png)
+
 [Back to top](<#contents>)
 
 #### Recipe Comments
+
+At the bottom of each recipe details page there is a comments section for users to post comments. Logged in users can use the comment form to post a comment to that particular recipe. Comments need to be approved by an admin before they appear on the site. Comments are listed in the admin area as unapproved and there is an action to approve comments in the admin actions menu. When comments are approved by the admin they immediately go live on the site and appear beneath the recipe. Comments are listed from the most recent at the top to the oldest at the bottom. The username of the comment author is displayed as well as the date and the body of the comment. 
+
+![Recipe Comments](readme/assets/images/recipe-comments.png)
 
 [Back to top](<#contents>)
 
 #### Comment Form
 
+The recipe comment form is what the user uses to post a comment on a recipe. This comment form is only visible to logged in users as a username is required for a successful submission. The comment form comprises of one text body field for the comment and a submit button. The author is assigned automatically as well as the created on date. 
+
+![Comment Form](readme/assets/images/comment-form.png)
+
+![Comment Form](readme/assets/images/log-in-to-post-comment.png)
+
 [Back to top](<#contents>)
 
 #### Comment Form Validation
+
+Javascript is used to validate the comment form. The form is checked for empty space as well as whitespace. Javascript provents the form from being submitted until the comment field passes the test. If the test fails, a pop-up notification appears on the users screen to advise them about the failure. The user can then rectify their mistake and submit the form again. When the comment form is filled out correctly the form submits successfully and the page is refreshed.
+
+![Comment Form Validation](readme/assets/images/comment-validation.png)
 
 [Back to top](<#contents>)
 
 #### Post Comment Notification
 
+Upon the successful submission of the comment form, the page will refresh and a notification will appear at the top of the page. This notification advises the user that their comment has been successfully posted. The notification can be removed from view by clicking the x icon. If not manually hidden, the notification is automatically removed from view after three seconds. The form is also hidden from view in the comment section, and this is instead replaced by a short paragraph of text thanking the user for posting a comment. The text also advises the user that the comment will be visible after it has been approved. 
+
+![Comment Notification](readme/assets/images/comment-notification.png)
+
+![Comment Success](readme/assets/images/comment-success.png)
+
 [Back to top](<#contents>)
 
 ### All Recipes
 
+The all recipe page is a template that displays all the published recipes on the Viva La Nacho site. It was created later in production as there needed to be a single place for users to browse the full selection of recipes. This template has a maximum limit of nine recipes per page but features pagination to allow users to view more recipes. The page is styled very similarly to other pages and also includes the header nav and footer sections. 
+
+![All Recipes](readme/assets/images/all-recipes-page.png)
+
+![All Recipes](readme/assets/images/all-recipes-page-2.png)
+
 #### All Recipes List
+
+The recipes on the all recipes page are arranged in cards in columns of three on larger screens. The cards are responsive and stack on top of each other on smaller screens. The recipes are listed from latest to oldest order.
+
+![All Recipes List](readme/assets/images/all-recipes-list.png)
 
 [Back to top](<#contents>)
 
 #### Recipe Cards
 
+Each recipe card includes a recipe image, recipe like count tag, title, author, excerpt and a button link to the full recipe. This makes it easy for a user to navigate to a recipe they are interested in. They can also see the like count to see if the recipe is popular. Cards are kept clean and are styled consistently with other recipe cards across the site.
+
+![All Recipes Card](readme/assets/images/all-recipes-card.png)
+
 [Back to top](<#contents>)
 
 #### Pagination
+
+A maximum of nine cards are visible on the all recipes page before page pagination occurs. The pagination menu is only visible if more than nine recipes exist on the Viva La Nacho site. Pagination is necessary to reduce load times and keep the page from being very large if a lot of recipes are published on the site. The user can click the next, previous, last or first buttons to navigate between pages of recipes.
+
+![All Recipes Pagination](readme/assets/images/all-recipes-pagination.png)
+
+![All Recipes Pagination](readme/assets/images/all-recipes-pagination-2.png)
 
 [Back to top](<#contents>)
 
 ### My Favourites
 
+The my favourites page is a template which is only accessible via the navigation menu to users who are logged in. The purpose of the my favourites page is to display a list of the recipes on the site which have been liked by the user. This is so the user can use liking recipes as a way of storing them to view at a later date, almost like putting a bookmark in a digital cookbook. Users can use this feature to keep their favourite recipes in one easy location without having to search for them manually on the all recipes page or home page.
+
+![My Favourites](readme/assets/images/my-favourites.png)
+
 #### My Favourites List
+
+The my favourites recipe list displays published recipes that have been liked by the user. Recipes are displayed in cards which are styled consistently with recipe cards found throughout the site. The only difference is they also feature a red cross icon button which is displayed on the top left corner of the recipe image.
+
+![My Favourites List](readme/assets/images/my-favourites-list.png)
 
 [Back to top](<#contents>)
 
 #### Unlike Recipe
 
+A user is able to quickly and easily unlike a recipe to remove it from the list on the my favourites page. The unlike button icon is on the top left corner of each recipe card. When a user clicks the unlike icon the content below the image is hidden and replace with a notification prompting the user to confirm their decision to unlike the recipe. This confirmation helps to avoid a user accidentally unliking a recipe. The user then has to confirm their decision by clicking the unlike button. Alternatively the user can click the cancel button to return the content to the recipe card and abort the process. Clicking the unlike button will remove the user like from the recipe and refresh the page with the recipe removed from the list.
+
+![My Favourites Unlike Recipe](readme/assets/images/my-favourites-unlike-recipe.png)
+
 [Back to top](<#contents>)
 
 #### Unlike Recipe Notification
+
+When a user unlikes a recipe from the my favourites page and the page is refreshed, a notification is displayed to the user at the top of the page confirming that the recipe has been unliked. This can be hidden by the user by clicking the x icon button. If the notification is not manually exited it will automatically be removed from view after three seconds. 
+
+![My Favourites Unlike Notification](readme/assets/images/recipe-unliked-notification.png)
 
 [Back to top](<#contents>)
 
 #### No Favourites
 
+If a user navigates to the my favourites page but has no liked recipes a content box appears which informs the user that they have no liked recipes. It also explains the purpose of the my favourites section, incase the user is unaware. There is also a button link in the box which navigates the user back to the homepage.
+
+![No Favourites Notification](readme/assets/images/no-favourites.png)
+
 [Back to top](<#contents>)
 
 ### My Recipes
 
+The purpose of the my recipes page is to display a list of the recipes that the current user has posted and is the author of. This list contains published and unpublished recipes and is only visible to the current logged in user. This page is not present in the navigation bars to non logged in users and can't be navigated to using the site navigation. The user can use the my recipes page to keep track of their recipes easily in one place. They can freely edit and delete any of their recipes from this page.
+
+![My Recipes](readme/assets/images/my-recipes.png)
+
 #### My Recipes List
+
+The my recipes list displays a list of recipes that have been created by the user. It displays both published and unpublished user recipes. Recipes are again displayed in cards which are similarly styled to the recipe cards throughout the site. Cards are organised in columns of three on large screens and stack responsively to one column on smaller screens.
+
+![My Recipes List](readme/assets/images/my-recipes-list.png)
 
 [Back to top](<#contents>)
 
 #### My Recipe Cards
 
+Recipe cards displayed on the my recipes page feature similar content to those seen throughout the rest of the site. They do however also include a drafted / published tag which displays to the user whether the recipe is drafted or not. They also contain edit, delete and view recipe buttons. Recipes which are drafted and unpublished do not contain the view recipe button as they do not have a full recipe template page until they are published.
+
+![My Recipes Card](readme/assets/images/my-recipe-card.png)
+
 [Back to top](<#contents>)
 
 #### Delete Recipe
+
+A user can delete their recipe easily from the my recipe page. If a user clicks the delete button on a recipe card the card content is hidden and a delete confirmation is displayed seeking confirmation from the user for recipe deletion. The user is also warned that the process cannot be undone. The user has the option to cancel the delete by clicking the cancel button or to confirm recipe deletion by clicking the delete button. The delete button is purposefully coloured red for warning. If the user clicks the cancel button the card content is returned to normal. If the user clicks the delete button the receipe is deleted from the database and the page is refreshed showing the recipe removed from the list.
+
+![My Recipes Delete](readme/assets/images/my-recipes-delete.png)
 
 [Back to top](<#contents>)
 
 #### Delete Recipe Notification
 
+If a user confirms the deletion of a recipe a notification is displayed to the user at the top of the page on refresh. This notification confirms the deletion of the recipe. The user can hide this notification by clicking the x icon. If the notification isn't manually closed the notification will automatically be removed from view after three seconds. 
+
+![Recipe Deleted Notification](readme/assets/images/recipe-deleted-notification.png)
+
 [Back to top](<#contents>)
 
 #### No Recipes
+
+If a user navigates to the my recipes page but doesn't have any recipes a box is displayed in the centre of the screen to advise the user that they have no recipes. They are encouraged to post their first recipe and given a button link to the post a recipe form. There is also a button link to return home if the user doesn't want to post a recipe.
+
+![No Recipes](readme/assets/images/no-recipes.png)
 
 [Back to top](<#contents>)
 
