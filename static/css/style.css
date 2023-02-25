@@ -152,7 +152,7 @@ form.login label, form.signup label {
     font-size: 1.25rem;
 }
 
-#id_login:placeholder, #id_password:placeholder {
+#id_login::placeholder, #id_password::placeholder {
     font-size: 1.25rem;
 }
 
