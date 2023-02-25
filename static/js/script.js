@@ -8,7 +8,7 @@ nav_button.addEventListener('click', () => {
     burger_icon.classList.toggle('hidden');
     exit_icon.classList.toggle('hidden');
     mobile_menu.classList.toggle('hidden');
-})
+});
 
 // Cancel Button Functionality
 if ( document.getElementsByClassName('cancel').length > 0 ) {
@@ -20,7 +20,7 @@ if ( document.getElementsByClassName('cancel').length > 0 ) {
         button.addEventListener('click', () => {
             form.classList.toggle('hidden');
             pop_up.classList.toggle('hidden');
-        })
+        });
     }
 }
 
@@ -37,12 +37,12 @@ if ( document.getElementsByClassName('my-recipe-card-content').length > 0 ) {
         delete_button.addEventListener('click', () => {
             recipe_text_content.classList.toggle('hidden');
             delete_recipe_notification.classList.toggle('hidden');
-        })
+        });
 
         cancel_button.addEventListener('click', () => {
             recipe_text_content.classList.toggle('hidden');
             delete_recipe_notification.classList.toggle('hidden');
-        })
+        });
     }
 }
 
@@ -59,12 +59,12 @@ if ( document.getElementsByClassName('my-favourites-card-content').length > 0 ) 
         unlike_button.addEventListener('click', () => {
             recipe_text_content.classList.toggle('hidden');
             unlike_recipe_notification.classList.toggle('hidden');
-        })
+        });
 
         cancel_button.addEventListener('click', () => {
             recipe_text_content.classList.toggle('hidden');
             unlike_recipe_notification.classList.toggle('hidden');
-        })
+        });
     }
 }
 
@@ -75,7 +75,7 @@ if ( document.getElementsByClassName('notification-close-button').length > 0 ) {
 
     close_button.addEventListener('click', () => {
         notification.classList.add('hidden');
-    })
+    });
 
     setTimeout(function() {
         notification.classList.add('hidden');
@@ -83,6 +83,12 @@ if ( document.getElementsByClassName('notification-close-button').length > 0 ) {
 }
 
 // Recipe Form Validation
+  
+// Strip HTML tags from summernote fields function
+function stripHTML(html){
+  let doc = new DOMParser().parseFromString(html, 'text/html');
+  return doc.body.textContent || "";
+}
 
 if ( ( document.getElementsByClassName('post-recipe').length > 0 ) || ( document.getElementsByClassName('edit-recipe').length > 0 ) ) {
 
@@ -95,26 +101,20 @@ if ( ( document.getElementsByClassName('post-recipe').length > 0 ) || ( document
         form = document.forms["edit-recipe"];
     }
 
-    // Strip HTML tags from summernote fields function
-    function stripHTML(html){
-        let doc = new DOMParser().parseFromString(html, 'text/html');
-        return doc.body.textContent || "";
-    }
-
     // Form submit event listener
     form.addEventListener('submit', event => {
 
-        let title = form["title"].value;
+        let title = form.title.value;
         let category_checkboxes = document.getElementById('div_id_category').querySelectorAll('input[type="checkbox"]:checked');
-        let prep_time = form["prep_time"].value;
-        let cooking_time = form["cooking_time"].value;
-        let serves = form["serves"].value;
-        let difficulty = form["difficulty"].value;
-        let excerpt = form["excerpt"].value;
+        let prep_time = form.prep_time.value;
+        let cooking_time = form.cooking_time.value;
+        let serves = form.serves.value;
+        let difficulty = form.difficulty.value;
+        let excerpt = form.excerpt.value;
         let allergen_checkboxes = document.querySelector('#div_id_allergens').querySelectorAll('input[type="checkbox"]:checked');
-        let ingredients = form["ingredients"].value;
-        let method = form["method"].value;
-        let featured_image = form["featured_image"].value;
+        let ingredients = form.ingredients.value;
+        let method = form.method.value;
+        let featured_image = form.featured_image.value;
         let featured_image_has_current = document.querySelector('#div_id_featured_image').getElementsByTagName('a');
 
         if ( ( title == "" ) || ( title.trim().length == 0 ) ) {
@@ -188,7 +188,7 @@ if ( document.getElementsByClassName('comment-form').length > 0 ) {
     // Form submit event listener
     form.addEventListener('submit', event => {
 
-        let body = form["body"].value;
+        let body = form.body.value;
 
         if ( ( body == "" ) || ( body.trim().length == 0 ) ) {
             event.preventDefault();
