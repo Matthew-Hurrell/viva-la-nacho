@@ -1230,13 +1230,43 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 
 ### W3C (HTML)
 
+When the Viva La Nacho site was first tested with the [W3C HTML Markup Validation Service](https://validator.w3.org/) it showed one error and some warnings. The error was a stray unordered list closing tag and the warnings were due to aria labels being used on non interactive icon elements. After I fixed these issues the test showed no errors or warnings.
+
+![HTML Validation Test](readme/assets/images/html-validation.png)
+
 [Back to top](<#contents>)
 
 ### W3C (CSS)
 
+The Viva La Nacho CSS stylesheet has been tested using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) by direct input. Unfortunately there were some errors shown for the @tailwind selectors at the top of the CSS file. These selectors are for the tailwind utility framework that Viva La Nacho uses for styling. However, with these selectors commented out the CSS test passed with no errors or warnings.
+
+![CSS Validation Errors](readme/assets/images/css-validation-errors.png)
+
+![CSS Validation Test](readme/assets/images/css-validation.png)
+
 [Back to top](<#contents>)
 
 ### PEP8 (PYTHON)
+
+Due to the closure of the PEP8 Python Validation online site, I used the new [Code Institute Python Linter](https://pep8ci.herokuapp.com/) to test all of the Viva La Nacho python code files. 
+
+#### admin.py
+![Admin Python Test](readme/assets/images/admin-python-test.png)
+
+#### settings.py
+![Settings Python Test](readme/assets/images/settings-python-test.png)
+
+#### forms.py
+![Forms Python Test](readme/assets/images/forms-python-test.png)
+
+#### models.py
+![Models Python Test](readme/assets/images/models-python-test.png)
+
+#### urls.py
+![URLs Python Test](readme/assets/images/urls-python-test.png)
+
+#### views.py
+![Views Python Test](readme/assets/images/views-python-test.png)
 
 [Back to top](<#contents>)
 
