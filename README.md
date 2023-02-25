@@ -756,11 +756,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: Each recipe should provide a link to the full recipe page
 
 ### Tasks:
-- [x] Add MyFavourites class view with logic into views.py
-- [x] Add URL path for the MyFavourites view in urls.py
-- [x] Create template for my_favourites and add content, logic and styling
-- [x] Add template URL link to base template nav menus
-- [x] Test functionality
+- &check; Add MyFavourites class view with logic into views.py
+- &check; Add URL path for the MyFavourites view in urls.py
+- &check; Create template for my_favourites and add content, logic and styling
+- &check; Add template URL link to base template nav menus
+- &check; Test functionality
 
 2. As a **user** I can **delete one or more of my recipes** so that **I can remove them from the site and from public view**
 
@@ -771,10 +771,10 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 4: Clicking the confirm deletion button should delete the recipe, remove it from the home page and refresh the 'my recipes' page to show that the recipe is no longer on the list
 
 ### Tasks:
-- [x] Add a DeleteRecipe view to views.py with logic 
-- [x] Add the DeleteRecipe view path to urls.py 
-- [x] Add the delete_recipe link url to the my_recipes template 
-- [x] Test functionality
+- &check; Add a DeleteRecipe view to views.py with logic 
+- &check; Add the DeleteRecipe view path to urls.py 
+- &check; Add the delete_recipe link url to the my_recipes template 
+- &check; Test functionality
 
 3. As a **user** I can **view a list of the recipes I have posted** so that **I can easily review them and edit them if necessary**
 
@@ -786,11 +786,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 5: The page should also feature a 'post a recipe' button which navigates the user to the post a recipe page form
 
 ### Tasks:
-- [x] Add MyRecipes class view with logic to views.py
-- [x] Add URL path for MyRecipes class in urls.py
-- [x] Create template for my_recipes and add logic, content and styling
-- [x] Add URL link to my_recipes into base template navigation menus
-- [x] Test functionality
+- &check; Add MyRecipes class view with logic to views.py
+- &check; Add URL path for MyRecipes class in urls.py
+- &check; Create template for my_recipes and add logic, content and styling
+- &check; Add URL link to my_recipes into base template navigation menus
+- &check; Test functionality
 
 4. As a **user** I can **edit my current recipes** so that **I can add amendments to the recipe or publish the recipe if it is a draft**
 
@@ -802,11 +802,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 5: Upon submission the user should be redirected back to the 'my recipes' page and a 'recipe successfully updated' alert should appear at the top of the screen to notify the user of the successful update
 
 ### Tasks:
-- [x] Add an EditRecipe view class with logic to views.py 
-- [x] Add a URL path for EditRecipe in urls.py 
-- [x] Create edit_recipe template and add form and content to template
-- [x] Add URL link to my_recipes template 
-- [x] Test functionality
+- &check; Add an EditRecipe view class with logic to views.py 
+- &check; Add a URL path for EditRecipe in urls.py 
+- &check; Create edit_recipe template and add form and content to template
+- &check; Add URL link to my_recipes template 
+- &check; Test functionality
 
 5. As a **user** I can **store my recipe post as a draft** so that **I can come back another time and add changes before publishing it online**
 
@@ -816,11 +816,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The recipe should appear on the 'my recipes' page with a 'draft' label showing next to it
 
 ### Tasks:
-- [x] Add logic to MyRecipes class view to include draft recipes
-- [x] Add status field to RecipeForm class in forms.py
-- [x] Style status field on post_recipe and edit_recipe templates
-- [x] Add draft tag and logic to my_recipes template
-- [x] Test functionality
+- &check; Add logic to MyRecipes class view to include draft recipes
+- &check; Add status field to RecipeForm class in forms.py
+- &check; Style status field on post_recipe and edit_recipe templates
+- &check; Add draft tag and logic to my_recipes template
+- &check; Test functionality
 
 6. As a **user** I can **post a recipe** so that **it can be shared online with the community**
 
@@ -831,12 +831,12 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 4: On submission, the recipe should be added to the 'my recipes' page and available to view on the home page and on the recipes full details page. The user should also be redirected to 'my recipes' page and a 'recipe successfully posted' alert should appear at the top of the page to notify the user of the successful posting
 
 ### Tasks:
-- [x] Add RecipeForm class to forms.py 
-- [x] Add PostRecipe class view to views.py and link form
-- [x] Add URL path for PostRecipe to urls.py
-- [x] Create post_recipe template with form, logic and content
-- [x] Add post_recipe URL links to base template nav bars
-- [x] Test functionality
+- &check; Add RecipeForm class to forms.py 
+- &check; Add PostRecipe class view to views.py and link form
+- &check; Add URL path for PostRecipe to urls.py
+- &check; Create post_recipe template with form, logic and content
+- &check; Add post_recipe URL links to base template nav bars
+- &check; Test functionality
 
 7. As a **user** I can **like a recipe** so that **I can view that recipe in the recipe list on my 'my favourites' page at a later date**
 
@@ -848,11 +848,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 5: When active, the heart icon should change colour to display that the recipe has been liked
 
 ### Tasks:
-- [x] Add likes many-to-many field into Recipe model
-- [x] Add RecipeLike view to views.py
-- [x] Add URL for RecipeLike to urls.py
-- [x] Add links to RecipeLike to recipe_details template
-- [x] Test functionality
+- &check; Add likes many-to-many field into Recipe model
+- &check; Add RecipeLike view to views.py
+- &check; Add URL for RecipeLike to urls.py
+- &check; Add links to RecipeLike to recipe_details template
+- &check; Test functionality
 
 8. As a **user** I can **unlike a recipe** so that **I can remove the recipe list on the 'my favourites' page**
 
@@ -864,10 +864,10 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 5: This functionality should also be available from the 'my favourites' page
 
 ### Tasks:
-- [x] Add UnlikeRecipe view with logic to views.py
-- [x] Add path for UnlikeRecipe view in urls.py
-- [x] Add links into my_favourites template
-- [x] Test functionality
+- &check; Add UnlikeRecipe view with logic to views.py
+- &check; Add path for UnlikeRecipe view in urls.py
+- &check; Add links into my_favourites template
+- &check; Test functionality
 
 9. As a **user** I can **post a comment on a recipe** so that **I can interact with the author and community**
 
@@ -879,10 +879,10 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 5: After admin approval the comment should appear on the recipe page
 
 ### Tasks:
-- [x] Add CommentForm class to forms.py
-- [x] Add post comment function to RecipeDetails view
-- [x] Add comment form with logic and content to recipe_details template
-- [x] Test functionality
+- &check; Add CommentForm class to forms.py
+- &check; Add post comment function to RecipeDetails view
+- &check; Add comment form with logic and content to recipe_details template
+- &check; Test functionality
 
 10. As an **administrator** I can **delete a user account** so that **I can remove users that are violating the community standards**
 
@@ -894,9 +894,9 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 5: Upon clicking the window delete button the user should be deleted along with all their comments and recipes. The admin area should be refreshed showing the updated user list with the deleted user removed
 
 ### Tasks:
-- [x] Set up allauth with django
-- [x] Add users to database
-- [x] Test functionality
+- &check; Set up allauth with django
+- &check; Add users to database
+- &check; Test functionality
 
 11. As a **user** I can **log into my account** so that **I can access my recipes and interact with the community**
 
@@ -906,11 +906,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The link should lead to a login page and redirect back to the homepage after the user logs in
 
 ### Tasks:
-- [x] Install allauth package to django
-- [x] Add allauth settings into settings.py
-- [x] Copy login allauth template and add content and custom styling
-- [x] Add URL to login template to base template navigation menus
-- [x] Test functionality
+- &check; Install allauth package to django
+- &check; Add allauth settings into settings.py
+- &check; Copy login allauth template and add content and custom styling
+- &check; Add URL to login template to base template navigation menus
+- &check; Test functionality
 
 12. As a **user** I can **sign out of my account** so that **I can close the application and navigate away from the page**
 
@@ -920,10 +920,10 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: When clicked the link should log the user out and redirect them to the home page
 
 ### Tasks:
-- [x] Implement allauth account_logout functionality
-- [x] Add custom styling to logout template
-- [x] Add URL link to logout template to base template navigation menus
-- [x] Test logout functionality
+- &check; Implement allauth account_logout functionality
+- &check; Add custom styling to logout template
+- &check; Add URL link to logout template to base template navigation menus
+- &check; Test logout functionality
 
 13. As a **user** I can **register my details** so that **I can create an account and access all the app features**
 
@@ -933,12 +933,12 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: Upon submission the user should be automatically logged in and redirected to the home page
 
 ### Tasks:
-- [x] Add python allauth package
-- [x] Add allauth settings into settings.py 
-- [x] All allauth URL path into urls.py
-- [x] Test register functionality
-- [x] Copy template files into templates directory and add custom content and styling
-- [x] Add register URL links to base template navigation menus
+- &check; Add python allauth package
+- &check; Add allauth settings into settings.py 
+- &check; All allauth URL path into urls.py
+- &check; Test register functionality
+- &check; Copy template files into templates directory and add custom content and styling
+- &check; Add register URL links to base template navigation menus
 
 14. As a **user** I can **view at least one image of the recipe** so that **I can see what the finished recipe looks like**
 
@@ -949,14 +949,14 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 4: Gallery images on the recipe page should be clickable to display the full-size image
 
 ### Tasks:
-- [x] Install cloudinary
-- [x] Add cloudinary settings into settings.py
-- [x] Import cloudinary into models.py
-- [x] Add featured image and three gallery image fields to Recipe model using cloudinary fields
-- [x] Add image fields to RecipeForm in forms.py
-- [x] Add recipe image tags to recipe_details template 
-- [x] Add content and styling for recipe images to recipe_details template along with logic for a placeholder if an image isn't used
-- [x] Test functionality
+- &check; Install cloudinary
+- &check; Add cloudinary settings into settings.py
+- &check; Import cloudinary into models.py
+- &check; Add featured image and three gallery image fields to Recipe model using cloudinary fields
+- &check; Add image fields to RecipeForm in forms.py
+- &check; Add recipe image tags to recipe_details template 
+- &check; Add content and styling for recipe images to recipe_details template along with logic for a placeholder if an image isn't used
+- &check; Test functionality
 
 15. As a **user** I can **see the preparation and approximate cooking times for all recipes** so that **I can asses what recipes are right for me and plan my cooking time**
 
@@ -966,11 +966,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The cooking and preparation times should display as coloured badges 
 
 ### Tasks:
-- [x] Add prep_time field and cooking_time field to Recipe model
-- [x] Add fields to RecipeForm in forms.py
-- [x] Add recipe prep time and cooking time tags to recipe_details template 
-- [x] Add content and styling for recipe prep time and cooking time to recipe_details template
-- [x] Test functionality
+- &check; Add prep_time field and cooking_time field to Recipe model
+- &check; Add fields to RecipeForm in forms.py
+- &check; Add recipe prep time and cooking time tags to recipe_details template 
+- &check; Add content and styling for recipe prep time and cooking time to recipe_details template
+- &check; Test functionality
 
 16. As a **user** I can **see a difficulty rating for each recipe** so that **I can quickly tell if a recipe is too difficult for me**
 
@@ -980,12 +980,12 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: Difficulty ratings should appear on all recipes on the home page as well as the individual recipe details pages
 
 ### Tasks:
-- [x] Add difficulty field to Recipe model
-- [x] Add custom difficulties choices to field options
-- [x] Add difficulty field to RecipeForm in forms.py
-- [x] Add recipe difficulty tag to recipe_details template with logic
-- [x] Add content and styling for recipe difficulty to recipe_details template
-- [x] Test functionality
+- &check; Add difficulty field to Recipe model
+- &check; Add custom difficulties choices to field options
+- &check; Add difficulty field to RecipeForm in forms.py
+- &check; Add recipe difficulty tag to recipe_details template with logic
+- &check; Add content and styling for recipe difficulty to recipe_details template
+- &check; Test functionality
 
 17. As a **user** I can **see the approximate amount of people that the recipes can serve** so that **I can easily adjust the ingredient amounts to match the number of people I am cooking for**
 
@@ -995,11 +995,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The serving number should appear in a coloured label 
 
 ### Tasks:
-- [x] Add serves field to Recipe model
-- [x] Add serves field to RecipeForm in forms.py
-- [x] Add recipe serves tag to recipe_details template 
-- [x] Add content and styling for recipe serves to recipe_details template
-- [x] Test functionality
+- &check; Add serves field to Recipe model
+- &check; Add serves field to RecipeForm in forms.py
+- &check; Add recipe serves tag to recipe_details template 
+- &check; Add content and styling for recipe serves to recipe_details template
+- &check; Test functionality
 
 18. As a **user** I can **see a list of allergens for the recipes** so that **I can avoid any recipes that contain certain allergens**
 
@@ -1009,13 +1009,13 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The allergens should all be displayed in an easy to view list format which is clearly displayed
 
 ### Tasks:
-- [x] Add allergens array field to Recipe model
-- [x] Add model method string_of_allergens to return a string of the allergens array field 
-- [x] Add custom array field class to allow multiple checkbox inputs
-- [x] Add allergens field to RecipeForm in forms.py
-- [x] Add recipe allergens tag to recipe_details template 
-- [x] Add content and styling for recipe allergens to recipe_details template
-- [x] Test functionality
+- &check; Add allergens array field to Recipe model
+- &check; Add model method string_of_allergens to return a string of the allergens array field 
+- &check; Add custom array field class to allow multiple checkbox inputs
+- &check; Add allergens field to RecipeForm in forms.py
+- &check; Add recipe allergens tag to recipe_details template 
+- &check; Add content and styling for recipe allergens to recipe_details template
+- &check; Test functionality
 
 19. As a **user** I can **see a summarised list of ingredients for each recipe** so that **I can quickly and easily read through the ingredients to get an idea of the amounts required**
 
@@ -1025,12 +1025,12 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The ingredients should be displayed as an unordered list with nicely formatted spacing and margins to make them easy to read
 
 ### Tasks:
-- [x] Add ingredients field to Recipe model
-- [x] Add ingredients field to RecipeForm in forms.py
-- [x] Import summernote to RecipeForm and add widget to field
-- [x] Add recipe ingredients tag to recipe_details template 
-- [x] Add content and styling for recipe ingredients to recipe_details template
-- [x] Test functionality
+- &check; Add ingredients field to Recipe model
+- &check; Add ingredients field to RecipeForm in forms.py
+- &check; Import summernote to RecipeForm and add widget to field
+- &check; Add recipe ingredients tag to recipe_details template 
+- &check; Add content and styling for recipe ingredients to recipe_details template
+- &check; Test functionality
 
 20. As a **user** I can **see a numbered list of steps to follow for the recipe methods** so that **I can easily follow the instructions one by one**
 
@@ -1040,12 +1040,12 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: Steps should be easy to read and formatted well with spacing and margins 
 
 ### Tasks:
-- [x] Add method field to Recipe model
-- [x] Add method field to RecipeForm in forms.py
-- [x] Import summernote to RecipeForm and add widget to field
-- [x] Add recipe method tag to recipe_details template 
-- [x] Add content and styling for recipe method to recipe_details template
-- [x] Test functionality
+- &check; Add method field to Recipe model
+- &check; Add method field to RecipeForm in forms.py
+- &check; Import summernote to RecipeForm and add widget to field
+- &check; Add recipe method tag to recipe_details template 
+- &check; Add content and styling for recipe method to recipe_details template
+- &check; Test functionality
 
 21. As a **user** I can **click on a recipe link on the home page and be directed to a full page for the recipe** so that **I can see the full recipe details and find out more information**
 
@@ -1054,11 +1054,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 2: The page should feature the recipes full details as well as a back button to navigate the user back to the home page
 
 ### Tasks:
-- [x] Add RecipeDetails class view with logic to views.py
-- [x] Add URL path RecipeDetails in urls.py 
-- [x] Create recipe_details template with content and logic 
-- [x] Add URL links to recipe_details to each recipe on the index template, as well as the my_favourites template and all recipes that are published on the my_recipes template
-- [x] Test functionality
+- &check; Add RecipeDetails class view with logic to views.py
+- &check; Add URL path RecipeDetails in urls.py 
+- &check; Create recipe_details template with content and logic 
+- &check; Add URL links to recipe_details to each recipe on the index template, as well as the my_favourites template and all recipes that are published on the my_recipes template
+- &check; Test functionality
 
 22. As a **user** I can **view comments on a recipe** so that **I can see what members of the community have said about the recipe**
 
@@ -1068,10 +1068,10 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: Each comment should display the comment text body, date posted and author
 
 ### Tasks:
-- [x] Import Comments model into views.py
-- [x] Add comments queryset with logic to RecipeDetails view
-- [x] Add comments loop and logic into recipe_details template
-- [x] Test functionality
+- &check; Import Comments model into views.py
+- &check; Add comments queryset with logic to RecipeDetails view
+- &check; Add comments loop and logic into recipe_details template
+- &check; Test functionality
 
 23. As a **user** I can **view a list of the most popular recipes on the home page** so that **I can look at an ordered list of the most popular recipes within the community**
 
@@ -1081,9 +1081,9 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The list should display a maximum of six recipes
 
 ### Tasks:
-- [x] Amend RecipeList class view to add queryset for most liked recipes
-- [x] Add most popular recipes section with loop logic, content and styling to index template
-- [x] Test functionality
+- &check; Amend RecipeList class view to add queryset for most liked recipes
+- &check; Add most popular recipes section with loop logic, content and styling to index template
+- &check; Test functionality
 
 24. As an **administrator** I can **post a recipe in the admin area** so that **I can add my own recipe posts**
 
@@ -1094,10 +1094,10 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 4: The recipe should appear in the recipe list in the admin area when the page refreshes 
 
 ### Tasks:
-- [x] Add admin URLS in urls.py
-- [x] Configure settings in settings.py
-- [x] Import models to admin.py and add classes for each model
-- [x] Test functionality
+- &check; Add admin URLS in urls.py
+- &check; Configure settings in settings.py
+- &check; Import models to admin.py and add classes for each model
+- &check; Test functionality
 
 25. As an **administrator** I can **approve a user comment** so that **it can be posted online**
 
@@ -1108,9 +1108,9 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 4: Upon approval the comment should be removed from the admin comment approval list 
 
 ### Tasks:
-- [x]  Add approve_comments action to commentadmin class in admin.py
-- [x] Add approve_coments function to update comment approved field to true
-- [x] Test functionality
+- &check; Add approve_comments action to commentadmin class in admin.py
+- &check; Add approve_coments function to update comment approved field to true
+- &check; Test functionality
 
 26. As an **administrator** I can **disapprove a comment** so that **it is deleted and doesn't go live on the site if it violates the community standards**
 
@@ -1121,9 +1121,9 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 4: Upon disapproval the comment should be deleted and removed from the admin comment approval list
 
 ### Tasks:
-- [x] Add approve_comments action to commentadmin class in admin.py
-- [x] Add approve_coments function to update comment approved field to true 
-- [x] Test functionality
+- &check; Add approve_comments action to commentadmin class in admin.py
+- &check; Add approve_coments function to update comment approved field to true 
+- &check; Test functionality
 
 27. As a **user** I can **view recipes on the home page** so that **I can browse through them and find any that interest me**
 
@@ -1133,12 +1133,12 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The recipes should be styled displayed in an appealing way 
 
 ### Tasks:
-- [x] Add RecipeList class view to views.py with logic and queryset for recipes
-- [x] Add URL path for the RecipeList view to urls.py
-- [x] Create index/homepage template with content, logic and styling
-- [x] Create base template with header and footer navigation
-- [x] Add links to homepage in base template navigation menus
-- [x] Test functionality
+- &check; Add RecipeList class view to views.py with logic and queryset for recipes
+- &check; Add URL path for the RecipeList view to urls.py
+- &check; Create index/homepage template with content, logic and styling
+- &check; Create base template with header and footer navigation
+- &check; Add links to homepage in base template navigation menus
+- &check; Test functionality
 
 28. As a **user** I can **view the featured recipe on the home page** so that **I can see what the recommended recipe of the week is**
 
@@ -1147,9 +1147,9 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 2: The recipe should include a large picture and summary and look eye-catching
 
 ### Tasks:
-- [x] Amend RecipeList class view in views.py to include a queryset for the featured recipe
-- [x] Add featured recipe tags, logic and styling into the index/homepage template
-- [x] Test functionality
+- &check; Amend RecipeList class view in views.py to include a queryset for the featured recipe
+- &check; Add featured recipe tags, logic and styling into the index/homepage template
+- &check; Test functionality
 
 29. As a **user** I can **view a list of the latest recipes on the home page** so that **I can see if there's anything new that I have missed**
 
@@ -1159,14 +1159,14 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: The list should display a maximum of six recipes
 
 ### Tasks:
-- [x] Add created_on date field to Recipe model in models.py
-- [x] Add RecipeList class view with queryset logic for latest recipes
-- [x] Add URL path for RecipeList to urls.py 
-- [x] Create template for home page called index 
-- [x] Add extends base and block content tags into template
-- [x] Add URL links to the index page into the navigation menus in the base template
-- [x] Add latest recipes section with loop logic, content and styling into the home template
-- [x] Test functionality
+- &check; Add created_on date field to Recipe model in models.py
+- &check; Add RecipeList class view with queryset logic for latest recipes
+- &check; Add URL path for RecipeList to urls.py 
+- &check; Create template for home page called index 
+- &check; Add extends base and block content tags into template
+- &check; Add URL links to the index page into the navigation menus in the base template
+- &check; Add latest recipes section with loop logic, content and styling into the home template
+- &check; Test functionality
 
 30. As an **administrator** I can **edit user recipes** so that **I can correct grammar or styling issues**
 
@@ -1178,9 +1178,9 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 5: It should be possible to cancel the edit action by clicking a cancel or back button on the edit form to return the administrator back to the list without editing the recipe content
 
 ### Tasks:
-- [x] Import models into admin.py
-- [x] Add admin classes for each database model
-- [x] Test functionality
+- &check; Import models into admin.py
+- &check; Add admin classes for each database model
+- &check; Test functionality
 
 31. As an **administrator** I can **delete user recipes** so that **I can remove them from the site if they do against the community standards**
 
@@ -1192,9 +1192,9 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 5: Clicking the confirm/delete button should delete the recipe and remove it from the site completely. The pop-up window should be closed and the window refreshed to show an updated list of recipes with the deleted recipe removed
 
 ### Tasks:
-- [x] Import models to admin.py
-- [x] Add admin classes for each database model
-- [x] Test functionality
+- &check; Import models to admin.py
+- &check; Add admin classes for each database model
+- &check; Test functionality
 
 32. As an **admin** I can **make a recipe featured** so that **the recipe can be viewed as the featured recipe on the home page**
 
@@ -1205,10 +1205,10 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 4: This recipe should then appear on the index page as a featured recipe
 
 ### Tasks:
-- [x] Add featured field to Recipe model in models.py
-- [x] Add add_featured and remove_featured actions and methods into the RecipeAdmin class in admin.py
-- [x] Add featured field into RecipeAdmin list display
-- [x] Test functionality
+- &check; Add featured field to Recipe model in models.py
+- &check; Add add_featured and remove_featured actions and methods into the RecipeAdmin class in admin.py
+- &check; Add featured field into RecipeAdmin list display
+- &check; Test functionality
 
 33. As a **user** I can **view all the recipes on one page** so that **I can browse all the recipes in one list**
 
@@ -1218,11 +1218,11 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 * Acceptance Criteria 3: All recipes should be displayed as cards in a paginated list 
 
 ### Tasks:
-- [x] Create AllRecipes class view in views.py
-- [x] Add the URL path for the AllRecipes view in urls.py
-- [x] Create the all_recipes template with content, styling and logic
-- [x] Add URL links from the index template to the all_recipes template
-- [x] Test functionality
+- &check; Create AllRecipes class view in views.py
+- &check; Add the URL path for the AllRecipes view in urls.py
+- &check; Create the all_recipes template with content, styling and logic
+- &check; Add URL links from the index template to the all_recipes template
+- &check; Test functionality
 
 [Back to top](<#contents>)
 
@@ -1272,25 +1272,231 @@ Due to the closure of the PEP8 Python Validation online site, I used the new [Co
 
 ### JSHint (JavaScript)
 
+When the Viva La Nacho javascript file script.js was first passed into the [JSHint Javascript Validation Tool](https://jshint.com/) it showed a few errors mainly due to missing semicolons. After the errors were rectified the code passed with no errors or warnings.
+
+![JavaScript Test](readme/assets/images/javascript-test.png)
+
 [Back to top](<#contents>)
 
 ## Input Validation Tests
 
+All forms on the Viva La Nacho site have been thoroughly tested for input validation. All the forms on the site use javascript to validate user input. Manual tests on each field on the forms have also been conducted to check for any errors.
+
 ### Post Recipe Form Tests
+
+| Status | **Post A Recipe Form**
+|:-------:|:--------|
+| &check; | Form cannot be submitted with blank title field 
+| &check; | Title field cannot be submitted with just whitespace
+| &check; | Form cannot be submitted without at least one category selected
+| &check; | Form cannot be submitted without prep time being entered
+| &check; | Prep time cannot be any character other than a number
+| &check; | Prep time cannot be above 600 or below 0
+| &check; | Form cannot be submitted without cooking time being entered
+| &check; | Cooking time cannot be any character other than a number
+| &check; | Cooking time cannot be above 600 or below 0
+| &check; | Form cannot be submitted without serving being entered
+| &check; | Serving cannot be above 10
+| &check; | Form cannot be submitted without difficulty being entered
+| &check; | Form cannot be submitted with blank excerpt
+| &check; | Excerpt cannot be just whitespace
+| &check; | Excerpt character length cannot be greater than 250
+| &check; | Form cannot be submitted without at least one allergen selected
+| &check; | Form cannot be submitted with blank ingredients field
+| &check; | Ingredients field cannot contain just whitespace
+| &check; | Form cannot be submitted with blank method field
+| &check; | Method field cannot contain just whitespace
+| &check; | Form cannot be submitted without uploading one image to the first image field
+| &check; | Form cannot be submitted by a non logged in user
 
 [Back to top](<#contents>)
 
 ### Edit Recipe Form Tests
 
+| Status | **Edit Recipe Form**
+|:-------:|:--------|
+| &check; | Form cannot be submitted with blank title field 
+| &check; | Title field cannot be submitted with just whitespace
+| &check; | Form cannot be submitted without at least one category selected
+| &check; | Form cannot be submitted without prep time being entered
+| &check; | Prep time cannot be any character other than a number
+| &check; | Prep time cannot be above 600 or below 0
+| &check; | Form cannot be submitted without cooking time being entered
+| &check; | Cooking time cannot be any character other than a number
+| &check; | Cooking time cannot be above 600 or below 0
+| &check; | Form cannot be submitted without serving being entered
+| &check; | Serving cannot be above 10
+| &check; | Form cannot be submitted without difficulty being entered
+| &check; | Form cannot be submitted with blank excerpt
+| &check; | Excerpt cannot be just whitespace
+| &check; | Excerpt character length cannot be greater than 250
+| &check; | Form cannot be submitted without at least one allergen selected
+| &check; | Form cannot be submitted with blank ingredients field
+| &check; | Ingredients field cannot contain just whitespace
+| &check; | Form cannot be submitted with blank method field
+| &check; | Method field cannot contain just whitespace
+| &check; | Form cannot be submitted without uploading one image to the first image field
+| &check; | Form cannot be submitted by a non logged in user
+
 [Back to top](<#contents>)
 
 ### Comment Form Tests
+
+| Status | **Comment Form**
+|:-------:|:--------|
+| &check; | Form cannot be submitted with blank body field
+| &check; | Body field cannot be submitted with just whitespace
+| &check; | Form cannot be submitted by a non logged in user
 
 [Back to top](<#contents>)
 
 ## Additional Tests
 
 ### Manual Tests
+
+There has been extensive manual testing completed on all features of the Viva La Nacho site.
+
+| Status | **Navigation**
+|:-------:|:--------|
+| &check; | My recipes and my favourites are hidden from a non authorised site user on the header and footer navigation bars
+| &check; | Logging in displays the log out navigation link and hides the log in and sign up menu items
+| &check; | Log out navigation menu item is not displayed to users who are not signed in
+| &check; | Home URL link in header and footer sends user to homepage
+| &check; | My favourites URL link in header and footer sends user to my favourites page
+| &check; | My recipes URL link in header and footer sends user to my recipes page
+| &check; | Login URL link in header and footer sends user to login page
+| &check; | Logout URL link in header and footer sends user to logout page
+| &check; | Sign up URL link in header and footer sends user to signup page
+| &check; | Post a recipe button URL link in header and footer sends user to post recipe page
+| &check; | Viva La Nacho logo URL link in header sends user to the homepage
+| &check; | Facebook social media icon in footer sends user to https://www.facebook.com and opens in a new tab
+| &check; | Instagram social media icon in footer sends user to https://www.instagram.com and opens in a new tab
+| &check; | Twitter social media icon in footer sends user to https://www.twitter.com and opens in a new tab
+| &check; | Tiktok social media icon in footer sends user to https://www.tiktok.com and opens in a new tab
+| &check; | Header and footer are present on all pages of the site
+| &check; | Header and footer menus are reponsive on smaller screens
+| &check; | Header menu collapses to mobile menu on smaller screens and the menu opens and closes with the menu button
+
+| Status | **Homepage**
+|:-------:|:--------|
+| &check; | All sections are fully responsive
+| &check; | Featured recipe view recipe button sends user to recipe full details
+| &check; | All view recipe buttons in latest recipes section cards send user to full recipes
+| &check; | View all recipe button in latest recipes section sends user to all recipes page
+| &check; | All view recipe buttons in most popular recipes section cards send user to full recipes
+| &check; | View all recipe button in most popular recipes section sends user to all recipes page
+
+| Status | **Recipe Details Page**
+|:-------:|:--------|
+| &check; | All sections are fully responsive
+| &check; | Like / unlike recipe icon button is disabled for unauthorised users
+| &check; | Authorised users can like / unlike a recipe
+| &check; | Number of recipe likes are reflected in the recipe like counter
+| &check; | Comment form is hidden for unauthorised users
+| &check; | Recipe comments are displayed in comments section after admin approval
+| &check; | Page is refreshed and notification is displayed to the user upon successful comment form submission
+| &check; | Comment form is hidden on page refresh after a successful comment form submission
+
+| Status | **All Recipes Page**
+|:-------:|:--------|
+| &check; | All sections are fully responsive
+| &check; | All view recipe buttons on recipe cards send user to full recipes
+| &check; | Page pagination is hidden when less than nine recipes are published on the site
+| &check; | Page pagination is displayed when more than nine recipes are published on the site
+| &check; | Page pagination next button takes user to next page of recipes
+| &check; | Page pagination last button takes user to last page of recipes
+| &check; | Page pagination previous button takes user to previous page of recipes
+| &check; | Page pagination first button takes user to first page of recipes
+
+| Status | **Log In Page**
+|:-------:|:--------|
+| &check; | Form is fully responsive
+| &check; | Link to sign up page takes user to sign up page
+| &check; | Lets cook button submits log in form
+| &check; | Remember me tickbox functionality works
+| &check; | Form will not submit with blank username field
+| &check; | Form will not submit with blank password field
+| &check; | Log in form functionality works
+
+| Status | **Log Out Page**
+|:-------:|:--------|
+| &check; | Form is fully responsive
+| &check; | Log out button link successfully logs user out and redirects them to the homepage
+| &check; | Cancel button link cancels user log out and redirects them to the homepage 
+
+| Status | **Sign Up Page**
+|:-------:|:--------|
+| &check; | Form is fully responsive
+| &check; | Link to log in page takes user to log in page
+| &check; | Lets cook button submits sign up form
+| &check; | Form will not successfully submit with blank username field
+| &check; | Form will not successfully submit with blank password field
+| &check; | Form will not successfully submit with a password field value below 8 characters
+| &check; | Form will not successfully submit while the passworld fields don't match
+| &check; | Form will not successfully submit while the email address matches another user email
+| &check; | Form will not successfully submit while the username matches another username
+| &check; | Sign up form functionality works and a new user is created with a successful form submission
+| &check; | Upon a successful form submission the user is redirected to the homepage as an authorised user
+
+| Status | **Post Recipe Page**
+|:-------:|:--------|
+| &check; | Form is fully responsive
+| &check; | Form is hidden to non authorised users and log in content box is displayed
+| &check; | Log in button in log in box sends user to log in page
+| &check; | Sign up button in log in box sends user to sign up page
+| &check; | Home button in log in box sends user to homepage
+| &check; | Form is dispayed to authorised users
+| &check; | Form submit button submits form 
+| &check; | Form cancel button hides form and displays are you sure you want to cancel notification
+| &check; | Are you sure you want to cancel home button redirects user to homepage
+| &check; | Are you sure you want to cancel no / cancel button returns to form with fields returned with in progress content
+| &check; | JavaScript functionality prevents form from being submitted until all fields pass JavaScript tests
+| &check; | Selecting draft recipe on form field drafts a recipe that doesn't appear publicly on the site
+| &check; | All fields successfully submit and are stored in the database
+| &check; | Cloudinary image fields save the images to cloudinary
+| &check; | Summernote fields return formatted text
+| &check; | Category and allergen fields are saved as an array
+| &check; | On successful form submission a new recipe instance is created
+| &check; | On successful form submission the page is refreshed, the form is hidden and the thank you for posting a recipe notification is displayed
+| &check; | The thank you for posting a recipe post another recipe button link refreshes the page and displays the form
+| &check; | The thank you for posting a recipe home button link sends the user to the home page
+
+
+| Status | **Edit Recipe Page**
+|:-------:|:--------|
+| &check; | Form is fully responsive
+| &check; | Form is hidden to non authorised users and log in content box is displayed
+| &check; | Log in button in log in box sends user to log in page
+| &check; | Sign up button in log in box sends user to sign up page
+| &check; | Home button in log in box sends user to homepage
+| &check; | Form is dispayed to authorised users
+| &check; | Form submit button submits form 
+| &check; | Form fields are automatically filled in with recipe instance content
+| &check; | Form cancel button hides form and displays are you sure you want to cancel notification
+| &check; | Are you sure you want to cancel home button redirects user to homepage
+| &check; | Are you sure you want to cancel no / cancel button returns to form with fields returned with in progress content
+| &check; | JavaScript functionality prevents form from being submitted until all fields pass JavaScript tests
+| &check; | On successful form submission the recipe is successfully amended
+| &check; | All fields successfully submit and are stored in the database
+| &check; | On successful form submission the page is refreshed, the form is hidden and the thank you for editing your recipe notification is displayed
+| &check; | The thank you for editing your recipe my recipes button link takes the user to the my recipes page
+| &check; | The thank you for editing your recipe home button link takes the user to the homepage
+
+| Status | **My Favourites Page**
+|:-------:|:--------|
+| &check; | All sections are fully responsive
+
+| Status | **My Recipes Page**
+|:-------:|:--------|
+| &check; | All sections are fully responsive
+
+| Status | **404 Page**
+|:-------:|:--------|
+| &check; | All sections are fully responsive
+
+| Status | **Misc Tests**
+|:-------:|:--------|
+| &check; | Typing in an incorrect site URL redirects to the 404 error page
 
 [Back to top](<#contents>)
 
