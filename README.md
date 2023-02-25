@@ -525,49 +525,107 @@ If a user navigates to the my recipes page but doesn't have any recipes a box is
 
 ### Post A Recipe
 
+The post a recipe page template is a page which features a recipe form to enable users to submit a recipe to the Viva La Nacho site. The page is viewable by unauthenticated users but the form is hidden unless a user is logged in. The page features similar styling to the rest of the site for consistency and the header and footer nav menus are present for easy user navigation. 
+
+![Post A Recipe Page](readme/assets/images/post-a-recipe-page.png)
+
+![Post A Recipe Page](readme/assets/images/post-a-recipe-page-2.png)
+
 #### Post Recipe Form
+
+The recipe form is the main element of the post a recipe page. The form is contained in a centralised box and features a title, input fields and a username display, as well as a submit button and a cancel button. Form fields include text boxes, multiple checkboxes, number select fields, dropdown selects, image upload fields and WYSIWYG summernote fields. Required fields are marked with a red asterix. The form is fully responsive and the fields stack and become full screen on smaller screen sizes. There are a lot of fields required for a recipe post, so the fields are spaced out and organised to avoid confusion and clutter. 
+
+![Recipe Form](readme/assets/images/recipe-form.png)
+
+![Recipe Form](readme/assets/images/recipe-form-2.png)
 
 [Back to top](<#contents>)
 
 #### Post Recipe Form Validation
 
+The recipe form user input is validated using javascript. A javascript event listener is used on the submit button to check all of the input fields for incorrect input. If any of the fields fail the tests the form is prevented from being submitted using the javascript prevent default function and a pop-up notification is displayed to the user which provides details of the field that failed and the error that occurred. The user then has the opportunity to rectify the error and submit the form again. The form will only submit to the database when all the fields pass the tests. This helps to prevent failed database submissions. Tests include checking for whitespace and also empty fields. There are also tests for the number fields to check that the user value isn't above a certain value. The summernote fields were slightly harder to validate as empty user input could still show HTML tags, which would pass the javascript test even with no user input. So to effectively validate these fields the strip HTML javascript function was created to remove HTML tags from the fields before testing. Checkboxes were also tested for any checked checkboxes by using the :checked selector and the javascript length function to check that the length of checked checkboxes was over 1. 
+
+![Recipe Form Validation](readme/assets/images/post-recipe-validation.png)
+
 [Back to top](<#contents>)
 
 #### Cancel Post Recipe Form
+
+If a user clicks the cancel button on the post a recipe form at any point, the form content is hidden and a box containing a notification is displayed. The purpose of this notification is to get the user to confirm their choice to cancel the form. It is also explained that any form progress will be lost. If the user then clicks the home button they are redirected to the home page and the form progress is lost. If the user clicks the back button the box is hidden and the form is displayed with the current user input field values returned as previous. This process is to ensure that a user doesn't accidentally or unintentionally lose their form progress by navigating away from the page. This would be a bad user experience. 
+
+![Cancel Recipe Form](readme/assets/images/cancel-recipe-form.png)
 
 [Back to top](<#contents>)
 
 #### Log In To Post Recipe
 
+The post recipe form page is available to both authorised and non authorised users. The button link to the page is available on the main nav bar to all users. The reason this button is still visible to non logged in users is it can be used as an incentive to encourage users to sign up. If site users aren't aware they can post their own recipes they may not decide to sign up for an account. This was an intentional design choice to boost user sign ups. However, non authorised users will not see the recipe form if they navigate to the post a recipe page. Instead they will be presented with a centralised content box which contains some text and button links. The notification advises the user that they need to be logged in to post a recipe. The user is then presented with three button links - one to the log in page, one to the sign up page and one for the home page. The user can then decide which option they would prefer. The log in and sign up page button links are deliberately kept brightly coloured to further encourage user sign ups and interaction. 
+
+![Non Authorised Post Recipe](readme/assets/images/non-logged-in-post-recipe.png)
+
 [Back to top](<#contents>)
 
 #### Post Recipe Notification
+
+When a user submits a recipe successfully the post a recipe page is refreshed and the form is hidden from view. A content box notification is displayed thanking the user for submitting their recipe. The box contains two button links - one to post another recipe, which refreshes the page and displays the recipe form again, and a home button which returns the user back to the home page. This process makes it easier for a user to post multiple recipes as they can be returned back to the recipe form with just one click. 
+
+![Recipe Submission Confirmation](readme/assets/images/recipe-submission-confirmation.png)
 
 [Back to top](<#contents>)
 
 ### Edit Recipe
 
+The edit recipe page is available to authorised users. The edit recipe page can be navigated to via the my recipes section. If a user has posted any recipes, the recipes will be available in a list on the my recipes section. Each of these recipes will feature an edit recipe button. When the edit recipe button is clicked the user is navigated to the edit recipe page. The page stying and content is exactly the same as the post a recipe page, including the recipe form. The only difference is the recipe form is pre filled out with the content from the specific instance of the recipe post. The user can then use this form to edit the content of their recipe post and submit the amendments to overwrite the recipe content.
+
+![Edit Recipe Page](readme/assets/images/edit-recipe-page.png)
+
+![Edit Recipe Page](readme/assets/images/edit-recipe-page-2.png)
+
 #### Edit Recipe Form
+
+As previously mentioned, the edit recipe form fields are pre filled out with content from the specific recipe instance. These fields are the same fields that are present in the post a recipe form and they are styled exactly the same, so the user should be familiar with the layout from when they submitted the recipe. All recipe content fields can be freely edited by the user. The user can also choose to draft or publish the recipe from this form. The form also contains a submit and a cancel button.
+
+![Edit Recipe Form](readme/assets/images/edit-recipe-form.png)
+
+![Edit Recipe Form](readme/assets/images/edit-recipe-form-2.png)
 
 [Back to top](<#contents>)
 
 #### Edit Recipe Form Validation
 
+The edit recipe form features exactly the same validation as the post recipe form as the fields are identical. The code was refactored to change the form variable to include the edit recipe form when that form is on screen. It is important to still validate the edit recipe form, as althought the user has already submitted the recipe and it passed the tests on the first submission, if the fields are edited and content is removed and it is now not valid, the form is likely to fail when it is submitted to the database again. This is why the edit recipe form is still validated with javascript. The fields are all tested individually and if a test fails, the form is prevented from submitting and the user is presented with a pop-up notification which provides the user information on what field failed and why. When all the fields pass the tests the form is submitted to the database and the page is refreshed.
+
+![Edit Recipe Form Validation](readme/assets/images/edit-recipe-form-validation.png)
+
 [Back to top](<#contents>)
 
 #### Cancel Edit Recipe Form
+
+If a user clicks the cancel button on the edit recipe form the form is removed from view and a centralised content box is displayed to the user prompting them to confirm their decision to cancel the form submission. The notification is identical to the one found on the post recipe form. It is also explained to the user that they will lose their form progress if they confirm the cancellation. The user is presented with two button links - one takes the user to the my recipes page and the other returns the user back to the form section. If a user clicks the cancel button the notification is hidden and the form is returned with the user form fields still in progress.
+
+![Edit Recipe Form Cancel](readme/assets/images/edit-recipe-form-cancel.png)
 
 [Back to top](<#contents>)
 
 #### Log In To Edit Recipe
 
+During the process of creating the edit recipe page it occurred to me that some site users might try to edit recipes by manually entering the URL of the recipe into their browser URL bar. To defend against this I created a notification that hides the recipe form and displays a notification to the user if they visit the edit recipe page but they are not logged in. This notification prompts the user to sign up or log in to edit a recipe. It also provides them with a link to the home page to navigate away from the edit page. 
+
+![Edit Recipe Logged In](readme/assets/images/edit-recipe-logged-in.png)
+
 [Back to top](<#contents>)
 
 #### Edit Recipe Notification
 
+If a user successfully submits the edit recipe form the page is refreshed and the form is hidden. A centralised content box is displayed to the user which thanks them for editing their recipe and confirms the successful form submission. The user is then presented with a button link to the my recipes page and a button link to the home page for easy navigation away from the page.
+
+![Edit Recipe Success](readme/assets/images/edit-recipe-success.png)
+
 [Back to top](<#contents>)
 
 ### 404 Page
+
+
 
 [Back to top](<#contents>)
 
