@@ -625,33 +625,49 @@ If a user successfully submits the edit recipe form the page is refreshed and th
 
 ### 404 Page
 
+The 404 page is triggered when a user navigates to a site URL which doesn't exist. This could be because of a number of reasons, including a faulty link or an expired URL. Most users will not see this page, but it is there as a backup for users who encounter these rare errors. The purpose of the 404 page is to notify the user that there has been an error, and the page that they have tried to access cannot be found. The Viva La Nacho 404 page provides a button link to the homepage for the user to easily navigate back home.
 
+![404 Page](readme/assets/images/404-page.png)
 
 [Back to top](<#contents>)
 
 ## Future Features
 
+I believe the Viva La Nacho site has a lot of potential for expansion in the future. The basic functionality is there for the MVP but there are many features I would like to add in the future.
+
 ### Admin Area
+
+I was advised by my mentor to add an admin area for administrators so they wouldn't have to log into the Django admin area. I would have liked to have implimented this prior to deadline but unfortunately due to time constraints I chose to prioritise other features. The basic concept would be to have an admin navigation option on the main site navigation bar that is only visible to users with admin privilages. Navigating to this page would open a dashboard for administrators to view the basic site stats like number of posts and comments and new users. They would also be able to execute basic tasks and actions like approving comments and adding a featured recipe. This page would have to be secured and hidden from other site users.
 
 [Back to top](<#contents>)
 
 ### User Profile
 
+Another feature that I believe would greatly improve on the site would be a customisable user profile section. In this section logged in / authorised users would be able to edit and update their profile details. They would also be able to add a profile picture / avatar for further profile customisation. This would greatly improve the social element of the app and the overall user experience. This was another feature I wanted to impliment but it was delayed due to other features taking priority. 
+
 [Back to top](<#contents>)
 
 ### User Change Password
+
+One of the first new features I will impliment in the future will be a user password change option for users who forget or want to change their password. Currently a user has no way to retrieve their password / profile if they forget their log in details. This will mean they will lose their access to their profile and recipes. This is a big problem and could lead to users abandoning the site in the future. Hence this feature is a priority moving forwards.
 
 [Back to top](<#contents>)
 
 ### Sign Up Email Confirmation
 
+Another future feature I would like to impliment relating to authorisation is a user sign up email confirmation. I would like a user sign up to trigger an automated email into the user inbox prompting them to confirm their email address. This would help to prevent spam profiles. Users who sign up but don't confirm their email can still view the site but have limited access to site functionality such as posting and commenting.
+
 [Back to top](<#contents>)
 
 ### Recipe Categories
 
+The Viva La Nacho site currently features recipe category fields which don't have any usable functionality. These fields were originally intended to group recipes together to be displayed in recipe category lists / sections. This is definitely a feature I would like to integrate in the future. I would also like for a user to be able to search the site for a food category and be presented with recipes that match that category.
+
 [Back to top](<#contents>)
 
 ### Search Recipes
+
+I did plan to have a search bar on the homepage in the original Viva La Nacho wireframe designs. Unfortunately this feature was delayed due to being a low priority in comparison to other features. In the future I would like a user to be able to use the search bar field on the homepage or the all recipes page to search for specific recipes / categories. Submitting this field would then return a search template page with a list of any matching results. This would be a better experience for the user rather than having to manually search for a particular recipe.
 
 [Back to top](<#contents>)
 
@@ -659,17 +675,70 @@ If a user successfully submits the edit recipe form the page is refreshed and th
 
 ## Languages
 
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - Provides the basic content and structure for the site.
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Provides the styling for the site.
+* [Python](https://www.python.org/) - Provides the functionality for the site.
+* [JavaScript](https://www.javascript.com/) - Provides the interactivity and front end functionality for the site.
+* [Git](https://git-scm.com/) - Provides the version control system for the site.
+
 [Back to top](<#contents>)
 
 ## Frameworks
+
+* [Tailwind](https://tailwindcss.com/) - A front end CSS utility framework for rapidly building websites.
+* [Django](https://www.djangoproject.com/) - A high level Python web framework.
 
 [Back to top](<#contents>)
 
 ## Software
 
+* [Balsamiq](https://balsamiq.com/) - An online cloud based software used for creating the site wireframes.
+* [GitHub](https://github.com/) - An internet hosting service used for version control. Used to host the Viva La Nacho repository and for the project board used for project management and user stories.
+* [GitPod](https://www.gitpod.io/) - A cloud development environment used as the primary site code editor.
+* [Heroku](https://dashboard.heroku.com/) - A cloud platform used to host the Viva La Nacho full stack application.
+* [Cloudinary](https://cloudinary.com/?&utm_campaign=1329&utm_content=instapagelogocta-selfservetest) - A cloud based video and image management platform used to store the site images.
+* [Slack](https://slack.com/intl/en-gb/) - An online instant messaging program used for site feedback and guidance from the [Code Institute](https://codeinstitute.net/) community.
+* [Skype](https://www.skype.com/en/) - An online telecommunications application used for mentor sessions.
+* [App Diagrams](https://app.diagrams.net/) - An online diagram software used for the database schemas.
+* [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - A set of web developer tools built directly into the chrome browser. Used for responsiveness tests and further testing.
+* [Google Fonts](https://fonts.google.com/) - A web based font service by Google used to supply the site typography.
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - An open source automated testing tool used for site tests.
+* [Responsive Design Checker](https://responsivedesignchecker.com/) - An online testing tool used for responsive site testing.
+* [Am I Responsive](https://ui.dev/amiresponsive) - An online testing tool used for responsive site testing.
+* [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/) - An online suite of evaluation tools use to test the site for accessibility.
+
 [Back to top](<#contents>)
 
 ## Libraries
+
+This is a list of the Python / Django libraries used in this project.
+
+* [asgiref](https://github.com/django/asgiref) - A standard Python library to allow for asynchronous web apps and servers to communicate with each other. 
+* [binaryornot](https://pypi.org/project/binaryornot/) - An ultra lightweight Python package to guess whether a file is binary or text.
+* [chardet](https://pypi.org/project/chardet/) - A universal encoding detector for Python3.
+* [click](https://click.palletsprojects.com/en/8.1.x/) - A Python package for creating beautiful command line interfaces in a composable way with as little code as possible.
+* [cloudinary](https://pypi.org/project/cloudinary/) - A Python package allowing integration between the application and Cloudinary. 
+* [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) - A Python package used to create projects from project templates.
+* [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
+* [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) - A Django package that facilitates integration with Cloudinary storage.
+* [Django](https://www.djangoproject.com/) - A python package for the Django framework.
+* [django-active-link](https://pypi.org/project/django-active-link/) - A Django package used to highlight an active link in the site navigation bars.
+* [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - An integrated set of Django applications addressing user authentication, registration and account management.
+* [django-browser-reload](https://github.com/adamchainz/django-browser-reload) - A Django package to automatically refresh the browser during development.
+* [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - A Django package that provides tags and filters to control the rendering behaviour of Django forms.
+* [django-summernote](https://pypi.org/project/django-summernote/) - A Django package to allow for the embedding of the summernote text editor into Django.
+* [django-tailwind](https://django-tailwind.readthedocs.io/en/latest/installation.html) - A Django package to allow for the easy integration of the Tailwind CSS utility framework with Django.
+* [gunicorn](https://gunicorn.org/) - A Python WSGI HTTP Server for UNIX.
+* [jinja2-time](https://pypi.org/project/jinja2-time/) - A Jinja2 Python extension for dates and times.
+* [oauthlib](https://github.com/oauthlib/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
+* [psycopg2](https://pypi.org/project/psycopg2/) - A PostgreSQL database adapter for Python.
+* [PyJWT](https://pyjwt.readthedocs.io/en/latest/) - A Python library that allows for encoding and decoding of JSON Web Tokens (JWT).
+* [python-slugify](https://pypi.org/project/python-slugify/) - A Python application that generates slug fields from unicode strings.
+* [python3-openid](https://pypi.org/project/python3-openid/) - A set of Python packages to support use of the OpenID decentralized identity system.
+* [pytz](https://pypi.org/project/pytz/) - A Python package for world timezone definitions, modern and historical.
+* [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - A Python package for OAuthlib authentication support for Requests.
+* [sqlparse](https://pypi.org/project/sqlparse/) - A non-validating SQL parser for Python.
+* [text-unidecode](https://pypi.org/project/text-unidecode/) - The most basic Text::Unidecode port for Python.
 
 [Back to top](<#contents>)
 
