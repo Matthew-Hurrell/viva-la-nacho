@@ -1637,11 +1637,19 @@ Viva La Nacho has been manually checked for accessibility issues but has also be
 
 ## Bugs
 
+A number of bugs presented themselves during the Viva La Nacho development process. Most of these bugs were resolved, but unfortunately due to time constraints some of them weren't.
+
 ### Resolved 
+
+* In the early stages of development I couldn't get the Tailwind CSS framework working on Heroku. Styling was showing on the development environment but not on the live site. This was resolved by removing the disable collect static environment variable from the Heroku config vars to allow the css and js files to be loaded.
+* When work first began on the post a recipe form, the form images were not being uploaded to cloudinary on submission and consequently weren't being submitted. This resulted in every user submitted recipe showing the placeholder image. To resolve this issue I added the cloudinary tag to the post a recipe template and added request.FILES into the view post request. I also added enctype="multipart/form-data" to the html form in the template. 
+* When JavaScript validation was first written to validate form input there was a bug on safari where the failed input notifications weren't being shown and the form was unable to be submitted. This was due to the javascript function preventing the button from being clicked until all the tests passed, but the function was throwing an error so the form wasn't submitting at all. This was resolved by rewriting the javascript function to remove the errors and using the preventdefault function on the submit button.
 
 [Back to top](<#contents>)
 
 ### Unresolved
+
+* There currently is a database related error in Viva La Nacho that relates to testing, that unfortunately resulted in not being able to run working automated tests on either the local or the online database. The online PostgreSQL database doesn't support creating a test database, and the local database doesn't support the array fields that I have used in my models. Unfortunately this created an issue running tests, as I couldn't use either of the databases to run the tests. I didn't want to have to change my models, database or dramatically change my Django settings just to enable a test database so I combatted this by doing increased manual testing on all features. I did contact tutor support and consult the slack community for guidance and they agreed it was not an easy problem to solve. Given more time I would have attempted to create a local PostgreSQL database purely for testing.
 
 [Back to top](<#contents>)
 
