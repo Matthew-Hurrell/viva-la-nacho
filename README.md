@@ -8,7 +8,7 @@ The site also features a back end admin dashboard that allows an administrator t
 
 Link to the live site - [Viva La Nacho](https://viva-la-nacho.herokuapp.com/)
 
-![Viva La Nacho Main Image](readme/assets/images/viva-la-nacho.png)
+![Viva La Nacho Main Image](readme/assets/images/viva-la-nacho-responsive.png)
 
 # Contents
 
@@ -1248,7 +1248,7 @@ The Viva La Nacho CSS stylesheet has been tested using the [W3C CSS Validation S
 
 ### PEP8 (PYTHON)
 
-Due to the closure of the PEP8 Python Validation online site, I used the new [Code Institute Python Linter](https://pep8ci.herokuapp.com/) to test all of the Viva La Nacho python code files. 
+Due to the closure of the PEP8 Python Validation online site, I used the new [Code Institute Python Linter](https://pep8ci.herokuapp.com/) to test all of the Viva La Nacho python code files. No errors were found. 
 
 #### admin.py
 ![Admin Python Test](readme/assets/images/admin-python-test.png)
@@ -1461,7 +1461,6 @@ There has been extensive manual testing completed on all features of the Viva La
 | &check; | The thank you for posting a recipe post another recipe button link refreshes the page and displays the form
 | &check; | The thank you for posting a recipe home button link sends the user to the home page
 
-
 | Status | **Edit Recipe Page**
 |:-------:|:--------|
 | &check; | Form is fully responsive
@@ -1484,19 +1483,44 @@ There has been extensive manual testing completed on all features of the Viva La
 
 | Status | **My Favourites Page**
 |:-------:|:--------|
-| &check; | All sections are fully responsive
+| &check; | The page is fully responsive
+| &check; | Authorised users see a list of all the recipes they have currently liked on the my favourites page
+| &check; | All view recipe buttons on recipe cards send the user to the full recipes 
+| &check; | All cards feature the correct information for each recipe
+| &check; | Clicking the unlike button hides the recipe content and displays the unlike confirmation notification
+| &check; | Clicking the cancel button on the unlike recipe notification hides the noitification and shows the recipe content
+| &check; | Clicking the unlike button on the unlike recipe notification refreshes the page and displays the recipe unlike notification with the recipe removed from the page
+| &check; | User unliking a recipe functionality works and removes user from recipe likes
+| &check; | The unlike recipe notification is dismissed automatically in three seconds
+| &check; | The unlike recipe notification is dismissed by clicking the x icon button on the notification
+| &check; | When a user has no liked recipes the no liked recipes notification displays
+| &check; | The home button link on the no liked recipes notification returns the user to the home page
 
 | Status | **My Recipes Page**
 |:-------:|:--------|
-| &check; | All sections are fully responsive
+| &check; | The page is fully responsive
+| &check; | Authorised users see a list of all the recipes they currently submitted into the site
+| &check; | All view recipe buttons on recipe cards send the user to the full recipes 
+| &check; | All cards feature the correct information for each recipe
+| &check; | The view recipe button doesn't appear on recipes that are drafted and not published
+| &check; | The published tag shows on published recipes and the drafted tag shows on drafted recipes
+| &check; | The view recipe button doesn't appear on recipes that are drafted and not published
+| &check; | Each recipe edit button link takes the user to the edit recipe form page with fields filled out with the correct recipe instance content
+| &check; | Clicking the delete button hides the recipe content and displays the delete recipe confirmation notification
+| &check; | Clicking the cancel button hides the delete recipe confirmation notification and displays the recipe content
+| &check; | Clicking the delete button on the recipe confirmation notification refreshes the page and displays the recipe deleted notification with the recipe removed from the recipe list
+| &check; | User delete recipe functionality works and removes recipe from site and database
+| &check; | The recipe deleted notification is dismissed automatically in three seconds
+| &check; | The recipe deleted notification is dismissed by clicking the x icon button on the notification
+| &check; | When a user has no recipes the no recipes notification is displayed
+| &check; | The post a recipe button link on the no recipes notification takes the user to the post a recipe form page
+| &check; | The home button link on the no recipes notification takes the user to the homepage
 
 | Status | **404 Page**
 |:-------:|:--------|
-| &check; | All sections are fully responsive
-
-| Status | **Misc Tests**
-|:-------:|:--------|
-| &check; | Typing in an incorrect site URL redirects to the 404 error page
+| &check; | The page is fully responsive
+| &check; | The 404 page is triggered and displayed when a user navigates to a site URL that doesn't exist
+| &check; | The home button link on the 404 page notification takes the user back to the homepage
 
 [Back to top](<#contents>)
 
@@ -1506,17 +1530,108 @@ There has been extensive manual testing completed on all features of the Viva La
 
 ### Responsive Tests
 
+The Viva La Nacho has been tested on a diverse range of different devices and screen sizes to test for style and layout issues. Manual responsive tests were carried out using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/), [Responsive Design Checker](https://responsivedesignchecker.com/) and [Am I Responsive](https://ui.dev/amiresponsive) as well as on a number of physical devices. All device screen sizes were tested on Chrome Dev Tools as well as Responsive Design Checker and no issues were found.
+
+| Status | **Chrome Dev Tools**
+|:-------:|:--------|
+| &check; | iPhone SE
+| &check; | iPhone XR
+| &check; | iPhone 12 Pro
+| &check; | Pixel 5
+| &check; | Samsung Galaxy S8+
+| &check; | Samsung Galaxy S20 Ultra
+| &check; | iPad Air
+| &check; | iPad Mini
+| &check; | Surface Pro 7
+| &check; | Surface Duo
+| &check; | Galaxy Fold
+| &check; | Samsung Galaxy A51/71
+| &check; | Nest Hub
+| &check; | Nest Hub Max
+| &check; | iPhone 6/7/8
+| &check; | Responsive mode
+
+| Status | **Responsive Design Checker**
+|:-------:|:--------|
+| &check; | 24" Desktop
+| &check; | 23" Desktop
+| &check; | 22" Desktop
+| &check; | 20" Desktop
+| &check; | 19" Desktop
+| &check; | 15" Desktop
+| &check; | 13" Notebook
+| &check; | 10" Notebook
+| &check; | Apple iPad Mini
+| &check; | Apple iPad Retina
+| &check; | Apple iPad Pro
+| &check; | Amazon Kindle Fire
+| &check; | Amazon Kindle Fire HD
+| &check; | Asus Eee 1000
+| &check; | Nexus 7
+| &check; | Nexus 9
+| &check; | Samsung Galaxy Tab 10
+| &check; | Apple iPhone 3/4/4s
+| &check; | Apple iPhone 5/5s
+| &check; | Apple iPhone 6/6s/7
+| &check; | Apple iPhone 6s Plus/7 Plus
+| &check; | Samsung Galaxy S5/S6/S7
+| &check; | Sony Xperia Z2/Z3
+| &check; | Google Pixel
+| &check; | Nexus 4
+| &check; | Nexus 5
+| &check; | Nexus 6
+
+![Viva La Nacho Responsive Screens](readme/assets/images/viva-la-nacho-responsive.png)
+
 [Back to top](<#contents>)
 
 ### Browser Tests
+
+The Viva La Nacho site has been tested on Google Chrome, Apple Safari, Microsoft Edge and Brave with no errors found in style, layout or functionality.  
 
 [Back to top](<#contents>)
 
 ### Lighthouse Tests
 
+Viva La Nacho has been tested using the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) [Lighthouse Tester](https://developer.chrome.com/docs/lighthouse/overview/) and has returned good results. Performance on first tests was lower due to large images. This was resolved by resizing and compressing the images. Final page test results can be seen below.
+
+#### Homepage Lighthouse Test
+![Homepage Lighthouse Test](readme/assets/images/homepage-lighthouse.png)
+
+#### Recipe Details Lighthouse Test
+![Recipe Details Lighthouse Test](readme/assets/images/recipe-details-lighthouse.png)
+
+#### All Recipes Lighthouse Test
+![All Recipes Lighthouse Test](readme/assets/images/all-recipes-lighthouse.png)
+
+#### Post A Recipe Lighthouse Test
+![Post A Recipe Lighthouse Test](readme/assets/images/post-recipe-lighthouse.png)
+
+#### My Recipes Lighthouse Test
+![My Recipes Lighthouse Test](readme/assets/images/my-recipes-lighthouse.png)
+
+#### My Favourites Lighthouse Test
+![My Favourites Lighthouse Test](readme/assets/images/my-favourites-lighthouse.png)
+
+#### Signup Lighthouse Test
+![Sign Up Lighthouse Test](readme/assets/images/sign-up-lighthouse.png)
+
+#### Log In Lighthouse Test
+![Log In Lighthouse Test](readme/assets/images/log-in-lighthouse.png)
+
+#### Log Out Lighthouse Test
+![Log Out Lighthouse Test](readme/assets/images/log-out-lighthouse.png)
+
+#### Edit Recipe Lighthouse Test
+![Edit Recipe Lighthouse Test](readme/assets/images/edit-recipe-lighthouse.png)
+
 [Back to top](<#contents>)
 
 ### Wave Accessibility Tests
+
+Viva La Nacho has been manually checked for accessibility issues but has also been tested through the [Wave Accessibility Evaluation Tool](https://wave.webaim.org/). No errors or contrast issues were found.
+
+![Wave Accessibility Evaluation Tool](readme/assets/images/viva-la-nacho-wave-accessibility.png)
 
 [Back to top](<#contents>)
 
