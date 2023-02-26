@@ -8,6 +8,7 @@ from cloudinary.models import CloudinaryField
 class ModifiedArrayField(ArrayField):
     """
     Modified Array Field.
+    Sourced from - https://rogulski.it/django-multiselect-choice-admin/
     Allows for checkbox multiple select fields to create an array.
     """
 
