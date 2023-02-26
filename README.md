@@ -696,6 +696,7 @@ I did plan to have a search bar on the homepage in the original Viva La Nacho wi
 * [GitHub](https://github.com/) - An internet hosting service used for version control. Used to host the Viva La Nacho repository and for the project board used for project management and user stories.
 * [GitPod](https://www.gitpod.io/) - A cloud development environment used as the primary site code editor.
 * [Heroku](https://dashboard.heroku.com/) - A cloud platform used to host the Viva La Nacho full stack application.
+* [ElephantSQL](https://www.elephantsql.com/) - A free cloud based PostgreSQL database system used for the application database.
 * [Cloudinary](https://cloudinary.com/?&utm_campaign=1329&utm_content=instapagelogocta-selfservetest) - A cloud based video and image management platform used to store the site images.
 * [Slack](https://slack.com/intl/en-gb/) - An online instant messaging program used for site feedback and guidance from the [Code Institute](https://codeinstitute.net/) community.
 * [Skype](https://www.skype.com/en/) - An online telecommunications application used for mentor sessions.
@@ -1650,6 +1651,7 @@ A number of bugs presented themselves during the Viva La Nacho development proce
 ### Unresolved
 
 * There currently is a database related error in Viva La Nacho that relates to testing, that unfortunately resulted in not being able to run working automated tests on either the local or the online database. The online PostgreSQL database doesn't support creating a test database, and the local database doesn't support the array fields that I have used in my models. Unfortunately this created an issue running tests, as I couldn't use either of the databases to run the tests. I didn't want to have to change my models, database or dramatically change my Django settings just to enable a test database so I combatted this by doing increased manual testing on all features. I did contact tutor support and consult the slack community for guidance and they agreed it was not an easy problem to solve. Given more time I would have attempted to create a local PostgreSQL database purely for testing.
+* At the beginning of the project I accidentally committed a secret key variable inside the settings.py file. I didn't notice the mistake until later in the project. I have now changed the secret key and placed the new one inside an environment variable but the original secret key still remains in the git commit history. I did do some research into how to remove this but at this stage I didn't want to risk changing the repository history, as it does not seem to be an easy problem to solve.
 
 [Back to top](<#contents>)
 
@@ -1657,7 +1659,109 @@ A number of bugs presented themselves during the Viva La Nacho development proce
 
 ## Project Deployment via Heroku
 
-This is a guide on how to deploy a project via [Heroku](https://www.heroku.com).
+This is a guide on how to deploy a full stack web application via [Heroku](https://www.heroku.com).
+
+1. **Open your project in a code editor e.g [GitPod](https://www.gitpod.io/) or [VS Code](https://code.visualstudio.com/) and make sure it is connected to a GitHub repo.**
+
+2. **Install Django and supporting libraries** 
+* In the terminal type pip3 install 'django<4' gunicorn
+* In the terminal type pip3 install dj_database_url psycopg2
+* In the terminal type pip3 install dj3-cloudinary-storage
+
+3. **Create a requirements file**
+* type pip3 freeze --local > requirements.txt
+
+4. **Create a Django project** 
+* In the terminal type django-admin startproject 'project_name' - project_name is desired project name
+
+5. **Create app**
+* In the terminal type python3 manage.py startapp 'app_name' - app_name is desired app name
+
+6. **Add the new app into settings.py**
+* In settings.py add the app name into the installed apps array variable and save the file
+
+7. **Migrate Changes**
+* In the terminal type python3 manage.py migrate
+* In the terminal type python3 manage.py runserver
+
+8. **Create a new external database**
+* Log into [ElephantSQL](https://www.elephantsql.com/) or create new account.
+* Click to create new instance
+* Set up the plan by giving it a name and select the tiny turtle plan (which is free)
+* Select a region (data center) nearest to your location
+* Click review, check that the details are correct and then click to create instance
+* Return to ElephantSQL dashboard and click on the database instance name for the project
+* Copy the ElephantSQL database URL using the copy icon. It begins with 'postgres://'
+
+9. **Create the Heroku App**
+* Log into [Heroku](https://www.heroku.com/) or create an account.
+* Click to create new heroku app. Give the app an app name and select Europe as the region
+* Open the app settings tab
+* Click to reveal the config vars
+* Add a config var called DATABASE_URL and paste in the ElephantSQL database URL
+
+10. **Attach the database**
+* In your code editor create a new env.py file on the top level of the project directory
+* In the env.py file add import os at the top of the file
+* Set environment variables inside the env file by adding - os.environ["DATABASE_URL"] = and then paste in the ElephantSQL database URL
+* Set secret key variable inside the env file by adding - os.environ["SECRET_KEY"] = and then add your own secret key here
+* In Heroku add the secret key variable value to the application config vars
+
+11. **Prepare the environment and settings.py file**
+* In settings.py reference and import the env.py by adding the following code to the file - 
+from pathlib import Path
+import os
+import dj_database_url
+if os.path.isfile("env.py"):
+    import env
+* Remove the hardcoded secret key and replace with links to the secret key variable in the env.py and in the heroku config vars by adding the following code - 
+SECRET_KEY = os.environ.get('SECRET_KEY')
+* Comment out the old DATABASES object variable and add a new databases variable by adding the following code - 
+DATABASES = {
+    'default':
+    dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+
+12. **Save all files and make migrations**
+* In the terminal type python3 manage.py migrate
+* Save all files
+
+13. **Get static and media files stored on Cloudinary**
+* Log in or sign up for an account on [Cloudinary](https://cloudinary.com/).
+* Copy cloundinary URL API environment variable from Cloudinary dashboard
+* Add cloudinary URL to env.py file by adding the following code - os.environ["CLOUDINARY_URL"] = and then paste in the Cloudinary URL
+* In Heroku add in the Cloudinary URL into the application config vars on the app settings. The key should be CLOUDINARY_URL and the value should be the Cloudinary URL
+* Add DISABLE_COLLECTSTATIC to Heroku config vars with a value of 1. This is a temporary step that will be removed on deployment
+* Add Cloudinary libraries into installed apps in settings.py. To do this add the following code into the INSTALLED_APPS array variable - 'cloudinary_storage', 'cloudinary'. Cloudinary storage needs to be before django.contrib.staticfiles. Cloudinary needs to be after django.contrib.staticfiles.
+* Tell Django to use Cloudinary to store media and static files by adding the following code into the settings.py file -
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/' 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+* Link file to the templates directory in Heroku. Add the following code into the settings.py file under the BASE_DIR variable - 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+* Change the templates directory to templates_dir. To do this add the following code inside the templates array variable -
+'DIRS':[TEMPLATES_DIR],
+* Add Heroku hostname to allowed_hosts by adding the following code into the allowed hosts variable - ["project_name.herokuapp.com", "localhost"] - project_name is the project name
+* Create three new folders in top level of project directory - media, static and templates
+
+14. **Create Procfile**
+* Create a file called Procfile on the top level of the project directory
+* Add the following code into the procfile - web: gunicorn project_name.wsgi - project_name is the project name
+* Save all files
+
+15. **Add, commit and push to repo**
+* In the terminal type the following commands to push to the GitHub repo -
+git add
+git commit -m "Deployment commit"
+git push
+
+16. **Deploy the project to Heroku from the GitHub repo**
+* On the Heroku project add another config var - the key should be PORT and the value should be 8000
+* Under the project deploy tab, for the deployment method select GitHub. Search for the repository name and click connect. Once the project is connected scroll down to the manual deployment section and click deploy branch. Make sure you have the main branch selected
+
 
 [Back to top](<#contents>)
 
@@ -1665,16 +1769,32 @@ This is a guide on how to deploy a project via [Heroku](https://www.heroku.com).
 
 ## Content
 
+* Recipe content for Viva La Nacho was sourced from [BBC Good Food Mexican Recipes](https://www.bbcgoodfood.com/recipes/collection/mexican-recipes)
+
 [Back to top](<#contents>)
 
 ## Media
+
+* SVG icons for Viva La Nacho were obtained from [Font Awesome](https://fontawesome.com/)
+* The Viva La Nacho hero image was downloaded from [iStock](https://www.istockphoto.com/)
+* The accounts and featured recipe background images were downloaded from [Unsplash](https://unsplash.com/)
+* Recipe images were obtained from recipes featured on [BBC Good Food Mexican Recipes](https://www.bbcgoodfood.com/recipes/collection/mexican-recipes)
 
 [Back to top](<#contents>)
 
 ## Code 
 
+* The ModifiedArrayField model class to return an array field with front-end checkboxes was sourced from [Rogulski.it](https://rogulski.it/django-multiselect-choice-admin/)
+* [Django Docs](https://docs.djangoproject.com/en/4.1/) was used as an invaluable source of information on the Django framework.
+
 [Back to top](<#contents>)
 
 # Acknowledgements
+
+The Viva La Nacho project was created as a portfolio project #4 for the Higher National Diploma in Full Stack Software Development at [Code Institute](https://codeinstitute.net/). This has certainly been the most challenging project so far, but I have learnt a lot from this experience and I am eternally grateful for the support I have had from my family, friends, work colleagues and fellow students. I would like to personally thank my Code Institute mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for all his help and guidance. Also a big thank you to the Code Institute tutors who helped me sort out some tricky bugs during development. I am very excited to move on to my final portfolio project with Code Institute and continuing my learning journey as a software developer.
+
+Happy coding!
+
+Matthew Hobbs-Hurrell
 
 [Back to top](<#contents>)
