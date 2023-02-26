@@ -17,7 +17,7 @@ body {
 /* Hero */
 
 .hero {
-    background-image: url('https://res.cloudinary.com/dihur97qf/image/upload/v1674160158/viva-hero-image_quybxc.jpg');
+    background-image: url('https://res.cloudinary.com/dihur97qf/image/upload/v1677413750/viva-la-nacho-hero-image-large_ymacvj.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -109,7 +109,7 @@ footer {
 /* Featured Recipe */
 
 .featured-recipe-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1677414114/viva-featured-recipe-background_t43bwh.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -118,7 +118,7 @@ footer {
 /* Allauth Pages */
 
 .accounts-background {
-    background: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674680944/accounts-background_xjkxa8.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1677414255/accounts-background_iksfn8.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -199,7 +199,7 @@ form.login label, form.signup label {
 /* Post A Recipe Form */
 
 .post-recipe-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1677414114/viva-featured-recipe-background_t43bwh.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -387,14 +387,14 @@ form button {
 /* My Recipes */
 
 .my-recipes-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.818), rgba(255, 255, 255, 0.819)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.818), rgba(255, 255, 255, 0.819)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1677414114/viva-featured-recipe-background_t43bwh.jpg');
     background-position: center;
 }
 
 /* Edit Recipe */
 
 .edit-recipe-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1677414114/viva-featured-recipe-background_t43bwh.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -409,14 +409,14 @@ form button {
 /* My Favourites */
 
 .my-favourites-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.818), rgba(255, 255, 255, 0.819)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.818), rgba(255, 255, 255, 0.819)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1677414114/viva-featured-recipe-background_t43bwh.jpg');
     background-position: center;
 }
 
 /* 404 */
 
 .error-background {
-    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1677414114/viva-featured-recipe-background_t43bwh.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -425,7 +425,7 @@ form button {
 /* Recipe Deleted */
 
 .recipe-deleted-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1674337219/featured-recipe-background_fhkhji.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.676), rgba(255, 255, 255, 0.677)), url('https://res.cloudinary.com/dihur97qf/image/upload/v1677414114/viva-featured-recipe-background_t43bwh.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
