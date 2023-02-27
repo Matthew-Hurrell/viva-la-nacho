@@ -1,10 +1,10 @@
 # **Viva La Nacho**
 
-Viva La Nacho is a full stack web application that gives users a platform to view and share Mexican recipes. The intention of the site is to provide a simple, intuitive, visually appealing and user friendly platform for users to share Mexican inspired recipes and interact with the community. The intended target audience is anyone with an interest in cooking and Mexican food. The target audience will mostly span across men and women from young adults to older generations. 
+Viva La Nacho is a full stack web application that gives users a platform to view and share Mexican recipes. The intention of the site is to provide a simple, intuitive, visually appealing and user-friendly platform for users to share Mexican-inspired recipes and interact with the community. The intended target audience is anyone with an interest in cooking and Mexican food. The target audience will mostly span across men and women from young adults to older generations. 
 
 The application impliments user authorisation and full CRUD functionality, allowing users to create, update, read and delete recipes stored in a relational database management system. Users can also like recipes to save them to their favourites list and interact with other users via recipe comments. 
 
-The site also features a back end admin dashboard that allows an administrator to review and approve user comments, as well as monitor and edit recipes and users. 
+The site also features a back-end admin dashboard that allows an administrator to review and approve user comments, as well as monitor and edit recipes. 
 
 Link to the live site - [Viva La Nacho](https://viva-la-nacho.herokuapp.com/)
 
@@ -119,33 +119,33 @@ Link to the live site - [Viva La Nacho](https://viva-la-nacho.herokuapp.com/)
 
 ## Objective
 
-This project was created as a fourth portfolio project submission for the Full Stack Software Development Higher National Diploma at [Code Institute](https://codeinstitute.net/). Amoungst other assessment criteria, the project had to be built using HTML, CSS, JavaScript, Python and Django and feature full CRUD functionality and user authorisation. The project had to also be planned and designed using agile methodologies. 
+This project was created as a fourth portfolio project submission for [Code Institutes](https://codeinstitute.net/) Higher National Diploma in Full Stack Software Development. Amongst other assessment criteria, this project had to be built using HTML, CSS, JavaScript, Python and the Django framework, and feature full CRUD functionality and user authorisation. The project also had to be planned and designed using agile methodologies. 
 
 As a fan of not just Mexican food, but also food in general, I decided to create a Mexican recipe sharing app as it appealed to my interests, and I believed I would enjoy creating the application. I also believed I would genuinely consider using it personally going forwards, as a personal cookbook to store my own recipes. 
 
-Due in part to a tight timeline for the project, I decided to keep the scope concise and well defined to aid in my goals, objectives and deliverables. I am a firm believer that it's better to do a good job at a few things rather than an average job at a lot of things. With this in mind, I focussed on implimenting an MVP with the core features necessary, in order to provide an attractive experience for the user with limited unnecessary features.
+Due in part to a tight timeline for the project, I decided to keep the scope concise and well-defined to aid in my goals, objectives and deliverables. I am a firm believer that it's better to do a good job at a few things rather than an average job at a lot of things. With this in mind, I focussed on implementing an MVP with the core features necessary, in order to provide an attractive experience for the user with limited unnecessary features.
 
-Put in its simplest form, the overall project objective of Viva La Nacho was this - create a full stack online application which allows users to sign up and create, edit and share Mexican recipes and interact with the community. I then refined this objective into epics, user stories and tasks using an agile methodology which provided me with a clear path to achieving my objective.
+Put in its simplest form, my overall objective with the Viva La Nacho project was this - to construct a full-stack online application that allows users to sign up and create, edit and share Mexican recipes and interact with the community. I then refined this objective into epics, user stories and then tasks using an agile methodology which provided me with a clear path to achieving my objective.
 
 [Back to top](<#contents>)
 
 ## Site User Goal
 
-Users of the Viva La Nacho application could have many goals. They may wish to gather and share knowledge related to Mexican food. They might want to interact and network with other users in the community who have shared interests. They could also want a platform to store their recipes, as well as gather and save new ones in a central location. Or it's possible they just want to browse the recipes casually without signing up. To make the application appealing to a vast audience, I have to try to create an application to cater to all of these potential user goals.
+Users of the Viva La Nacho application could have many goals. They may wish to gather and share knowledge related to Mexican food. They may want to interact and network with other users in the community who have shared interests. They may also want a platform to store their recipes, as well as gather and save new ones in a central location. Or it's possible they may just want to browse the recipes casually without signing up. To make the application appealing to a vast audience with differing goals, I have to try to create an application to cater to all of these potential user goals.
 
 [Back to top](<#contents>)
 
 ## Site Owner Goal
 
-As the site owner, the goal is to provide a stable and enjoyable user experience that encourages interaction and participation. The platform should be accessibile, welcoming and appealing to new users. Content should be high quality and well structured. User interactions should be monitored to maintain community standards. 
+As the site owner, the goal is to provide a stable and enjoyable user experience that encourages interaction and participation. The platform should be accessible, welcoming and appealing to new users. Content should be of a high quality and well structured. User interactions should be monitored to maintain community standards. 
 
 [Back to top](<#contents>)
 
 ## Project Management
 
-### Github Project Board
+### GitHub Project Board
 
-An agile methodology was used to plan and design the Viva La Nacho application. A large part of this planning was done via the [Viva La Nacho GitHub Project Board](https://github.com/users/Matthew-Hurrell/projects/2). User stories were created on GitHub and added to the board in the todo section. They then moved across the board into in progress when they were being actioned, and then into the done section when they were completed. This helped greatly in tracking progress and organising and allocating work.
+An agile methodology was used to structure the planning and design of the Viva La Nacho application. A large part of this planning was done via the [Viva La Nacho GitHub Project Board](https://github.com/users/Matthew-Hurrell/projects/2). User stories were created on GitHub and added to the board in the to-do section. They then moved across the board into in-progress when they were being actioned, and then into the done section when they were completed. This helped greatly in tracking progress and organising and allocating work.
 
 ![Viva La Nacho Project Board](readme/assets/images/viva-la-nacho-project-board.png)
 
@@ -153,7 +153,7 @@ An agile methodology was used to plan and design the Viva La Nacho application. 
 
 ### Database Schema
 
-Database schemas were drawn up using [App Diagrams.net](https://app.diagrams.net/). The schemas were used to plan the database models and fields. It also helps to display the relationships between the models and how they interact. Viva La Nacho consists of three models - Recipe, Comment and User.
+Database schemas were drawn up using [App Diagrams.net](https://app.diagrams.net/). The schemas were used to plan the database models and fields. It also helped in displaying the relationships between the models and how they interact. Viva La Nacho consists of three models - Recipe, Comment and User.
 
 ![Viva La Nacho Database Schemas](readme/assets/images/viva-la-nacho-database-schemas.png)
 
@@ -196,17 +196,19 @@ Wireframes were created using [Balsamiq](https://balsamiq.com/) to plan content 
 
 ## User Stories
 
-In terms of project management, user stories are an integral part of the software development creative process. Viva La Nacho consists of 43 user stories, each broken down into acceptance criteria and tasks. Each user story is also given a story points number relating to time/difficulty of the tasks and then is assigned a priority label of either 'must have', 'should have', 'could have' or 'wont have' to help organise work through iterations. User stories were created from 'Epics' which are larger over-arching features/concepts which are then refined down into smaller individual parts. Completed user stories were marked as closed. 
+In terms of project management, user stories are an integral part of the software development creative process. Viva La Nacho consists of 43 user stories, each broken down into acceptance criteria and tasks. Each user story was given a story points number relating to the time/difficulty of the tasks in relation to each other, and then was assigned a priority label of either 'must have', 'should have', 'could have' or 'won't have' to help organise work through iterations. User stories were created from 'Epics', which are larger over-arching features/concepts, then refined into smaller individual parts. Completed user stories were marked as closed. User stories were sorted into weekly iterations that were used to structure and allocate the work each week. Each iteration was planned to not include more than 60% must-have user stories.
 
 A full list of user stories can be found in the [Viva La Nacho GitHub Project Board](https://github.com/users/Matthew-Hurrell/projects/2).
 
 ![Like A Recipe User Story](readme/assets/images/user-story-like-a-recipe.png)
 
+![User Story Iteration](readme/assets/images/user-story-iteration.png)
+
 [Back to top](<#contents>)
 
 ## Site Structure 
 
-The Viva La Nacho app features a simple and user friendly site structure that users will be quite familiar with. However, some content is hidden / restricted to users who are not logged in. The main pages / templates of Viva La Nacho include - the home page, recipe full details, my favourites, my recipes, post recipe form, edit recipe form, all recipes and the sign up, log in and log out templates. Site users can freely and easily browse the various pages using the site navigation bar which is visible at the top and bottom of each page. The nav bar options automatically change depending on whether a user is signed in or not to allow for easy and intuitive site navigation.
+The Viva La Nacho app features a simple and user friendly site structure that users will be quite familiar with. However, some content is hidden / restricted to users who are not logged in. The main pages / templates of Viva La Nacho include - the home page, recipe full details, my favourites, my recipes, post recipe form, edit recipe form, all recipes and the signup, login and log out templates. Site users can freely and easily browse the various pages using the site navigation bar which is visible at the top and bottom of each page. The nav bar options automatically change depending on whether a user is signed in or not to allow for easy and intuitive site navigation.
 
 ![Header Nav Logged In](readme/assets/images/nav-bar-logged-in.png)
 
@@ -215,7 +217,6 @@ The Viva La Nacho app features a simple and user friendly site structure that us
 ![Footer Nav Logged In](readme/assets/images/footer-nav-logged-in.png)
 
 ![Footer Nav Not Logged In](readme/assets/images/footer-nav-not-logged-in.png)
-
 
 [Back to top](<#contents>)
 
@@ -229,7 +230,7 @@ The Viva La Nacho colour scheme was inspired by the [2016 WOW Fiesta Color Palet
 
 ## Typography 
 
-Viva La Nacho uses [Google Fonts](https://fonts.google.com/) for the site typography. The specific fonts are [Port Lligat Slab](https://fonts.google.com/specimen/Port+Lligat+Slab?query=Port+Lligat+Slab) and [ASAP](https://fonts.google.com/specimen/Asap?query=asap). Port Lligat Slab is a display typeface. It is clear but defined with a clear Mexican inspired twist. It was chosen to add some character to the titles and links. It is a playful font and matches the theme well. Asap is a contemporary sans-serif font. It's modern looking and rounded, and it was used for the main bodies of text to make them easier to read. 
+Viva La Nacho uses [Google Fonts](https://fonts.google.com/) for the site typography. The specific fonts are [Port Lligat Slab](https://fonts.google.com/specimen/Port+Lligat+Slab?query=Port+Lligat+Slab) and [ASAP](https://fonts.google.com/specimen/Asap?query=asap). Port Lligat Slab is a display typeface. It is a playful font with clear but defined with a clear Mexican-inspired twist. It was chosen to add some character to the titles and links. Asap is a contemporary sans-serif font. It is modern looking and rounded, and it was used for the main bodies of text to make them easier to read. 
 
 ![Port Lligat Slab Typeface](readme/assets/images/port-lligat-slab.png)
 
@@ -251,7 +252,7 @@ The homepage is the first page of the site that a user will see when they naviga
 
 #### Navigation
 
-Site navigation is present at all times on every page of the site in the form of footer and header nav bars. These navigational elements change depending on whether a user is logged in or not. Non logged in users only have access to the home page, recipe detail pages, view all recipe page and the log in and sign up page. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes. The header nav features the site logo which is also a link back to the home page. It also features a post a recipe button which is distinctly different from the other nav menu items. This is to draw the users eye and encourage them to sign up so that they can use this feature. All nav menu items feature a scale and underline hover effect. Navigation items are active on the current page and the underline remains in place as a visual aid to show the user where they are.
+Site navigation is present at all times on every page of the site in the form of footer and header nav bars. These navigational elements change depending on whether a user is logged in or not. Non logged in users only have access to the home page, recipe detail pages, view all recipe page and the login and signup page. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes. The header nav features the site logo which is also a link back to the home page. It also features a post a recipe button which is distinctly different from the other nav menu items. This is to draw the user's eye and encourage them to sign up so that they can use this feature. All nav menu items feature a scale and underline hover effect. Navigation items are active on the current page and the underline remains in place as a visual aid to show the user where they are.
 
 ![Header Nav Logged In](readme/assets/images/nav-bar-logged-in.png)
 
@@ -267,7 +268,7 @@ Site navigation is present at all times on every page of the site in the form of
 
 #### Hero
 
-The homepage hero section is the large eye catching section which is just beneath the navigation bar. The hero is only displayed on the homepage. It is used to catch the users attention, and to clearly showcase the general topic of the site. It features a large, colourful full screen background image and a centralised text box with the site title and tagline. The hero section also features the mexican hat logo motif to reinforce the brand image.
+The homepage hero section is the large eye-catching section that is just beneath the navigation bar. The hero is only displayed on the homepage. It is used to catch the users attention, and to clearly showcase the general topic of the site. It features a large, colourful full screen background image and a centralised text box with the site title and tagline. The hero section also features the Mexican hat logo motif to reinforce the brand image.
 
 ![Hero Homepage](readme/assets/images/hero-homepage.png)
 
@@ -275,7 +276,7 @@ The homepage hero section is the large eye catching section which is just beneat
 
 #### Intro
 
-The homepage intro section is a brief introductory text paragraph that explains the purpose of the site and how to use it to new users. The section also features a divider above and below to clearly define and separate the sections. These stylised dividers are used frequently throughout the site and help to solidify the theme. A lighter shade of the green theme colour is used as a background colour.
+The homepage intro section is a brief introductory text paragraph that explains the purpose of the site and how to use it to new users. This section also features a divider above and below to clearly define and separate the sections. These stylised dividers are used frequently throughout the site and help to solidify the Mexican theme. A lighter shade of the green theme colour is used as a background colour.
 
 ![Intro Homepage](readme/assets/images/homepage-intro.png)
 
@@ -291,7 +292,7 @@ The featured recipe is the first recipe shown on the site homepage. This singula
 
 #### Latest Recipes List
 
-The latest recipe list is a dynamic list of the latest recipes that have been uploaded to the site. When a new recipe is published, it will appear at the top of the list. Draft recipes do not appear in this list. Each recipe is displayed as a card. Each card has an image, a like count tag, a title, an author, an excerpt and a link to the full recipe page. The list displays a maximum of nine cards to avoid clutter. At the end of the section there is also a button link to the all recipes page. This section is fully responsive, and cards stack on top of each other on smaller screens. 
+The latest recipe list is a dynamic list of the latest recipes that have been uploaded to the site. When a new recipe is published it will appear at the top of the list. Draft recipes do not appear in this list. Each recipe is displayed as a card, and each card has an image, like count tag, title, author, excerpt and a link to the full recipe page. The list displays a maximum of nine cards to avoid clutter. At the end of the section, there is also a button link to the all recipes page. This section is fully responsive, and cards stack on top of each other on smaller screens. 
 
 ![Latest Recipes](readme/assets/images/latest-recipes-1.png)
 
@@ -311,7 +312,7 @@ The most popular recipes list is another list styled similarly to the previous l
 
 #### Footer
 
-The Viva La Nacho footer is present on every page of the site. It features the same navigation menu as the header nav but styled differently. A deep green background colour is used, which contrasts well with the light background colours of the inner sections. Social media icon links feature colour hover effects which match their individual social media colour palettes. There is also a repitition of the viva la nacho site name and tag line with the mexican hat motif to finish the page. This footer is fully responsive, and navigation items stack vertically on smaller screens.
+The Viva La Nacho footer is present on every page of the site. It features the same navigation menu as the header nav but styled differently. A deep green background colour is used, which contrasts well with the light background colours of the inner sections. Social media icon links feature coloured hover effects which match their individual social media colour palettes. There is also a repetition of the Viva La Nacho site name and tagline with the Mexican hat motif to finish the page. This footer is fully responsive, and navigation items stack vertically on smaller screens.
 
 ![Footer](readme/assets/images/viva-la-nacho-footer.png)
 
@@ -323,7 +324,7 @@ The Viva La Nacho footer is present on every page of the site. It features the s
 
 #### Sign Up
 
-A user can navigate to the sign up page via the site navigation bars if they are not logged in. The Viva La Nacho sign up page is a template from the [Django Allauth Package](https://django-allauth.readthedocs.io/en/latest/installation.html). Allauth provides the basic functionality for the user authorisation used in Viva La Nacho. However, the basic allauth templates have been heavily customised and styled to match the site design. The sign up page features a title and a sign up form with user input fields. The form also features javascript validation to alert the user if the fields are incorrectly filled out. The page also features another mexican food themed background image. The image is filtered to lighten the colours to prevent being too distracting to the user. Once a user submits the form correctly they are redirected back to the homepage as a logged in user.
+A user can navigate to the sign up page via the site navigation bars if they are not logged in. The Viva La Nacho sign up page is a template from the [Django Allauth Package](https://django-allauth.readthedocs.io/en/latest/installation.html). Allauth provides the basic functionality for the user authorisation used in Viva La Nacho. However, the basic allauth templates have been heavily customised and styled to match the site design. The sign up page features a title and a sign up form with user input fields. The form also features javascript validation to alert the user if the fields are incorrectly filled out. The page features another Mexican food-themed background image. The background image is filtered to lighten the colours and to prevent it from being too distracting to the user. Once a user submits the form correctly they are redirected back to the homepage as a logged-in user.
 
 ![Sign Up](readme/assets/images/sign-up.png)
 
@@ -331,7 +332,7 @@ A user can navigate to the sign up page via the site navigation bars if they are
 
 #### Log In
 
-A user can navigate to the log in page via the site navigation bars if they are not already logged in. The styling of the log in page is very similar to the rest of the user authorisation pages. The colour scheme and background image are consistent, but the form and page heading are different. Once the log in form is submitted correctly the user is redirected to the homepage as a logged in user.
+A user can navigate to the log in page via the site navigation bars if they are not already logged in. The styling of the log in page is very similar to the rest of the user authorisation pages. The colour scheme and background image are consistent, but the form and page heading are different. Once the log in form is submitted correctly the user is redirected to the homepage as a logged-in user.
 
 ![Log In](readme/assets/images/log-in.png)
 
@@ -339,7 +340,7 @@ A user can navigate to the log in page via the site navigation bars if they are 
 
 #### Log Out
 
-A user can navigate to the log out page via the site navigation bars if they are logged in. They are promted on this page to confirm they wish to log out. Upon confirmation the user is logged out and redirected to the homepage. If the user instead clicks the 'I'm still hungry' button they are just redirected back to the homepage but not logged out. The styling and background image is consistent with the other authorisation pages for coherence. 
+A user can navigate to the log-out page via the site navigation bars if they are logged in. They are prompted on this page to confirm they wish to log out. Upon confirmation, the user is logged out and redirected to the homepage. If the user instead clicks the 'I'm still hungry' button they are just redirected back to the homepage but not logged out. The styling and background image is consistent with the other authorisation pages for coherence. 
 
 ![Log Out](readme/assets/images/log-out.png)
 
@@ -347,13 +348,13 @@ A user can navigate to the log out page via the site navigation bars if they are
 
 ### Full Recipe Details
 
-The full recipe details page is a template used to display the full information of a recipe. Each published recipe has a recipe details page. Theses pages are available for all users to view, including non logged in users. The main purpose of the page is to display the full recipe method and ingredients. Users will generally navigate to a full recipe page by clicking the view recipe button on the recipe card either on the home page or the all recipes page. As the user has now shown a specific interest in the recipe, all the information about the recipe is displayed here. 
+The full recipe details page is a template used to display the full information of a recipe. Each published recipe has a recipe details page. Theses pages are available for all users to view, including non-logged-in users. The main purpose of the page is to display the full recipe method and ingredients. Users will generally navigate to a full recipe page by clicking the view recipe button on the recipe card either on the home page or the all recipes page. As the user has now shown a specific interest in the recipe, all the information about the recipe is displayed here. 
 
 ![Recipe Details](readme/assets/images/recipe-details-1.png)
 
 #### Recipe Details
 
-The first section of the recipe page features the recipe image. When there is more than one image a gallery of images is displayed underneath the main image. Basic recipe details and information is displayed in the top section such as cooking and prep time and allergens. There is also an icon on the image which allows the user to like the recipe. In the middle section there is two columns of text displaying the recipe ingredients and method. These fields are both summernote fields so they accept fully formatted and styled user text. Each section on the recipe details page is separated by a divider to clearly illustrate the different segments. 
+The first section of the recipe page features the recipe image. When there is more than one image, a gallery of images is displayed underneath the main image. Basic recipe details and information is displayed in the top section, such as cooking, prep time and allergens. There is also an icon on the image which allows the user to like the recipe. In the middle section there are two columns of text displaying the recipe ingredients and method. These fields are both summernote fields so they accept fully formatted and styled user text. Each section on the recipe details page is separated by a divider to clearly illustrate the different segments. 
 
 ![Recipe Details](readme/assets/images/recipe-details-2.png)
 
@@ -361,7 +362,7 @@ The first section of the recipe page features the recipe image. When there is mo
 
 #### Like / Unlike Recipe
 
-A user can like and unlike a recipe from that recipes specific recipe page. Each recipe features a heart icon in the top right corner of the main recipe image that can be clicked to like a recipe. It can also be clicked again to unlike a recipe. When a recipe is liked by a user, the icon changes to a heart with a minus icon. Unregistered users cannot like a recipe as they do not have a username. A user who is not logged in only sees a heart icon with a minus symbol to suggest it is blocked. Clicking the icon is disabled for an unregistered user and has no effect. 
+A user can like and unlike a recipe from the recipes specific recipe page. Each recipe features a heart icon in the top right corner of the main recipe image that can be clicked to like a recipe. It can also be clicked again to unlike a recipe. When a recipe is liked by a user, the icon changes to a heart with a minus icon. Unregistered users cannot like a recipe as they do not have a username. A user who is not logged in only sees a heart icon with a minus symbol to suggest it is blocked. Clicking the icon is disabled for an unregistered user and has no effect. 
 
 ![Like Recipe](readme/assets/images/like-recipe.png)
 
@@ -371,7 +372,7 @@ A user can like and unlike a recipe from that recipes specific recipe page. Each
 
 #### Recipe Comments
 
-At the bottom of each recipe details page there is a comments section for users to post comments. Logged in users can use the comment form to post a comment to that particular recipe. Comments need to be approved by an admin before they appear on the site. Comments are listed in the admin area as unapproved and there is an action to approve comments in the admin actions menu. When comments are approved by the admin they immediately go live on the site and appear beneath the recipe. Comments are listed from the most recent at the top to the oldest at the bottom. The username of the comment author is displayed as well as the date and the body of the comment. 
+At the bottom of each recipe details page there is a comments section for users to post comments. Logged in users can use the comment form to post a comment to that particular recipe. Comments need to be approved by an admin before they appear on the site. Comments are listed in the admin area as unapproved, and there is an action to approve comments in the admin actions menu. When comments are approved by the admin they immediately go live on the site and appear beneath the recipe. Comments are listed from the most recent at the top to the oldest at the bottom. The username of the comment author is displayed as well as the date and the body of the comment. 
 
 ![Recipe Comments](readme/assets/images/recipe-comments.png)
 
@@ -379,7 +380,7 @@ At the bottom of each recipe details page there is a comments section for users 
 
 #### Comment Form
 
-The recipe comment form is what the user uses to post a comment on a recipe. This comment form is only visible to logged in users as a username is required for a successful submission. The comment form comprises of one text body field for the comment and a submit button. The author is assigned automatically as well as the created on date. 
+The recipe comment form is what the user uses to post a comment on a recipe. This comment form is only visible to logged in users, as a username is required for successful submission. The comment form comprises of one text body field for the comment and a submit button. The author is assigned automatically as well as the created-on date.
 
 ![Comment Form](readme/assets/images/comment-form.png)
 
@@ -389,7 +390,7 @@ The recipe comment form is what the user uses to post a comment on a recipe. Thi
 
 #### Comment Form Validation
 
-Javascript is used to validate the comment form. The form is checked for empty space as well as whitespace. Javascript provents the form from being submitted until the comment field passes the test. If the test fails, a pop-up notification appears on the users screen to advise them about the failure. The user can then rectify their mistake and submit the form again. When the comment form is filled out correctly the form submits successfully and the page is refreshed.
+Javascript is used to validate the comment form. The form body field is checked for empty space as well as whitespace. Javascript prevents the form from being submitted until the comment field passes the test. If the test fails, a pop-up notification appears on the user's screen to advise them about the failure. The user can then rectify their mistake and submit the form again. When the comment form is filled out correctly the form submits successfully and the page is refreshed.
 
 ![Comment Form Validation](readme/assets/images/comment-validation.png)
 
@@ -415,7 +416,7 @@ The all recipe page is a template that displays all the published recipes on the
 
 #### All Recipes List
 
-The recipes on the all recipes page are arranged in cards in columns of three on larger screens. The cards are responsive and stack on top of each other on smaller screens. The recipes are listed from latest to oldest order.
+The recipes on the all recipes page are arranged as cards in columns of three on larger screens. The cards are responsive and stack on top of each other on smaller screens. The recipes are listed in chronological order.
 
 ![All Recipes List](readme/assets/images/all-recipes-list.png)
 
@@ -431,7 +432,7 @@ Each recipe card includes a recipe image, recipe like count tag, title, author, 
 
 #### Pagination
 
-A maximum of nine cards are visible on the all recipes page before page pagination occurs. The pagination menu is only visible if more than nine recipes exist on the Viva La Nacho site. Pagination is necessary to reduce load times and keep the page from being very large if a lot of recipes are published on the site. The user can click the next, previous, last or first buttons to navigate between pages of recipes.
+A maximum of nine cards are visible on the all recipes page before page pagination occurs. The pagination menu is only visible if more than nine recipes exist on the Viva La Nacho site. Pagination is necessary to reduce load times, and to keep the page from being very large if a lot of recipes are published on the site. The user can click the next, previous, last or first buttons to navigate between the pages of recipes.
 
 ![All Recipes Pagination](readme/assets/images/all-recipes-pagination.png)
 
@@ -441,13 +442,13 @@ A maximum of nine cards are visible on the all recipes page before page paginati
 
 ### My Favourites
 
-The my favourites page is a template which is only accessible via the navigation menu to users who are logged in. The purpose of the my favourites page is to display a list of the recipes on the site which have been liked by the user. This is so the user can use liking recipes as a way of storing them to view at a later date, almost like putting a bookmark in a digital cookbook. Users can use this feature to keep their favourite recipes in one easy location without having to search for them manually on the all recipes page or home page.
+The my favourites page is a template which is only accessible via the navigation menu to users who are logged in. The purpose of the my favourites page is to display a list of the recipes on the site which have been liked by the user. This is so the user can use the like recipe functionality as a way of storing recipes to view at a later date, almost like putting a bookmark in a digital cookbook. Users can use this feature to keep their favourite recipes in one easy location without having to search for them manually on the all recipes page or home page.
 
 ![My Favourites](readme/assets/images/my-favourites.png)
 
 #### My Favourites List
 
-The my favourites recipe list displays published recipes that have been liked by the user. Recipes are displayed in cards which are styled consistently with recipe cards found throughout the site. The only difference is they also feature a red cross icon button which is displayed on the top left corner of the recipe image.
+The my favourites recipe list displays published recipes that have been liked by the user. Recipes are displayed in cards which are styled consistently with recipe cards found throughout the site. The only difference is that they also feature a red cross icon button which is displayed on the top left corner of the recipe image.
 
 ![My Favourites List](readme/assets/images/my-favourites-list.png)
 
@@ -463,7 +464,7 @@ A user is able to quickly and easily unlike a recipe to remove it from the list 
 
 #### Unlike Recipe Notification
 
-When a user unlikes a recipe from the my favourites page and the page is refreshed, a notification is displayed to the user at the top of the page confirming that the recipe has been unliked. This can be hidden by the user by clicking the x icon button. If the notification is not manually exited it will automatically be removed from view after three seconds. 
+When a user unlikes a recipe from the my favourites page and the page is refreshed, and a notification is displayed to the user at the top of the page confirming that the recipe has been unliked. This can be hidden by the user by clicking the x icon button. If the notification is not manually exited it will automatically time out and be removed from view after three seconds. 
 
 ![My Favourites Unlike Notification](readme/assets/images/recipe-unliked-notification.png)
 
@@ -471,7 +472,7 @@ When a user unlikes a recipe from the my favourites page and the page is refresh
 
 #### No Favourites
 
-If a user navigates to the my favourites page but has no liked recipes a content box appears which informs the user that they have no liked recipes. It also explains the purpose of the my favourites section, incase the user is unaware. There is also a button link in the box which navigates the user back to the homepage.
+If a user navigates to the my favourites page but has no liked recipes, a content box appears that informs the user that they have no liked recipes. It also explains the purpose of the my favourites section, incase the user is unaware. There is also a button link in the box which navigates the user back to the homepage.
 
 ![No Favourites Notification](readme/assets/images/no-favourites.png)
 
@@ -479,7 +480,7 @@ If a user navigates to the my favourites page but has no liked recipes a content
 
 ### My Recipes
 
-The purpose of the my recipes page is to display a list of the recipes that the current user has posted and is the author of. This list contains published and unpublished recipes and is only visible to the current logged in user. This page is not present in the navigation bars to non logged in users and can't be navigated to using the site navigation. The user can use the my recipes page to keep track of their recipes easily in one place. They can freely edit and delete any of their recipes from this page.
+The purpose of the my recipes page is to display a list of the recipes that the current user has posted and is the author of. This list contains published and unpublished recipes and is only visible to the current logged-in user. This page is not present in the navigation bars to non logged in users and can't be navigated to using the site navigation. The user can use the my recipes page to keep track of their recipes easily in one place. They can freely edit and delete any of their recipes from this page.
 
 ![My Recipes](readme/assets/images/my-recipes.png)
 
@@ -501,7 +502,7 @@ Recipe cards displayed on the my recipes page feature similar content to those s
 
 #### Delete Recipe
 
-A user can delete their recipe easily from the my recipe page. If a user clicks the delete button on a recipe card the card content is hidden and a delete confirmation is displayed seeking confirmation from the user for recipe deletion. The user is also warned that the process cannot be undone. The user has the option to cancel the delete by clicking the cancel button or to confirm recipe deletion by clicking the delete button. The delete button is purposefully coloured red for warning. If the user clicks the cancel button the card content is returned to normal. If the user clicks the delete button the receipe is deleted from the database and the page is refreshed showing the recipe removed from the list.
+A user can delete their recipe easily from the my recipe page. If a user clicks the delete button on a recipe card the card content is hidden and a delete confirmation is displayed seeking confirmation from the user for recipe deletion. The user is also warned that the process cannot be undone. The user then has the option to cancel the delete by clicking the cancel button, or to confirm recipe deletion by clicking the delete button. The delete button is purposefully coloured red for warning. If the user clicks the cancel button the card content is returned to normal. If the user clicks the delete button the receipe is deleted from the database and the page is refreshed showing the recipe removed from the list.
 
 ![My Recipes Delete](readme/assets/images/my-recipes-delete.png)
 
@@ -509,7 +510,7 @@ A user can delete their recipe easily from the my recipe page. If a user clicks 
 
 #### Delete Recipe Notification
 
-If a user confirms the deletion of a recipe a notification is displayed to the user at the top of the page on refresh. This notification confirms the deletion of the recipe. The user can hide this notification by clicking the x icon. If the notification isn't manually closed the notification will automatically be removed from view after three seconds. 
+If a user confirms the deletion of a recipe, a notification is displayed to the user at the top of the page on refresh. This notification confirms the deletion of the recipe. The user can hide this notification by clicking the x icon. If the notification isn't manually closed, the notification is automatically timed out and removed from view after three seconds. 
 
 ![Recipe Deleted Notification](readme/assets/images/recipe-deleted-notification.png)
 
@@ -517,7 +518,7 @@ If a user confirms the deletion of a recipe a notification is displayed to the u
 
 #### No Recipes
 
-If a user navigates to the my recipes page but doesn't have any recipes a box is displayed in the centre of the screen to advise the user that they have no recipes. They are encouraged to post their first recipe and given a button link to the post a recipe form. There is also a button link to return home if the user doesn't want to post a recipe.
+If a user navigates to the my recipes page but doesn't have any recipes, a box is displayed in the centre of the screen to advise the user that they have no recipes. They are encouraged to post their first recipe and given a button link to the post a recipe form. There is also a button link to return home if the user doesn't want to post a recipe.
 
 ![No Recipes](readme/assets/images/no-recipes.png)
 
@@ -525,7 +526,7 @@ If a user navigates to the my recipes page but doesn't have any recipes a box is
 
 ### Post A Recipe
 
-The post a recipe page template is a page which features a recipe form to enable users to submit a recipe to the Viva La Nacho site. The page is viewable by unauthenticated users but the form is hidden unless a user is logged in. The page features similar styling to the rest of the site for consistency and the header and footer nav menus are present for easy user navigation. 
+The post a recipe page template is a page which features a recipe form to enable users to submit a recipe to the Viva La Nacho site. The page is viewable by unauthenticated users but the form is hidden unless a user is logged in. The page features similar styling to the rest of the site for consistency, and the header and footer nav menus are present for easy user navigation. 
 
 ![Post A Recipe Page](readme/assets/images/post-a-recipe-page.png)
 
@@ -533,7 +534,7 @@ The post a recipe page template is a page which features a recipe form to enable
 
 #### Post Recipe Form
 
-The recipe form is the main element of the post a recipe page. The form is contained in a centralised box and features a title, input fields and a username display, as well as a submit button and a cancel button. Form fields include text boxes, multiple checkboxes, number select fields, dropdown selects, image upload fields and WYSIWYG summernote fields. Required fields are marked with a red asterix. The form is fully responsive and the fields stack and become full screen on smaller screen sizes. There are a lot of fields required for a recipe post, so the fields are spaced out and organised to avoid confusion and clutter. 
+The recipe form is the main element of the post a recipe page. The form is contained in a centralised box and features a title, input fields and username display, as well as a submit button and cancel button. Form fields include text boxes, multiple checkboxes, number select fields, dropdown selects, image upload fields and WYSIWYG summernote fields. Required fields are marked with a red asterix. The form is fully responsive and the fields stack and become full screen on smaller screen sizes. There are a lot of fields required for a recipe post, so the fields are spaced out and organised to avoid confusion and clutter. 
 
 ![Recipe Form](readme/assets/images/recipe-form.png)
 
@@ -543,7 +544,7 @@ The recipe form is the main element of the post a recipe page. The form is conta
 
 #### Post Recipe Form Validation
 
-The recipe form user input is validated using javascript. A javascript event listener is used on the submit button to check all of the input fields for incorrect input. If any of the fields fail the tests the form is prevented from being submitted using the javascript prevent default function and a pop-up notification is displayed to the user which provides details of the field that failed and the error that occurred. The user then has the opportunity to rectify the error and submit the form again. The form will only submit to the database when all the fields pass the tests. This helps to prevent failed database submissions. Tests include checking for whitespace and also empty fields. There are also tests for the number fields to check that the user value isn't above a certain value. The summernote fields were slightly harder to validate as empty user input could still show HTML tags, which would pass the javascript test even with no user input. So to effectively validate these fields the strip HTML javascript function was created to remove HTML tags from the fields before testing. Checkboxes were also tested for any checked checkboxes by using the :checked selector and the javascript length function to check that the length of checked checkboxes was over 1. 
+The recipe form user input is validated using javascript. A javascript event listener is used on the submit button to check all of the input fields for incorrect input. If any of the fields fail the tests, the form is prevented from being submitted using the javascript prevent default function. A pop-up notification is then displayed to the user that provides details of the field that failed and the error that occurred. The user then has the opportunity to rectify the error and submit the form again. The form will only successfully submit to the database when all the fields pass the tests. This validation helps to prevent failed database submissions. Tests include checking for whitespace and also empty fields. There are also tests for the number fields to check that the user value isn't above a certain value. The summernote fields were slightly harder to validate as empty user input could still show HTML tags, which would pass the javascript test even with no user input. So to effectively validate these fields the strip HTML javascript function was created to remove HTML tags from the fields before testing. Checkboxes were also tested for any checked checkboxes by using the :checked selector and the javascript length function to check that the length of checked checkboxes was over 1. 
 
 ![Recipe Form Validation](readme/assets/images/post-recipe-validation.png)
 
@@ -559,7 +560,7 @@ If a user clicks the cancel button on the post a recipe form at any point, the f
 
 #### Log In To Post Recipe
 
-The post recipe form page is available to both authorised and non authorised users. The button link to the page is available on the main nav bar to all users. The reason this button is still visible to non logged in users is it can be used as an incentive to encourage users to sign up. If site users aren't aware they can post their own recipes they may not decide to sign up for an account. This was an intentional design choice to boost user sign ups. However, non authorised users will not see the recipe form if they navigate to the post a recipe page. Instead they will be presented with a centralised content box which contains some text and button links. The notification advises the user that they need to be logged in to post a recipe. The user is then presented with three button links - one to the log in page, one to the sign up page and one for the home page. The user can then decide which option they would prefer. The log in and sign up page button links are deliberately kept brightly coloured to further encourage user sign ups and interaction. 
+The post a recipe form page is available to both authorised and non-authorised users. The button link to the page is available on the main nav bar for all users. The reason this button is still visible to non logged in users is it can be used as an incentive to encourage users to sign up. If site users aren't aware they can post their own recipes they may not decide to sign up for an account. This is an intentional design choice to boost user sign ups. However, non authorised users will not see the recipe form if they navigate to the post a recipe page. Instead they will be presented with a centralised content box which contains some text and button links. The notification advises the user that they need to be logged in to post a recipe. The user is then presented with three button links - one to the log in page, one to the sign up page and one for the home page. The user can then decide which option they would prefer. The log in and sign up page button links are deliberately kept brightly coloured to further encourage user sign ups and interaction. 
 
 ![Non Authorised Post Recipe](readme/assets/images/non-logged-in-post-recipe.png)
 
@@ -567,7 +568,7 @@ The post recipe form page is available to both authorised and non authorised use
 
 #### Post Recipe Notification
 
-When a user submits a recipe successfully the post a recipe page is refreshed and the form is hidden from view. A content box notification is displayed thanking the user for submitting their recipe. The box contains two button links - one to post another recipe, which refreshes the page and displays the recipe form again, and a home button which returns the user back to the home page. This process makes it easier for a user to post multiple recipes as they can be returned back to the recipe form with just one click. 
+When a user submits a recipe successfully, the post a recipe page is refreshed and the form is hidden from view. A content box notification is displayed thanking the user for submitting their recipe. The box contains two button links - one to post another recipe, which refreshes the page and displays the recipe form again, and a home button which returns the user back to the home page. This process makes it easier for a user to post multiple recipes, as they can be returned back to the recipe form with just one click. 
 
 ![Recipe Submission Confirmation](readme/assets/images/recipe-submission-confirmation.png)
 
@@ -575,7 +576,7 @@ When a user submits a recipe successfully the post a recipe page is refreshed an
 
 ### Edit Recipe
 
-The edit recipe page is available to authorised users. The edit recipe page can be navigated to via the my recipes section. If a user has posted any recipes, the recipes will be available in a list on the my recipes section. Each of these recipes will feature an edit recipe button. When the edit recipe button is clicked the user is navigated to the edit recipe page. The page stying and content is exactly the same as the post a recipe page, including the recipe form. The only difference is the recipe form is pre filled out with the content from the specific instance of the recipe post. The user can then use this form to edit the content of their recipe post and submit the amendments to overwrite the recipe content.
+The edit recipe page is available to authorised users. The edit recipe page can be navigated to via the my recipes section. If a user has posted any recipes, the recipes will be available in the list on the my recipes section. Each of these recipes will feature an edit recipe button. When the edit recipe button is clicked the user is navigated to the edit recipe page. The page styling and content is exactly the same as the post a recipe page, including the recipe form. The only difference is the recipe form is pre-filled out with the content from the specific instance of the recipe post. The user can then use this form to edit the content of their recipe post and submit the amendments to overwrite the recipe content.
 
 ![Edit Recipe Page](readme/assets/images/edit-recipe-page.png)
 
@@ -583,7 +584,7 @@ The edit recipe page is available to authorised users. The edit recipe page can 
 
 #### Edit Recipe Form
 
-As previously mentioned, the edit recipe form fields are pre filled out with content from the specific recipe instance. These fields are the same fields that are present in the post a recipe form and they are styled exactly the same, so the user should be familiar with the layout from when they submitted the recipe. All recipe content fields can be freely edited by the user. The user can also choose to draft or publish the recipe from this form. The form also contains a submit and a cancel button.
+As previously mentioned, the edit recipe form fields are pre filled out with content from the specific recipe instance. These fields are the same fields that are present in the post a recipe form and they are styled exactly the same, so the user should be familiar with the layout from when they first submitted the recipe. All recipe content fields can be freely edited by the user. The user can also choose to draft or publish the recipe from this form. The form also contains a submit and cancel button.
 
 ![Edit Recipe Form](readme/assets/images/edit-recipe-form.png)
 
@@ -593,7 +594,7 @@ As previously mentioned, the edit recipe form fields are pre filled out with con
 
 #### Edit Recipe Form Validation
 
-The edit recipe form features exactly the same validation as the post recipe form as the fields are identical. The code was refactored to change the form variable to include the edit recipe form when that form is on screen. It is important to still validate the edit recipe form, as althought the user has already submitted the recipe and it passed the tests on the first submission, if the fields are edited and content is removed and it is now not valid, the form is likely to fail when it is submitted to the database again. This is why the edit recipe form is still validated with javascript. The fields are all tested individually and if a test fails, the form is prevented from submitting and the user is presented with a pop-up notification which provides the user information on what field failed and why. When all the fields pass the tests the form is submitted to the database and the page is refreshed.
+The edit recipe form features exactly the same validation as the post recipe form, as the fields are identical. The original code was refactored to change the form variable to include the edit recipe form. It is important to still validate the edit recipe form, as although the user has already submitted the recipe and it passed the tests on the first submission, if the fields are edited and content is removed and it is now not valid, the form is likely to fail when it is submitted to the database again. This is why the edit recipe form is still validated with javascript. The fields are all tested individually and if a test fails, the form is prevented from submitting, and the user is presented with a pop-up notification that provides the user information on which field failed and why. When all the fields pass the tests, the form is submitted to the database and the page is refreshed.
 
 ![Edit Recipe Form Validation](readme/assets/images/edit-recipe-form-validation.png)
 
@@ -601,7 +602,7 @@ The edit recipe form features exactly the same validation as the post recipe for
 
 #### Cancel Edit Recipe Form
 
-If a user clicks the cancel button on the edit recipe form the form is removed from view and a centralised content box is displayed to the user prompting them to confirm their decision to cancel the form submission. The notification is identical to the one found on the post recipe form. It is also explained to the user that they will lose their form progress if they confirm the cancellation. The user is presented with two button links - one takes the user to the my recipes page and the other returns the user back to the form section. If a user clicks the cancel button the notification is hidden and the form is returned with the user form fields still in progress.
+If a user clicks the cancel button on the edit recipe form, the form is removed from view and a centralised content box is displayed to the user prompting them to confirm their decision to cancel the form submission. The notification is identical to the one found on the post recipe form. It is also explained to the user that they will lose their form progress if they confirm the cancellation. The user is presented with two button links - one takes the user to the my recipes page, and one that returns the user back to the form section. If a user clicks the cancel button, the notification is hidden and the form is returned with the user form fields still in progress.
 
 ![Edit Recipe Form Cancel](readme/assets/images/edit-recipe-form-cancel.png)
 
@@ -609,7 +610,7 @@ If a user clicks the cancel button on the edit recipe form the form is removed f
 
 #### Log In To Edit Recipe
 
-During the process of creating the edit recipe page it occurred to me that some site users might try to edit recipes by manually entering the URL of the recipe into their browser URL bar. To defend against this I created a notification that hides the recipe form and displays a notification to the user if they visit the edit recipe page but they are not logged in. This notification prompts the user to sign up or log in to edit a recipe. It also provides them with a link to the home page to navigate away from the edit page. 
+During the process of creating the edit recipe page, it occurred to me that some site users may try to edit recipes by manually entering the URL of the recipe into their browser URL bar. To defend against this I created a notification that hides the recipe form and displays a notification to the user if they visit the edit recipe page but they are not logged in. This notification prompts the user to sign up or log in to edit a recipe. It also provides them with a link to the home page to navigate away from the edit page. 
 
 ![Edit Recipe Logged In](readme/assets/images/edit-recipe-logged-in.png)
 
@@ -617,7 +618,7 @@ During the process of creating the edit recipe page it occurred to me that some 
 
 #### Edit Recipe Notification
 
-If a user successfully submits the edit recipe form the page is refreshed and the form is hidden. A centralised content box is displayed to the user which thanks them for editing their recipe and confirms the successful form submission. The user is then presented with a button link to the my recipes page and a button link to the home page for easy navigation away from the page.
+If a user successfully submits the edit recipe form, the page is refreshed and the form is hidden. A centralised content box is displayed to the user which thanks them for editing their recipe and confirms the successful form submission. The user is then presented with a button link to the my recipes page and a button link to the home page for easy navigation away from the page.
 
 ![Edit Recipe Success](readme/assets/images/edit-recipe-success.png)
 
@@ -633,41 +634,41 @@ The 404 page is triggered when a user navigates to a site URL which doesn't exis
 
 ## Future Features
 
-I believe the Viva La Nacho site has a lot of potential for expansion in the future. The basic functionality is there for the MVP but there are many features I would like to add in the future.
+I believe the Viva La Nacho site has a lot of potential for expansion in the future. The basic functionality is there for the MVP, but there are many features I would like to add in the future.
 
 ### Admin Area
 
-I was advised by my mentor to add an admin area for administrators so they wouldn't have to log into the Django admin area. I would have liked to have implimented this prior to deadline but unfortunately due to time constraints I chose to prioritise other features. The basic concept would be to have an admin navigation option on the main site navigation bar that is only visible to users with admin privilages. Navigating to this page would open a dashboard for administrators to view the basic site stats like number of posts and comments and new users. They would also be able to execute basic tasks and actions like approving comments and adding a featured recipe. This page would have to be secured and hidden from other site users.
+I was advised by my mentor to add an admin area for administrators so they wouldn't have to log into the Django admin area. I would have liked to have implemented this prior to the project deadline, but unfortunately due to time constraints, I chose to prioritise other features. The basic concept would be to have an admin navigation option on the main site navigation bar that is only visible to users with admin privilages. Navigating to this page would open a dashboard for administrators to view the basic site stats like number of posts and comments and new users. They would also be able to execute basic tasks and actions like approving comments and adding a featured recipe. This page would have to be secured and hidden from other site users.
 
 [Back to top](<#contents>)
 
 ### User Profile
 
-Another feature that I believe would greatly improve on the site would be a customisable user profile section. In this section logged in / authorised users would be able to edit and update their profile details. They would also be able to add a profile picture / avatar for further profile customisation. This would greatly improve the social element of the app and the overall user experience. This was another feature I wanted to impliment but it was delayed due to other features taking priority. 
+Another feature that I believe would greatly improve on the site would be a customisable user profile section. In this section logged in / authorised users would be able to edit and update their profile details. They would also be able to add a profile picture / avatar for further profile customisation. This would greatly improve the social element of the app and the overall user experience. This was another feature I wanted to implement but it was delayed due to other features taking priority. 
 
 [Back to top](<#contents>)
 
 ### User Change Password
 
-One of the first new features I will impliment in the future will be a user password change option for users who forget or want to change their password. Currently a user has no way to retrieve their password / profile if they forget their log in details. This will mean they will lose their access to their profile and recipes. This is a big problem and could lead to users abandoning the site in the future. Hence this feature is a priority moving forwards.
+One of the first new features I will impliment in the future will be a user password change option for users who forget or want to change their password. Currently a user has no way to retrieve their password / profile if they forget their log in details. This could result in the user losing access to their profile and recipes. This is a big problem and could lead to users abandoning the site in the future. Hence this feature is a priority moving forwards.
 
 [Back to top](<#contents>)
 
 ### Sign Up Email Confirmation
 
-Another future feature I would like to impliment relating to authorisation is a user sign up email confirmation. I would like a user sign up to trigger an automated email into the user inbox prompting them to confirm their email address. This would help to prevent spam profiles. Users who sign up but don't confirm their email can still view the site but have limited access to site functionality such as posting and commenting.
+Another future feature I would like to implement relating to authorisation is a user sign-up email confirmation. I would like a user sign-up form submission to trigger an automated email into the user inbox prompting them to confirm their email address. This would help to prevent spam profiles. Users who sign up but don't confirm their email can still view the site but have limited access to site functionality such as posting and commenting.
 
 [Back to top](<#contents>)
 
 ### Recipe Categories
 
-The Viva La Nacho site currently features recipe category fields which don't have any usable functionality. These fields were originally intended to group recipes together to be displayed in recipe category lists / sections. This is definitely a feature I would like to integrate in the future. I would also like for a user to be able to search the site for a food category and be presented with recipes that match that category.
+The Viva La Nacho site currently features recipe category fields which do not have any usable functionality. These fields were originally intended to group recipes together to be displayed in recipe category lists / sections. This is definitely a feature I would like to integrate in the future. I would also like for a user to be able to search the site for a food category and be presented with recipes that match that category.
 
 [Back to top](<#contents>)
 
 ### Search Recipes
 
-I did plan to have a search bar on the homepage in the original Viva La Nacho wireframe designs. Unfortunately this feature was delayed due to being a low priority in comparison to other features. In the future I would like a user to be able to use the search bar field on the homepage or the all recipes page to search for specific recipes / categories. Submitting this field would then return a search template page with a list of any matching results. This would be a better experience for the user rather than having to manually search for a particular recipe.
+I did plan to have a search bar on the homepage in the original Viva La Nacho wireframe designs. Unfortunately this feature was delayed due to being a low priority in comparison to other features. In the future I would like a user to be able to use the search bar field on the homepage to search for specific recipes / categories. Submitting this field would then return a search template page with a list of any matching results. This would be a better experience for the user rather than having to manually search for a particular recipe.
 
 [Back to top](<#contents>)
 
@@ -745,7 +746,7 @@ This is a list of the Python / Django libraries used in this project.
 
 # Testing
 
-The Viva La Nacho site has been tested rigorously throughout the development process. This section will document those testing proceedures.
+The Viva La Nacho site has been tested rigorously throughout the development process. This section will provide documentation on the tests carried out.
 
 ## User Story Tests
 
@@ -1231,7 +1232,7 @@ The Viva La Nacho site has been tested rigorously throughout the development pro
 
 ### W3C (HTML)
 
-When the Viva La Nacho site was first tested with the [W3C HTML Markup Validation Service](https://validator.w3.org/) it showed one error and some warnings. The error was a stray unordered list closing tag and the warnings were due to aria labels being used on non interactive icon elements. After I fixed these issues the test showed no errors or warnings.
+When the Viva La Nacho site was first tested with the [W3C HTML Markup Validation Service](https://validator.w3.org/), it showed one error and some warnings. The error was a stray unordered list closing tag and the warnings were due to aria labels being used on non-interactive icon elements. After I fixed these issues the test showed no errors or warnings.
 
 ![HTML Validation Test](readme/assets/images/html-validation.png)
 
@@ -1281,7 +1282,7 @@ When the Viva La Nacho javascript file script.js was first passed into the [JSHi
 
 ## Input Validation Tests
 
-All forms on the Viva La Nacho site have been thoroughly tested for input validation. All the forms on the site use javascript to validate user input. Manual tests on each field on the forms have also been conducted to check for any errors.
+All forms on the Viva La Nacho site have been thoroughly tested for input validation. All the forms on the site use javascript to validate user input. Manual tests have also been conducted on each form field to check for any errors.
 
 ### Post Recipe Form Tests
 
@@ -1527,11 +1528,15 @@ There has been extensive manual testing completed on all features of the Viva La
 
 ### Automated Tests
 
+Due to unfortunate and unexpected compatibility issues between the Viva La Nacho models and the databases, automated tests were unable to be carried out fully. Sadly the ElephantSQL database does not support test databases being created for testing, and the local sqlite3 database does not support the array fields used in the Viva La Nacho Recipe model. Code Institute tutors advised it would be quite difficult to rectify the situation, so given the time constraints and deadline for the fourth project submission, it was decided to attempt to remedy this with rigorous and extensive manual testing. With a greater timescale, more work would have been done to rectify this problem. I did however write some example model tests in the test_models.py file to show some examples of what I would have done.
+
+![Automated Test Examples](readme/assets/images/automated-test-example.png)
+
 [Back to top](<#contents>)
 
 ### Responsive Tests
 
-The Viva La Nacho has been tested on a diverse range of different devices and screen sizes to test for style and layout issues. Manual responsive tests were carried out using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/), [Responsive Design Checker](https://responsivedesignchecker.com/) and [Am I Responsive](https://ui.dev/amiresponsive) as well as on a number of physical devices. All device screen sizes were tested on Chrome Dev Tools as well as Responsive Design Checker and no issues were found.
+Viva La Nacho has been tested on a diverse range of different devices and screen sizes to test for style and layout issues. Manual responsive tests were carried out using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/), [Responsive Design Checker](https://responsivedesignchecker.com/) and [Am I Responsive](https://ui.dev/amiresponsive) as well as on a number of physical devices. All device screen sizes were tested on Chrome Dev Tools as well as Responsive Design Checker and no issues were found.
 
 | Status | **Chrome Dev Tools**
 |:-------:|:--------|
@@ -1594,7 +1599,7 @@ The Viva La Nacho site has been tested on Google Chrome, Apple Safari, Microsoft
 
 ### Lighthouse Tests
 
-Viva La Nacho has been tested using the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) [Lighthouse Tester](https://developer.chrome.com/docs/lighthouse/overview/) and has returned good results. Performance on first tests was lower due to large images. This was resolved by resizing and compressing the images. Final page test results can be seen below.
+Viva La Nacho has been tested using the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) [Lighthouse Tester](https://developer.chrome.com/docs/lighthouse/overview/) and has returned good results. Performance on the first tests was lower due to large images. This was resolved by resizing and compressing the images. The final page test results can be seen below.
 
 #### Homepage Lighthouse Test
 ![Homepage Lighthouse Test](readme/assets/images/homepage-lighthouse.png)
@@ -1638,20 +1643,20 @@ Viva La Nacho has been manually checked for accessibility issues but has also be
 
 ## Bugs
 
-A number of bugs presented themselves during the Viva La Nacho development process. Most of these bugs were resolved, but unfortunately due to time constraints some of them weren't.
+A number of bugs presented themselves during the Viva La Nacho development process. Most of these bugs were resolved, but unfortunately, due to time constraints, some of them weren't.
 
 ### Resolved 
 
-* In the early stages of development I couldn't get the Tailwind CSS framework working on Heroku. Styling was showing on the development environment but not on the live site. This was resolved by removing the disable collect static environment variable from the Heroku config vars to allow the css and js files to be loaded.
-* When work first began on the post a recipe form, the form images were not being uploaded to cloudinary on submission and consequently weren't being submitted. This resulted in every user submitted recipe showing the placeholder image. To resolve this issue I added the cloudinary tag to the post a recipe template and added request.FILES into the view post request. I also added enctype="multipart/form-data" to the html form in the template. 
-* When JavaScript validation was first written to validate form input there was a bug on safari where the failed input notifications weren't being shown and the form was unable to be submitted. This was due to the javascript function preventing the button from being clicked until all the tests passed, but the function was throwing an error so the form wasn't submitting at all. This was resolved by rewriting the javascript function to remove the errors and using the preventdefault function on the submit button.
+* In the early stages of development, I couldn't get the Tailwind CSS framework working on Heroku. Styling was showing on the development environment but not on the live site. This was resolved by removing the disable collect static environment variable from the Heroku config vars, to allow for the CSS and JS files to be loaded.
+* When work first began on the post a recipe form, the form images were not being uploaded to cloudinary on submission and consequently weren't being submitted. This resulted in every user submitted recipe showing the placeholder image. To resolve this issue, I added the cloudinary tag to the post a recipe template and added request.FILES into the view post request. I also added enctype="multipart/form-data" to the HTML form in the template. 
+* When JavaScript validation was first written to validate form input, there was a bug on safari where the failed input notifications weren't being shown and the form wasn't submitting. This was due to the javascript function throwing an error. This was resolved by rewriting the javascript function to remove the errors and using the preventdefault function on the submit button.
 
 [Back to top](<#contents>)
 
 ### Unresolved
 
-* There currently is a database related error in Viva La Nacho that relates to testing, that unfortunately resulted in not being able to run working automated tests on either the local or the online database. The online PostgreSQL database doesn't support creating a test database, and the local database doesn't support the array fields that I have used in my models. Unfortunately this created an issue running tests, as I couldn't use either of the databases to run the tests. I didn't want to have to change my models, database or dramatically change my Django settings just to enable a test database so I combatted this by doing increased manual testing on all features. I did contact tutor support and consult the slack community for guidance and they agreed it was not an easy problem to solve. Given more time I would have attempted to create a local PostgreSQL database purely for testing.
-* At the beginning of the project I accidentally committed a secret key variable inside the settings.py file. I didn't notice the mistake until later in the project. I have now changed the secret key and placed the new one inside an environment variable but the original secret key still remains in the git commit history. I did do some research into how to remove this but at this stage I didn't want to risk changing the repository history, as it does not seem to be an easy problem to solve.
+* There is currently a database-related error in Viva La Nacho that relates to testing. This error resulted in not being able to run working automated tests on either the local or the online database. The online PostgreSQL database doesn't support creating a test database, and the local database doesn't support the array fields that are used in the Viva La Nacho models. Unfortunately, this created an issue running tests, as I couldn't use either of the databases to run the tests. I didn't want to have to change my models, database or dramatically change my Django settings just to enable a test database, so I combatted this by doing increased manual testing on all features. I did contact tutor support and consult the slack community for guidance, and they agreed it was not an easy problem to solve. Given more time I would have attempted to create a local PostgreSQL database purely for testing.
+* At the beginning of the project I accidentally committed a secret key variable inside the settings.py file to the git repository. I didn't notice this mistake until later in the project. I have now changed the secret key and placed the new one inside an environment variable, but the original secret key still remains in the git commit history. I did do some research into how to remove this, but at this stage I didn't want to risk changing the repository history, and as I have changed the secret key, this shouldn't pose a security risk going forwards.
 
 [Back to top](<#contents>)
 
@@ -1762,7 +1767,6 @@ git push
 * On the Heroku project add another config var - the key should be PORT and the value should be 8000
 * Under the project deploy tab, for the deployment method select GitHub. Search for the repository name and click connect. Once the project is connected scroll down to the manual deployment section and click deploy branch. Make sure you have the main branch selected
 
-
 [Back to top](<#contents>)
 
 # Credits
@@ -1793,7 +1797,9 @@ git push
 
 The Viva La Nacho project was created as a portfolio project #4 for the Higher National Diploma in Full Stack Software Development at [Code Institute](https://codeinstitute.net/). This has certainly been the most challenging project so far, but I have learnt a lot from this experience and I am eternally grateful for the support I have had from my family, friends, work colleagues and fellow students. I would like to personally thank my Code Institute mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for all his help and guidance. Also a big thank you to the Code Institute tutors who helped me sort out some tricky bugs during development. I am very excited to move on to my final portfolio project with Code Institute and continuing my learning journey as a software developer.
 
-Happy coding!
+Onwards and upwards!
+
+Happy coding to all!
 
 Matthew Hobbs-Hurrell
 
